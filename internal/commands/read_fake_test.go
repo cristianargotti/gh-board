@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"io"
 	"strconv"
 	"testing"
 	"time"
@@ -179,6 +180,22 @@ func (f *readFakeChecksums) ReleaseChecksum(_ context.Context, _, asset string) 
 	return f.sum, f.err
 }
 
+// readFakeDownloads adds the release download port doctor uses when the
+// installed binary differs from the release checksum.
+type readFakeDownloads struct {
+	*readFakeChecksums
+	data []byte
+	err  error
+}
+
+func (f *readFakeDownloads) DownloadReleaseAsset(_ context.Context, _, _ string, w io.Writer) error {
+	if f.err != nil {
+		return f.err
+	}
+	_, err := w.Write(f.data)
+	return err
+}
+
 // readFakeTimelines adds the timeline port digest uses for first_response.
 type readFakeTimelines struct {
 	*readFakeReader
@@ -200,7 +217,7 @@ func readTestDeps(t *testing.T, reader domain.ProjectReader) (*Deps, *bytes.Buff
 	out := &bytes.Buffer{}
 	deps := &Deps{
 		Reader: reader, Clock: readFakeClock{readFixtureNow}, Config: readFixtureConfig(t),
-		Dirs: config.Paths(t.TempDir()), Out: out, Err: &bytes.Buffer{}, Version: "1.2.3",
+		Dirs: config.Paths(t.TempDir()), Out: out, Err: &bytes.Buffer{}, Version: "1.2.3", ReleaseRepository: "acme/gh-board",
 	}
 	return deps, out
 }

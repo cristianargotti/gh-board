@@ -37,6 +37,9 @@ type exchange struct {
 		Status  int               `json:"status"`
 		Headers map[string]string `json:"headers"`
 		Body    json.RawMessage   `json:"body"`
+		// Text is a verbatim body for the asset download fixtures, which
+		// are not JSON.
+		Text string `json:"text"`
 	} `json:"response"`
 }
 
@@ -161,6 +164,12 @@ func (r *replay) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		_ = json.NewEncoder(w).Encode(map[string]string{"message": message})
 		return
 	}
+	serveExchange(w, ex)
+}
+
+// serveExchange writes the recorded response; a text body is served
+// verbatim under the fixture headers.
+func serveExchange(w http.ResponseWriter, ex *exchange) {
 	for k, v := range ex.Response.Headers {
 		w.Header().Set(k, v)
 	}
@@ -169,6 +178,10 @@ func (r *replay) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		status = http.StatusOK
 	}
 	w.WriteHeader(status)
+	if ex.Response.Text != "" {
+		_, _ = io.WriteString(w, ex.Response.Text)
+		return
+	}
 	_, _ = w.Write(ex.Response.Body)
 }
 

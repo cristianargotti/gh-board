@@ -94,10 +94,16 @@ type readDoctorArtifact struct {
 	Reason string `json:"reason,omitempty"`
 }
 
+// readDoctorBinary is the binary check: the installed file against the
+// release checksum, and when they differ, the code signature of the file
+// and the release asset against the manifest.
 type readDoctorBinary struct {
 	Path            string `json:"path,omitempty"`
 	SHA256          string `json:"sha256,omitempty"`
 	ReleaseChecksum string `json:"release_checksum,omitempty"`
+	Signature       string `json:"signature,omitempty"`
+	AssetSHA256     string `json:"asset_sha256,omitempty"`
+	Provenance      string `json:"provenance,omitempty"`
 	Verified        *bool  `json:"verified,omitempty"`
 	Note            string `json:"note,omitempty"`
 }
@@ -243,13 +249,7 @@ func readDoctorBinaryTable(doc *render.Document, title string, rows []readDoctor
 
 // readDoctorState writes the binary and watch state and the problems.
 func readDoctorState(doc *render.Document, r *readDoctorReport) {
-	binary := doc.AddSection("Binary")
-	binary.AddKeyValue("Path", r.Binary.Path).AddKeyValue("SHA-256", r.Binary.SHA256)
-	binary.AddKeyValue("Release checksum", r.Binary.ReleaseChecksum)
-	if r.Binary.Verified != nil {
-		binary.AddKeyValue("Verified", readYesNo(*r.Binary.Verified))
-	}
-	readDoctorNote(binary, r.Binary.Note)
+	readDoctorBinarySection(doc.AddSection("Binary"), r.Binary)
 	watch := doc.AddSection("Watch")
 	watch.AddKeyValue("State file", r.Watch.StatePath).AddKeyValue("Present", readYesNo(r.Watch.Present))
 	watch.AddKeyValue(readKeyGenerated, r.Watch.GeneratedAt).AddKeyValue("Age", r.Watch.Age)

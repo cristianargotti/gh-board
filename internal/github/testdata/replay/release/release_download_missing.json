@@ -1,0 +1,13 @@
+{
+ "request": {
+  "method": "GET",
+  "path": "/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_386.deb"
+ },
+ "response": {
+  "status": 404,
+  "headers": {},
+  "body": {
+   "message": "Not Found"
+  }
+ }
+}

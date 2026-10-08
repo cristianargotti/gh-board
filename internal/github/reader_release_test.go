@@ -1,6 +1,7 @@
 package github_test
 
 import (
+	"bytes"
 	"context"
 	"errors"
 	"testing"
@@ -36,6 +37,37 @@ func TestReleaseChecksum(t *testing.T) {
 			}
 			if tc.err == nil && (len(sum) != 64 || sum[:len(recordedAssetDigest)] != recordedAssetDigest) {
 				t.Fatalf("checksum = %q", sum)
+			}
+		})
+	}
+}
+
+var downloadCases = []struct {
+	name, repository, asset string
+	err                     error
+	want                    string
+}{
+	{"follows the redirect", "cli/cli", "gh_2.102.0_linux_amd64.deb", nil, "deb package bytes\n"},
+	{"http error", "cli/cli", "gh_2.102.0_linux_386.deb", domain.ErrAPI, ""},
+	{"asset missing", "cli/cli", "gh-board_2.102.0_linux-amd64", domain.ErrNotFound, ""},
+	{"no repository configured", "", "gh_2.102.0_linux_amd64.deb", domain.ErrUsage, ""},
+}
+
+func TestDownloadReleaseAsset(t *testing.T) {
+	for _, tc := range downloadCases {
+		t.Run(tc.name, func(t *testing.T) {
+			r, base := newReplay(t, "release")
+			a := github.New(github.Options{Transport: base.Options().Transport, Clock: fixedClock{now: testNow}, ReleaseRepository: tc.repository})
+			var buf bytes.Buffer
+			err := a.DownloadReleaseAsset(context.Background(), "2.102.0", tc.asset, &buf)
+			if !errors.Is(err, tc.err) {
+				t.Fatalf("err = %v, want %v", err, tc.err)
+			}
+			if buf.String() != tc.want {
+				t.Fatalf("downloaded %q, want %q", buf.String(), tc.want)
+			}
+			if tc.err == nil && r.count() != 3 {
+				t.Fatalf("calls = %+v, want the query, the redirect and the object", r.all())
 			}
 		})
 	}

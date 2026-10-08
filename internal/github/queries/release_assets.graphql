@@ -1,10 +1,11 @@
 # The digest GitHub computes for every release asset lets doctor compare
-# the installed binary without downloading the checksum file.
+# the installed binary without downloading the checksum file; the download
+# URL lets it fetch the asset when the installed copy differs.
 query ReleaseAssets($owner: String!, $name: String!, $tag: String!) {
   repository(owner: $owner, name: $name) {
     release(tagName: $tag) {
       tagName
-      releaseAssets(first: 100) { nodes { name digest } }
+      releaseAssets(first: 100) { nodes { name digest downloadUrl } }
     }
   }
 }
