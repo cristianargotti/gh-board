@@ -39,7 +39,7 @@ func TestActionPins(t *testing.T) {
 }
 
 var toolPins = []string{
-	"github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.13.2",
+	"github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.14.0",
 	"mvdan.cc/gofumpt@v0.11.0",
 	"golang.org/x/vuln/cmd/govulncheck@v1.7.0",
 	"github.com/zricethezav/gitleaks/v8@v8.30.0",
@@ -80,7 +80,7 @@ func TestSetupGoAndCheckout(t *testing.T) {
 
 func checkSetupSteps(t *testing.T, steps *yaml.Node) {
 	t.Helper()
-	for _, step := range steps.Content {
+	for i, step := range steps.Content {
 		var value struct {
 			Uses string
 			With map[string]string
@@ -92,9 +92,31 @@ func checkSetupSteps(t *testing.T, steps *yaml.Node) {
 			if value.With["go-version"] != "1.27.0" || value.With["cache"] != "true" {
 				t.Error("Go must use 1.27.0 with caching")
 			}
+			checkToolchainStep(t, steps, i+1)
 		}
 		if strings.HasPrefix(value.Uses, "actions/checkout@") && value.With["persist-credentials"] != "false" {
 			t.Error("checkout must not persist credentials")
 		}
+	}
+}
+
+// setup-go exports GOTOOLCHAIN=local, which makes the go command ignore the
+// toolchain line of go.mod; the step after it restores the default.
+func checkToolchainStep(t *testing.T, steps *yaml.Node, index int) {
+	t.Helper()
+	if index >= len(steps.Content) {
+		t.Fatal("setup-go must be followed by the toolchain step")
+	}
+	var value struct {
+		Name  string
+		Shell string
+		Run   string
+	}
+	if err := steps.Content[index].Decode(&value); err != nil {
+		t.Fatal(err)
+	}
+	if value.Name != "Use the toolchain named in go.mod" || value.Shell != "bash" ||
+		value.Run != `echo "GOTOOLCHAIN=auto" >> "$GITHUB_ENV"` {
+		t.Errorf("step after setup-go = %+v", value)
 	}
 }

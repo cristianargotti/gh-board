@@ -2,6 +2,8 @@ module github.com/cristianargotti/gh-board
 
 go 1.27
 
+toolchain go1.27.2
+
 require (
 	github.com/cli/go-gh/v2 v2.16.1
 	github.com/spf13/cobra v1.10.2
