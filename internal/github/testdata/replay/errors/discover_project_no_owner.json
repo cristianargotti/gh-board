@@ -1,0 +1,51 @@
+{
+ "request": {
+  "operation": "DiscoverProject",
+  "match": {
+   "owner": "login-that-does-not-exist-xyz",
+   "number": 1
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": null,
+    "user": null,
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "organization"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to an Organization with the login of 'login-that-does-not-exist-xyz'."
+    },
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "user"
+     ],
+     "locations": [
+      {
+       "line": 3,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a User with the login of 'login-that-does-not-exist-xyz'."
+    }
+   ]
+  }
+ }
+}

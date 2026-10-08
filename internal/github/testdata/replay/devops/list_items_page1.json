@@ -1,0 +1,619 @@
+{
+ "request": {
+  "operation": "ListItems",
+  "match": {
+   "project": "PVT__mGFEy6M_Z_9BlrI",
+   "after": null,
+   "archived": [
+    "NOT_ARCHIVED"
+   ]
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "items": {
+      "totalCount": 12,
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDcxNDI4NTcxNDI4NTcxNM4P2hRA"
+      },
+      "nodes": [
+       {
+        "id": "PVTI_2S53ifwBmckAEEcshW1LB7X",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:38Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 53: Validar transição de status"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:38Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:39Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_t4p1I4VCPwnw6p279T_caMs",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:41Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 54: Documentar ritual de planejamento"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:41Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:42Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_x-Qlv1rT--lbpMoBKPIqUxw",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:43Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 55: Configurar iteração da sprint"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:44Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:45Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_4hOcSkkLzJ9HpzDPxEx6tms",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:46Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 56: Medir tempo de primeira resposta"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:47Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:48Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_cv_m3nWbK8fOdaV9ughnFNr",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:49Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 57: Preparar checklist de onboarding"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:50Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:51Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_tH4dB73zVPGDO9QXhbry5eX",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:52Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 58: Revisar limites de WIP"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:53Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:54Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_yTbttE-iacNMZ5o87vJ6ptJ",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:56Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 59: Ligar repositório ao projeto"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:56Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:57Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_NHEkULAikalZ-vmoRi8rL4s",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:49:58Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 60: Conferir datas do épico"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:49:59Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:49:59Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_Ca82cILm7Cy1qgxdWkeNGHX",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:50:01Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 61: Revisar fluxo de triagem"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:50:02Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:50:02Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_aAbE5IPYsjD33lVggwogKp6",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:50:04Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 62: Ajustar alertas do board"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:50:04Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:50:05Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_OowkSVLu6kNViVeH2JOss8j",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T12:50:07Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 63: Publicar digest semanal"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T12:50:08Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Iniciativa"
+           },
+           "updatedAt": "2026-10-08T12:50:09Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Migração de nuvem",
+           "optionId": "0678b8f5"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_xTxOGzKQ7OanjAfQZBpceD1",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT__mGFEy6M_Z_9BlrI"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T13:22:48Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "text": "Tarefa sintética 64: Mapear capacidades no board.yml"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T13:22:49Z",
+           "creator": {
+            "login": "membro8"
+           },
+           "name": "Backlog",
+           "optionId": "f75ad846"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,10 @@
+# The kind of an organization issue field decides which member of
+# IssueFieldCreateOrUpdateInput carries the value.
+query IssueField($id: ID!) {
+  node(id: $id) {
+    __typename
+    ... on IssueFieldCommon { name dataType }
+    ... on IssueFieldSingleSelect { options { id name } }
+    ... on IssueFieldMultiSelect { options { id name } }
+  }
+}

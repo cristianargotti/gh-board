@@ -1,0 +1,15 @@
+# The organization issue fields (the start and target dates): the kind and the
+# options decide the member of the value input, the id names the field.
+query OrganizationIssueFields($owner: String!, $first: Int!, $after: String) {
+  organization(login: $owner) {
+    issueFields(first: $first, after: $after, orderBy: { field: NAME, direction: ASC }) {
+      pageInfo { hasNextPage endCursor }
+      nodes {
+        ...IssueFieldRef
+        ... on IssueFieldCommon { dataType }
+        ... on IssueFieldSingleSelect { options { id name } }
+        ... on IssueFieldMultiSelect { options { id name } }
+      }
+    }
+  }
+}

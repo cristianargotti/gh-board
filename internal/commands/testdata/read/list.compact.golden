@@ -1,0 +1,12 @@
+# Items
+REF	STATE	STATUS	ASSIGNEES	TITLE	LABELS	LANE	EPIC	SPRINT	TARGET
+acme/app#1	OPEN	IN PROGRESS	ana	[[begin:title]] Onboarding do kit [[end:title]]		Plataforma	Onboarding		2026-11-15
+acme/app#2	OPEN	BACKLOG		[[begin:title]] Alertas no Claude Code [[end:title]]			Alertas		
+acme/app#3	OPEN	IN PROGRESS	ana	[[begin:title]] Corrigir login SSO [[end:title]]	bug	Plataforma	Onboarding	Sprint 5	2026-10-01
+acme/app#4	OPEN	TEST / VALIDATION	bruno	[[begin:title]] Dashboard de custos [[end:title]]		Dados	Alertas	Sprint 5	2026-10-20
+acme/app#5	OPEN	BACKLOG		[[begin:title]] Pedido: relatório semanal [[end:title]]	entrada				
+acme/app#6	CLOSED	DONE	bruno	[[begin:title]] Documentar guardas [[end:title]]	docs	Plataforma	Onboarding	Sprint 5	2026-10-07
+acme/app#8	OPEN	BACKLOG		[[begin:title]] Entrada urgente [[end:title]]	entrada, urgente				
+acme/app#9	OPEN	READY TO DEV	bruno	[[begin:title]] Pedido decidido [[end:title]]	entrada			Sprint 5	2026-10-30
+> 8 items shown
+Generated at: 2026-10-08T12:00:00Z

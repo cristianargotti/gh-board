@@ -1,0 +1,20 @@
+{
+ "request": {
+  "operation": "OwnerID",
+  "match": {
+   "login": "acme"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repositoryOwner": {
+     "id": "MDEyOk9yZ2FuaXphdGlvbjI3MzQ4MzM=",
+     "login": "acme"
+    }
+   }
+  }
+ }
+}

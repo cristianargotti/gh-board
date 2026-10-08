@@ -1,0 +1,9 @@
+{"jsonrpc":"2.0","id":null,"error":{"code":-32700,"message":"parse error: invalid character 'o' in literal null (expecting 'u')"}}
+{"jsonrpc":"2.0","id":1,"error":{"code":-32600,"message":"initialize first"}}
+{"jsonrpc":"2.0","id":2,"error":{"code":-32600,"message":"jsonrpc must be \"2.0\""}}
+{"jsonrpc":"2.0","id":3,"error":{"code":-32600,"message":"method is required"}}
+{"jsonrpc":"2.0","id":null,"error":{"code":-32600,"message":"batch requests are not supported"}}
+{"jsonrpc":"2.0","id":5,"result":{}}
+{"jsonrpc":"2.0","id":6,"result":{"capabilities":{"tools":{"listChanged":false}},"instructions":"Start with context.","protocolVersion":"2025-11-25","serverInfo":{"name":"gh-board","version":"1.2.3"}}}
+{"jsonrpc":"2.0","id":7,"error":{"code":-32602,"message":"invalid params: expected an object"}}
+{"jsonrpc":"2.0","id":8,"result":{"tools":[{"annotations":{"destructiveHint":false,"idempotentHint":true,"openWorldHint":true,"readOnlyHint":true},"description":"Board overview. Read tool: no side effects.","inputSchema":{"additionalProperties":false,"properties":{"project":{"description":"owner/number","type":"string"}},"type":"object"},"name":"status","title":"gh board status"},{"annotations":{"destructiveHint":false,"idempotentHint":false,"openWorldHint":true,"readOnlyHint":false},"description":"Plan closing an issue. Plan tool: writes a plan and returns its id with the exact gh board apply command. Nothing changes until a person runs that command in a terminal; apply is never a tool.","inputSchema":{"additionalProperties":false,"properties":{"budget":{"description":"tokens","type":"integer"},"dry_run":{"description":"show only","type":"boolean"},"kind":{"enum":["task","epic"],"type":"string"},"labels":{"items":{"type":"string"},"type":"array"},"ref":{"description":"issue reference","type":"string"}},"required":["ref"],"type":"object"},"name":"close","title":"gh board close"}]}}

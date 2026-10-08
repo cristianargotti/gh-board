@@ -1,0 +1,32 @@
+{
+ "request": {
+  "operation": "AssignableUsers",
+  "match": {
+   "owner": "membro1",
+   "name": "gh-board-sandbox",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "assignableUsers": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpKvY3Jpc3RpYW5hcmdvdHRpzgZOy5U="
+      },
+      "nodes": [
+       {
+        "id": "U_2JRxF9gBtX",
+        "login": "membro1"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

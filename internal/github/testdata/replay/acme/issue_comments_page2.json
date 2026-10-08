@@ -1,0 +1,36 @@
+{
+ "request": {
+  "operation": "IssueComments",
+  "match": {
+   "id": "I_kud9Ny7kjDmOS1mJGdwQGO",
+   "after": "Y3Vyc29yOnYyOpHPAAAAAWCzv1E="
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "comments": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpHPAAAAAWC27Ug="
+      },
+      "nodes": [
+       {
+        "id": "IC_gND2JMzK8FsHhnjXyHx0uH",
+        "body": "Comentário sintético: alinhado com o time, seguimos com a próxima etapa.",
+        "createdAt": "2026-09-30T18:48:08Z",
+        "url": "https://github.com/acme/app/issues/111#issuecomment-5917568328",
+        "author": {
+         "login": "membro1"
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

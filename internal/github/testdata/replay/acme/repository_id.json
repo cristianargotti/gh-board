@@ -1,0 +1,20 @@
+{
+ "request": {
+  "operation": "RepositoryID",
+  "match": {
+   "owner": "acme",
+   "name": "app"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "id": "R_UkssVNXKn-"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+would write {{plist}}:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>gh-board.watch</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>{{bin}}</string>
+		<string>watch</string>
+		<string>--once</string>
+		<string>--project</string>
+		<string>acme/7</string>
+	</array>
+	<key>StartInterval</key>
+	<integer>600</integer>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>GH_PATH</key>
+		<string>/opt/homebrew/bin/gh</string>
+	</dict>
+	<key>StandardOutPath</key>
+	<string>{{log}}</string>
+	<key>StandardErrorPath</key>
+	<string>{{log}}</string>
+</dict>
+</plist>
+would run launchctl bootout gui/501/gh-board.watch
+would run launchctl bootstrap gui/501 {{plist}}

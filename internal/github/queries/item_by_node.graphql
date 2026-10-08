@@ -1,0 +1,11 @@
+# Resolves a project item id or an issue id; an issue lists its items on
+# every project and the reader keeps the one of the current board.
+query ItemByNode($id: ID!) {
+  node(id: $id) {
+    __typename
+    ... on ProjectV2Item { ...ItemFields }
+    ... on Issue {
+      projectItems(first: 50, includeArchived: true) { nodes { ...ItemFields } }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+# Board acme/7
+
+## Project
+
+- **Title**: [[begin:title]] Time Produto [[end:title]]
+- **Viewer role**: WRITER
+- **Items**: 7 open, 1 closed, 1 archived
+
+## Open items per status
+
+| STATUS | CLASS | OPEN |
+| --- | --- | --- |
+| BACKLOG | backlog | 3 |
+| READY TO DEV | ready | 1 |
+| IN PROGRESS | active | 2 |
+| TEST / VALIDATION | active | 1 |
+| DONE | done | 0 |
+
+## Sprint
+
+- **Title**: Sprint 5
+- **Start**: 2026-10-05
+- **End**: 2026-10-18
+- **Days left**: 10
+- **Open**: 3
+- **Done**: 1
+
+## Alerts
+
+- **Summary**: Sprint 5 · 10 dias · 1 atrasada · 1 bloqueada · 2 entradas fora do SLA · 1 WIP excedido · 1 parada · 1 épico sem datas
+- **Total**: 7
+
+- overdue: 1
+- blocked: 1
+- triage_sla: 2
+- wip_exceeded: 1
+- stale_active: 1
+- epic_without_dates: 1
+
+- **Generated at**: 2026-10-08T12:00:00Z

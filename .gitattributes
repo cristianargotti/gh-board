@@ -1,0 +1,12 @@
+# Every text file is checked out with LF on every operating system, so
+# golden files, shell scripts and the embedded assets hash the same on
+# the Windows runners as on Linux and macOS.
+* text=auto eol=lf
+
+# Binary fixtures stay untouched.
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

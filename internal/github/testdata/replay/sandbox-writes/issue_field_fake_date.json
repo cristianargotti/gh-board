@@ -1,0 +1,21 @@
+{
+ "request": {
+  "operation": "IssueField",
+  "match": {
+   "id": "IFD_fakeDateField00"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "IssueFieldDate",
+     "name": "Start date",
+     "dataType": "DATE"
+    }
+   }
+  }
+ }
+}

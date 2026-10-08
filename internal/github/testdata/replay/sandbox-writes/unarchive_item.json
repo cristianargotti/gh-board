@@ -1,0 +1,22 @@
+{
+ "request": {
+  "operation": "UnarchiveItem",
+  "match": {
+   "projectId": "PVT_wNsk5eGXHNnHmD7K",
+   "itemId": "PVTI_Hb2IyeQTZLqeIkI4hezZd4d"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "unarchiveProjectV2Item": {
+     "item": {
+      "id": "PVTI_Hb2IyeQTZLqeIkI4hezZd4d"
+     }
+    }
+   }
+  }
+ }
+}

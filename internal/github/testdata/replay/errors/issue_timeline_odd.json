@@ -1,0 +1,68 @@
+{
+ "request": {
+  "operation": "IssueTimeline",
+  "match": {
+   "id": "I_oddTimeline00000",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "timelineItems": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "MQ"
+      },
+      "nodes": [
+       {
+        "__typename": "IssueComment",
+        "id": "IC_oddComment00000",
+        "body": "Comentário sintético de um autor removido.",
+        "createdAt": "2026-10-01T10:00:00Z",
+        "url": "https://github.com/acme/team-docs/issues/9#issuecomment-1",
+        "author": null
+       },
+       {
+        "__typename": "IssueFieldChangedEvent",
+        "id": "IFCE_oddNoField000",
+        "createdAt": "2026-10-01T11:00:00Z",
+        "actor": null,
+        "issueField": null,
+        "newValue": "2026-10-20",
+        "newOptions": null
+       },
+       {
+        "__typename": "IssueFieldAddedEvent",
+        "id": "IFAE_oddOptions000",
+        "createdAt": "2026-10-01T12:00:00Z",
+        "actor": null,
+        "issueField": {
+         "name": "Effort",
+         "id": "IFSS_oddEffort0000"
+        },
+        "newValue": null,
+        "newOptions": [
+         {
+          "name": "Medium"
+         },
+         {
+          "name": "Low"
+         }
+        ]
+       },
+       {
+        "__typename": "LabeledEvent",
+        "id": "LE_oddLabeled00000",
+        "createdAt": "2026-10-01T13:00:00Z"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

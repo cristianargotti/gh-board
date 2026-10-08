@@ -1,0 +1,46 @@
+name: Sinal de operação
+description: Algo que o próprio time observou e que vai quebrar ou encarecer um sistema se ninguém agir. Tipo Task, etiquetas entrada e sinal.
+title: "[Sinal] "
+labels: ["entrada", "sinal"]
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ninguém pede, mas acontece: um modelo deprecado, custo acima do previsto, regressão numa avaliação, um token perto de vencer. O sinal vai para a pessoa de run da semana.
+  - type: input
+    id: sistema
+    attributes:
+      label: Sistema
+      description: O sistema, agente ou fluxo do time em que aconteceu.
+      placeholder: "Nome do sistema, agente ou fluxo"
+    validations: { required: true }
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de sinal
+      options:
+        - Modelo deprecado ou mudança do provedor
+        - Custo acima do previsto
+        - Regressão em teste ou avaliação
+        - Falha recorrente de job ou alerta
+        - Acesso ou credencial vencendo
+        - Outro
+    validations: { required: true }
+  - type: textarea
+    id: observado
+    attributes:
+      label: O que foi observado
+      description: Com número, data e fonte.
+      placeholder: "Custo diário do sistema: US$ 18 em 28/09, média de US$ 7 (painel de custo, tag do sistema)."
+    validations: { required: true }
+  - type: textarea
+    id: risco
+    attributes:
+      label: Risco e prazo
+      description: O que acontece se nada for feito, e até quando.
+    validations: { required: true }
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta

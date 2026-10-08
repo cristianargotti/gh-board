@@ -1,0 +1,80 @@
+{
+ "request": {
+  "operation": "IssueByID",
+  "match": {
+   "id": "I_kud9Ny7kjDmOS1mJGdwQGO"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "Issue",
+     "id": "I_kud9Ny7kjDmOS1mJGdwQGO",
+     "number": 111,
+     "title": "Tarefa sintética 68: Medir tempo de primeira resposta",
+     "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+     "state": "CLOSED",
+     "url": "https://github.com/acme/app/issues/111",
+     "createdAt": "2026-09-30T17:06:09Z",
+     "updatedAt": "2026-09-30T18:48:10Z",
+     "closedAt": "2026-09-30T18:48:10Z",
+     "repository": {
+      "name": "app",
+      "owner": {
+       "login": "acme"
+      }
+     },
+     "labels": {
+      "nodes": [
+       {
+        "id": "LA_C53zUJPE0KekzSb069YD_X",
+        "name": "precos",
+        "color": "2F5FA8"
+       },
+       {
+        "id": "LA_qONtWKn2S7YHHbCyaQd43E",
+        "name": "precos-onda2",
+        "color": "6D28D9"
+       }
+      ]
+     },
+     "assignees": {
+      "nodes": [
+       {
+        "id": "U_2JRxF9gBtX",
+        "login": "membro1"
+       }
+      ]
+     },
+     "milestone": null,
+     "issueType": null,
+     "parent": {
+      "id": "I_anP9MzAOzZOzKDFlEvnuMf",
+      "number": 21,
+      "title": "Tarefa sintética 69: Preparar checklist de onboarding",
+      "repository": {
+       "name": "app",
+       "owner": {
+        "login": "acme"
+       }
+      }
+     },
+     "subIssuesSummary": {
+      "total": 0,
+      "completed": 0,
+      "percentCompleted": 0
+     },
+     "blockedBy": {
+      "totalCount": 0
+     },
+     "issueFieldValues": {
+      "nodes": []
+     }
+    }
+   }
+  }
+ }
+}

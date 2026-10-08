@@ -1,0 +1,29 @@
+{
+ "request": {
+  "operation": "AddComment",
+  "match": {
+   "subjectId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "addComment": {
+     "commentEdge": {
+      "node": {
+       "id": "IC_mmfJFWdem4h1p36WYoqMYM",
+       "body": "Comentário sintético: alinhado com o time, seguimos com a próxima etapa.",
+       "createdAt": "2026-10-08T16:28:46Z",
+       "url": "https://github.com/membro1/gh-board-sandbox/issues/1#issuecomment-6064400972",
+       "author": {
+        "login": "membro1"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

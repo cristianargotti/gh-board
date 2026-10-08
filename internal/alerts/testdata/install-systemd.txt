@@ -1,0 +1,21 @@
+would write {{service}}:
+[Unit]
+Description=gh board watch of acme/7
+
+[Service]
+Type=oneshot
+Environment="GH_PATH=/usr/bin/gh"
+ExecStart="{{binq}}" "watch" "--once" "--project" "acme/7"
+would write {{timer}}:
+[Unit]
+Description=gh board watch every 10min
+
+[Timer]
+OnStartupSec=1min
+OnUnitActiveSec=10min
+Unit=gh-board.watch.service
+
+[Install]
+WantedBy=timers.target
+would run systemctl --user daemon-reload
+would run systemctl --user enable --now gh-board.watch.timer

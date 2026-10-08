@@ -1,0 +1,87 @@
+# Doctor
+
+## Configuration
+
+- **Source**: user
+- **File**: /home/ana/.config/gh-board/acme-7.yml
+- **SHA-256**: a1b2c3d4e5f60718293a4b5c6d7e8f9000112233445566778899aabbccddeeff
+- **Mode**: team (board.yml)
+- **Project**: acme/7
+- **Repository**: acme/app
+- **Default project**:
+- **Default file**:
+
+> no default project recorded: gh board use owner/number records one for every command
+
+## Environment
+
+- **GH_BOARD_CONFIG**:
+- **GH_BOARD_HOME**:
+- **GH_TOKEN set**: no
+- **GITHUB_TOKEN set**: no
+- **Config dir**: testdata/read/.home/config
+- **State dir**: testdata/read/.home/state
+- **Cache dir**: testdata/read/.home/cache
+
+## Identity
+
+- **Login**: ana
+- **Host**: github.com
+- **Token source**: oauth_token
+
+## Project
+
+- **Ref**: acme/7
+- **Title**: [[begin:title]] Time Produto [[end:title]]
+- **Viewer role**: WRITER
+- **Items**: 9
+
+## Repository
+
+- **Name**: acme/app
+- **Permission**: WRITE
+- **Can write**: yes
+
+## board.yml mismatches
+
+> none
+
+## Agent artifacts
+
+| PATH | STATUS | REASON |
+| --- | --- | --- |
+| testdata/read/.home/artifacts/deny.json | ok |  |
+| testdata/read/.home/artifacts/missing.md | FAIL | missing |
+| testdata/read/.home/artifacts/hooks.json | FAIL | modified: sha256 5e1abc307d11, installed 000000000000 |
+
+## Agent hooks
+
+> no agent hooks recorded: install the guards with gh board agent install
+
+## MCP servers
+
+> no MCP servers recorded: register them with gh board agent install --mcp
+
+## Binary
+
+- **Path**: testdata/read/.home/bin/gh-board
+- **SHA-256**: 312b3d9f1b8837ebd4f80c35de8e2abf527de89728ca73a6c7e51e512c6a4137
+- **Release checksum**:
+
+> release checksum unavailable: the adapter does not expose release checksums
+
+## Watch
+
+- **State file**: testdata/read/.home/state/alerts.json
+- **Present**: yes
+- **Generated at**: 2026-10-08T11:30:00Z
+- **Age**: 30m0s
+- **Summary**: Sprint 5 · 11 dias · 1 atrasada
+- **Alerts**: 1
+
+## Problems
+
+- artifact testdata/read/.home/artifacts/missing.md: missing
+- artifact testdata/read/.home/artifacts/hooks.json: modified: sha256 5e1abc307d11, installed 000000000000
+
+- **Generated at**: 2026-10-08T12:00:00Z

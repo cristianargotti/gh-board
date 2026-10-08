@@ -1,0 +1,20 @@
+{
+ "request": {
+  "operation": "OwnerID",
+  "match": {
+   "login": "membro1"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repositoryOwner": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   }
+  }
+ }
+}

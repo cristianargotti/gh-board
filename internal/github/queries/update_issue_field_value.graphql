@@ -1,0 +1,3 @@
+mutation UpdateIssueFieldValue($issueId: ID!, $issueField: IssueFieldCreateOrUpdateInput!) {
+  updateIssueFieldValue(input: { issueId: $issueId, issueField: $issueField }) { issue { id } }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gh-board",
+  "version": "0.1.0",
+  "description": "GitHub Projects boards for Claude Code through gh board: the skill, a guard that denies destructive board commands, and the /board pane with the alerts gh board watch writes.",
+  "author": {
+    "name": "Cristian Reyes"
+  },
+  "keywords": ["github", "projects", "board", "gh", "guard"],
+  "types": "./types/index.d.ts"
+}

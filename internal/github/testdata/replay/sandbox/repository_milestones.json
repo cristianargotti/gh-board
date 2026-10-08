@@ -1,0 +1,27 @@
+{
+ "request": {
+  "operation": "RepositoryMilestones",
+  "match": {
+   "owner": "membro1",
+   "name": "gh-board-sandbox",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "milestones": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": null
+      },
+      "nodes": []
+     }
+    }
+   }
+  }
+ }
+}

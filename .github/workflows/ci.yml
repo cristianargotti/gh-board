@@ -1,0 +1,117 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Go / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    defaults:
+      run:
+        shell: bash
+    env:
+      CGO_ENABLED: '1'
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
+        with:
+          go-version: '1.27.0'
+          cache: true
+      - name: Install pinned tools
+        run: |
+          go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.13.2
+          go install mvdan.cc/gofumpt@v0.11.0
+          go install golang.org/x/vuln/cmd/govulncheck@v1.7.0
+          go install github.com/zricethezav/gitleaks/v8@v8.30.0
+      - name: Check runner build tools
+        run: |
+          make --version
+          gcc --version
+      - name: Run local pipeline
+        env:
+          GH_BOARD_HOME: ${{ runner.temp }}/gh-board
+        run: make ci
+      - name: Reject formatting and module drift
+        run: git diff --exit-code
+
+  acceptance:
+    name: Agent acceptance / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
+        with:
+          go-version: '1.27.0'
+          cache: true
+      - name: Run agent acceptance
+        run: go run ./tools/acceptance
+
+  release-config:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
+        with:
+          go-version: '1.27.0'
+          cache: true
+      - name: Verify action pins against their release tags
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .github/workflows/verify-action-pins.sh
+      - name: Check workflow semantics
+        run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12
+      - name: Check GoReleaser configuration
+        run: go run github.com/goreleaser/goreleaser/v2@v2.12.7 check
+
+  claude-plugin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+      DISABLE_AUTOUPDATER: '1'
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '22.19.0'
+          package-manager-cache: false
+      - name: Install pinned Claude Code
+        run: npm install --global @anthropic-ai/claude-code@2.1.286
+      - name: Validate plugin
+        env:
+          CLAUDE_CONFIG_DIR: ${{ runner.temp }}/gh-board-claude
+        run: claude plugin validate agents/claude
+      # The plugin test runner executes local tests without a model or credentials.
+      - name: Test plugin
+        env:
+          CLAUDE_CONFIG_DIR: ${{ runner.temp }}/gh-board-claude
+        run: claude plugin test agents/claude

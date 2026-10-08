@@ -1,0 +1,57 @@
+name: Erro (um sistema do time errou)
+description: Um sistema, agente ou fluxo do time deu um resultado errado. Tipo Bug, etiquetas entrada e erro.
+title: "[Erro] "
+labels: ["entrada", "erro"]
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        O reporte pode chegar por qualquer canal (Slack, Google Chat, Miro, conversa). Quem registra aqui é o PM da semana, ou quem recebeu o reporte.
+        O campo **Resultado esperado** é o mais importante: diz como seria o resultado certo e é a referência para validar a correção.
+        Impacto alto: marque a etiqueta `urgente` e avise a pessoa de run da semana no mesmo dia.
+  - type: input
+    id: sistema
+    attributes:
+      label: Sistema
+      description: O sistema, agente ou fluxo do time em que aconteceu.
+      placeholder: "Nome do sistema, agente ou fluxo"
+    validations: { required: true }
+  - type: input
+    id: canal
+    attributes:
+      label: Quem reportou, canal e link
+      placeholder: "Nome e área; Google Chat, link da mensagem"
+    validations: { required: true }
+  - type: input
+    id: onde
+    attributes:
+      label: Onde aconteceu
+      description: O caso concreto, para reproduzir.
+      placeholder: "ID do item ou da conversa, data e hora; ou link da execução"
+    validations: { required: true }
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: O que aconteceu
+    validations: { required: true }
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Resultado esperado
+      description: O resultado correto, como quem reportou esperava.
+    validations: { required: true }
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: Impacto
+      options:
+        - Alto (resultado errado publicado ou enviado a cliente, fluxo crítico parado, dado pessoal exposto)
+        - Médio (retrabalho ou decisão atrasada)
+        - Baixo (incômodo, há contorno)
+    validations: { required: true }
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidência
+      description: Prints, logs, IDs.

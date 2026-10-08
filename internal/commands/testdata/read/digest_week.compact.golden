@@ -1,0 +1,21 @@
+# Resumo da semana 2026-W40
+Período: 28/09/2026 a 04/10/2026
+Projeto: acme/7
+## Entregas
+> Nenhuma entrega registrada na semana.
+## Marcos com prazo na semana
+> Nenhum marco com prazo registrado na semana.
+## Riscos observados em 2026-10-08T12:00:00Z
+REGRA	SEVERIDADE	ITEM	TÍTULO	MENSAGEM
+overdue	critical	acme/app#3	[[begin:title]] Corrigir login SSO [[end:title]]	Atrasada há 7 dias (alvo 01/10/2026)
+blocked	warning	acme/app#4	[[begin:title]] Dashboard de custos [[end:title]]	Bloqueada: Situação = Bloqueada
+triage_sla	warning	acme/app#5	[[begin:title]] Pedido: relatório semanal [[end:title]]	Entrada sem decisão há 6 dias úteis (SLA: 2)
+triage_sla	critical	acme/app#8	[[begin:title]] Entrada urgente [[end:title]]	Entrada urgente sem decisão desde 07/10/2026 (SLA: mesmo dia)
+wip_exceeded	critical	quadro		WIP excedido: IN PROGRESS 2/1
+stale_active	warning	acme/app#3	[[begin:title]] Corrigir login SSO [[end:title]]	Sem movimento há 13 dias em IN PROGRESS
+epic_without_dates	info	acme/app#2	[[begin:title]] Alertas no Claude Code [[end:title]]	Épico sem data de início e sem data alvo
+## Métricas
+- first_response: indisponível (histórico completo de comentários e decisões não disponível: acme/app#9)
+- autonomy: indisponível (nenhum item elegível na semana)
+- run_share: indisponível (nenhum item elegível na semana)
+Gerado em: 2026-10-08T12:00:00Z

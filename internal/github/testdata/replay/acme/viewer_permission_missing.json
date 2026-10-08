@@ -1,0 +1,33 @@
+{
+ "request": {
+  "operation": "ViewerPermission",
+  "match": {
+   "owner": "acme",
+   "name": "repo-that-does-not-exist"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": null
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "repository"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a Repository with the name 'acme/repo-that-does-not-exist'."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,48 @@
+name: Regra (mudar o que um sistema sabe ou faz)
+description: Mudança de regra de negócio, configuração ou conhecimento de um sistema do time, validada com um exemplo antes de ir para produção. Tipo Task, etiquetas entrada e regra.
+title: "[Regra] "
+labels: ["entrada", "regra"]
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Mudar uma regra (um limite, uma lista, uma política, a base de conhecimento) muda o comportamento do sistema, então pede um exemplo concreto de antes e depois. O exemplo é rodado em simulação ou em shadow antes da mudança ir para produção.
+        A regra é do negócio: quem aprova é a pessoa da área, não o time que mantém o sistema.
+  - type: input
+    id: sistema
+    attributes:
+      label: Sistema
+      description: O sistema, agente ou fluxo do time que muda.
+      placeholder: "Nome do sistema, agente ou fluxo"
+    validations: { required: true }
+  - type: input
+    id: canal
+    attributes:
+      label: Quem pediu, canal e link
+      placeholder: "Nome e área; Slack, link da mensagem"
+    validations: { required: true }
+  - type: textarea
+    id: muda
+    attributes:
+      label: O que muda
+      description: A regra de hoje e a regra nova.
+    validations: { required: true }
+  - type: textarea
+    id: exemplo
+    attributes:
+      label: Exemplo antes e depois
+      description: Um caso concreto, com o resultado de hoje e o resultado esperado com a regra nova. É o caso que valida a mudança.
+    validations: { required: true }
+  - type: input
+    id: quando
+    attributes:
+      label: A partir de quando e por quê
+      placeholder: "06/10, início da campanha X"
+    validations: { required: true }
+  - type: input
+    id: aprova
+    attributes:
+      label: Quem aprova no negócio
+      placeholder: "Nome completo e cargo"
+    validations: { required: true }

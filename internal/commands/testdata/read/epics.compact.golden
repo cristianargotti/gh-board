@@ -1,0 +1,5 @@
+# Epics acme/7
+REF	STATUS	OWNER	PROGRESS	START	TARGET	TITLE
+acme/app#1	IN PROGRESS	ana	2/4 (50%)	2026-09-22	2026-11-15	[[begin:title]] Onboarding do kit [[end:title]]
+acme/app#2	BACKLOG		0/0			[[begin:title]] Alertas no Claude Code [[end:title]]
+Generated at: 2026-10-08T12:00:00Z

@@ -1,0 +1,18 @@
+{
+ "request": {
+  "operation": "Viewer",
+  "match": {}
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   }
+  }
+ }
+}

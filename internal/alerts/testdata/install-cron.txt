@@ -1,0 +1,6 @@
+systemd is absent: installing a cron line
+would run crontab -
+with input:
+MAILTO=someone
+0 7 * * 1 /usr/local/bin/backup --weekly
+*/10 * * * * GH_PATH=/usr/bin/gh {{binsh}} watch --once --project acme/7 # gh-board.watch

@@ -1,0 +1,19 @@
+{
+ "request": {
+  "operation": "IssueField",
+  "match": {
+   "id": "PVT_6gozs2PV0g9mjnL3"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "ProjectV2"
+    }
+   }
+  }
+ }
+}

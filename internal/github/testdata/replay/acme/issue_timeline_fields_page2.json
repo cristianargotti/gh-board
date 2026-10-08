@@ -1,0 +1,63 @@
+{
+ "request": {
+  "operation": "IssueTimeline",
+  "match": {
+   "id": "I_L6YAgk2eOGLqwgrX2JwpPl",
+   "after": "Y3Vyc29yOnYyOpPPAAABoMmr2fABqzMxNjEwMjA4NTYw"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "timelineItems": {
+      "pageInfo": {
+       "hasNextPage": true,
+       "endCursor": "Y3Vyc29yOnYyOpPPAAABoMnBIygBqzMxNjExNzM4ODQy"
+      },
+      "nodes": [
+       {
+        "__typename": "IssueFieldAddedEvent",
+        "id": "IFAE_lADORaYhCM8AAAABSkwJXM8AAAAHXDTUBw",
+        "createdAt": "2026-09-22T15:34:31Z",
+        "actor": {
+         "login": "membro1"
+        },
+        "issueField": {
+         "name": "Priority",
+         "id": "IFSS_K-XGVJw7oo"
+        },
+        "newValue": "High",
+        "newOptions": [
+         {
+          "name": "High"
+         }
+        ]
+       },
+       {
+        "__typename": "IssueFieldAddedEvent",
+        "id": "IFAE_lADORaYhCM8AAAABSkwJXM8AAAAHXDTa2g",
+        "createdAt": "2026-09-22T15:34:33Z",
+        "actor": {
+         "login": "membro1"
+        },
+        "issueField": {
+         "name": "Effort",
+         "id": "IFSS_JigL4QI9av"
+        },
+        "newValue": "High",
+        "newOptions": [
+         {
+          "name": "High"
+         }
+        ]
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

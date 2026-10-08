@@ -1,0 +1,12 @@
+# Audit log
+
+- **Since**: 2026-09-08T12:00:00Z
+- **State dir**: testdata/read/.home/state
+- **Entries**: 2
+
+| AT | ACTOR | COMMAND | TARGETS | RESULT | DRY RUN | REASON | PLAN |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-10-01T10:00:00Z | ana | move acme/app#3 IN PROGRESS | I_kwDOAbc003 | ok | no | inicio do sprint |  |
+| 2026-10-07T09:00:00Z | ana | close acme/app#6 | I_kwDOAbc006 | failed: drift detected | yes |  | 20261007T090000Z-ab12 |
+
+- **Generated at**: 2026-10-08T12:00:00Z

@@ -1,0 +1,162 @@
+# golangci-lint v2 configuration. Limits come from the PCC engineering
+# standards (section 12 of the design): gocognit 15, funlen 40, hexagonal
+# boundaries enforced by depguard, gosec, errcheck, unused, revive, goconst.
+version: "2"
+
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  default: standard
+  enable:
+    - depguard
+    - funlen
+    - gocognit
+    - goconst
+    - gosec
+    - revive
+  settings:
+    funlen:
+      lines: 40
+      statements: -1
+      ignore-comments: true
+    gocognit:
+      min-complexity: 15
+    goconst:
+      min-len: 3
+      min-occurrences: 3
+    depguard:
+      rules:
+        domain:
+          list-mode: strict
+          files:
+            - "**/internal/domain/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/domain
+            - $gostd
+        config:
+          list-mode: strict
+          files:
+            - "**/internal/config/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/config
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+            - gopkg.in/yaml.v3
+            - github.com/cli/go-gh/v2/pkg/config
+        github:
+          list-mode: strict
+          files:
+            - "**/internal/github/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/github
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+            - github.com/cristianargotti/gh-board/internal/config
+            - github.com/cli/go-gh/v2
+        render:
+          list-mode: strict
+          files:
+            - "**/internal/render/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/render
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+        guard:
+          list-mode: strict
+          files:
+            - "**/internal/guard/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/guard
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+        audit:
+          list-mode: strict
+          files:
+            - "**/internal/audit/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/audit
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+            - github.com/cristianargotti/gh-board/internal/config
+        plan:
+          list-mode: strict
+          files:
+            - "**/internal/plan/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/plan
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+            - github.com/cristianargotti/gh-board/internal/audit
+            - github.com/cristianargotti/gh-board/internal/config
+            - github.com/cli/go-gh/v2/pkg/term
+        alerts:
+          list-mode: strict
+          files:
+            - "**/internal/alerts/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/alerts
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+            - github.com/cristianargotti/gh-board/internal/audit
+            - github.com/cristianargotti/gh-board/internal/config
+        mcp:
+          list-mode: strict
+          files:
+            - "**/internal/mcp/**"
+          allow:
+            - github.com/cristianargotti/gh-board/internal/mcp
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal/domain
+        commands:
+          list-mode: strict
+          files:
+            - "**/internal/commands/**"
+          allow:
+            - $gostd
+            - github.com/cristianargotti/gh-board
+            - github.com/spf13/cobra
+            - github.com/spf13/pflag
+        cmd:
+          list-mode: strict
+          files:
+            - "**/cmd/**"
+          allow:
+            - $gostd
+            - github.com/cristianargotti/gh-board/internal
+        tools:
+          list-mode: strict
+          files:
+            - "**/tools/**"
+            - "!**/tools/cicheck/**"
+          allow:
+            - $gostd
+        cicheck:
+          list-mode: strict
+          files:
+            - "**/tools/cicheck/**"
+          allow:
+            - $gostd
+            - gopkg.in/yaml.v3
+        assets:
+          list-mode: strict
+          files:
+            - "**/embed.go"
+          allow:
+            - $gostd
+  exclusions:
+    rules:
+      # Test tables repeat fixture literals and tests read and run what
+      # they created; these three checks apply to production code only.
+      - path: '_test\.go$'
+        linters:
+          - goconst
+      - path: '_test\.go$'
+        linters:
+          - gosec
+        text: 'G(304|204)'
+
+formatters:
+  enable:
+    - gofumpt

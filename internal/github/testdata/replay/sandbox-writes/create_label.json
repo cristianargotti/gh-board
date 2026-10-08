@@ -1,0 +1,24 @@
+{
+ "request": {
+  "operation": "CreateLabel",
+  "match": {
+   "repositoryId": "R_pnZsM5O_6f",
+   "name": "kit-teste"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "createLabel": {
+     "label": {
+      "id": "LA_z4YTG_lw2ByXgGJpObmQg9",
+      "name": "kit-teste",
+      "color": "0e8a16"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+# Item acme/app#3
+## Issue
+Title: [[begin:title]] Corrigir login SSO [[end:title]]
+State: OPEN
+Type: Task
+URL: https://github.com/acme/app/issues/3
+Labels: bug
+Assignees: ana
+Parent: acme/app#1 [[begin:title]] Onboarding do kit [[end:title]]
+Sub-issues: 0/0
+Blocked by: 0 open issue(s)
+Created: 2026-09-24T00:00:00Z
+Updated: 2026-09-25T00:00:00Z
+Closed:
+## Board fields
+FIELD	VALUE	UPDATED
+Status	IN PROGRESS	2026-09-25T00:00:00Z
+Frente	Plataforma	2026-09-25T00:00:00Z
+Épico	Onboarding	2026-09-25T00:00:00Z
+Sprint	Sprint 5	2026-09-25T00:00:00Z
+## Dates
+Source: issue_fields
+Start: 2026-09-28
+Target: 2026-10-01
+## Body
+> [[begin:body]] O login com SSO falha quando a sessão expira. [[end:body]]
+Generated at: 2026-10-08T12:00:00Z

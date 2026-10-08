@@ -1,0 +1,17 @@
+Sprint 5
+
+  Title:      Sprint 5
+  Start:      2026-10-05
+  End:        2026-10-18
+  Days left:  10
+  Open:       3
+  Done:       1
+
+Items
+  REF         STATUS             ASSIGNEES  TITLE                LANE        EPIC        SPRINT    TARGET
+  acme/app#3  IN PROGRESS        ana        Corrigir login SSO   Plataforma  Onboarding  Sprint 5  2026-10-01
+  acme/app#4  TEST / VALIDATION  bruno      Dashboard de custos  Dados       Alertas     Sprint 5  2026-10-20
+  acme/app#6  DONE               bruno      Documentar guardas   Plataforma  Onboarding  Sprint 5  2026-10-07
+  acme/app#9  READY TO DEV       bruno      Pedido decidido                              Sprint 5  2026-10-30
+
+  Generated at:  2026-10-08T12:00:00Z

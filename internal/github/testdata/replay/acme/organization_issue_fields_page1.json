@@ -1,0 +1,79 @@
+{
+ "request": {
+  "operation": "OrganizationIssueFields",
+  "match": {
+   "owner": "acme",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": {
+     "issueFields": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "NA"
+      },
+      "nodes": [
+       {
+        "name": "Effort",
+        "id": "IFSS_JigL4QI9av",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "IFSSO__tGlRqOJnV",
+          "name": "High"
+         },
+         {
+          "id": "IFSSO_VllhLi0MJw",
+          "name": "Medium"
+         },
+         {
+          "id": "IFSSO_PtlZXuFZrp",
+          "name": "Low"
+         }
+        ]
+       },
+       {
+        "name": "Priority",
+        "id": "IFSS_K-XGVJw7oo",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "IFSSO_xd5OJ1cz6L",
+          "name": "Urgent"
+         },
+         {
+          "id": "IFSSO_nKSuOCcrkZ",
+          "name": "High"
+         },
+         {
+          "id": "IFSSO_6uroewPlUD",
+          "name": "Medium"
+         },
+         {
+          "id": "IFSSO_VFxTScXRaQ",
+          "name": "Low"
+         }
+        ]
+       },
+       {
+        "name": "Start date",
+        "id": "IFD_e7jmu-_8WZ",
+        "dataType": "DATE"
+       },
+       {
+        "name": "Target date",
+        "id": "IFD_QPgBnZsICL",
+        "dataType": "DATE"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

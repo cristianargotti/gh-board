@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-10-08T12:00:00Z",
+  "project": {
+    "owner": "acme",
+    "number": 7
+  },
+  "summary": "Sprint 5 · 3 dias · 1 atrasada · 1 bloqueada · WIP excedido",
+  "alerts": [
+    {
+      "rule_id": "overdue",
+      "severity": "critical",
+      "item": {
+        "node_id": "I_kwDOexample0000012",
+        "project_item_id": "PVTI_lADOexample0000012",
+        "repository": "acme/team-docs",
+        "number": 12,
+        "title": "Publicar o manual do time",
+        "url": "https://github.com/acme/team-docs/issues/12"
+      },
+      "message": "Atrasada há 8 dias (alvo 30/09/2026)",
+      "first_seen": "2026-10-01T09:00:00Z"
+    },
+    {
+      "rule_id": "blocked",
+      "severity": "warning",
+      "item": {
+        "node_id": "I_kwDOexample0000015",
+        "project_item_id": "PVTI_lADOexample0000015",
+        "repository": "acme/team-docs",
+        "number": 15,
+        "title": "Revisar o fluxo de triagem",
+        "url": "https://github.com/acme/team-docs/issues/15"
+      },
+      "message": "Bloqueada por 1 issue aberta",
+      "first_seen": "2026-10-08T12:00:00Z"
+    },
+    {
+      "rule_id": "wip_exceeded",
+      "severity": "critical",
+      "item": {
+        "node_id": "",
+        "repository": "",
+        "number": 0,
+        "title": "",
+        "url": ""
+      },
+      "message": "WIP excedido: Em andamento 5/4",
+      "first_seen": "2026-10-08T12:00:00Z"
+    }
+  ]
+}

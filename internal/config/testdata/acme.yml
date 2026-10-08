@@ -1,0 +1,50 @@
+version: 1
+project:
+  owner: acme
+  number: 7
+repository: acme/app   # where new issues are created and the default for "#n"
+language: pt-BR
+timezone: America/Sao_Paulo
+capabilities:
+  status:
+    field: Status
+    backlog: [BACKLOG]
+    ready: [READY TO DEV]
+    active: [IN PROGRESS, "TEST / VALIDATION"]
+    done: [DONE]
+  epic: { issue_type: Feature, field: "Épico" }
+  task: { issue_type: Task, max_estimate_days: 3 }
+  lane: { field: Frente }
+  sprint: { field: Sprint }
+  estimate: { field: "Estimativa (dias)" }
+  dates: { start: "Start date", target: "Target date", source: issue_fields }
+  blocked: { field: "Situação" }
+  triage: { label: entrada, decision_field: "Decisão", sla_business_days: 2, urgent_label: urgente }
+  lab: { label: lab, gate_field: Porta, result_field: Resultado }
+policy:
+  transitions:
+    "READY TO DEV": [IN PROGRESS]
+    "IN PROGRESS": [TEST / VALIDATION, READY TO DEV]
+    "TEST / VALIDATION": [DONE, IN PROGRESS]
+  wip: { "IN PROGRESS": 6, "TEST / VALIDATION": 5 }
+  bulk_threshold: 10
+tidy:
+  inherit_from_parent: [lane, epic]
+  sprint_from_target: true
+  stamp_start_on_active: true
+  epic_follows_tasks: true
+alerts:
+  overdue: {}
+  blocked: {}
+  triage_sla: {}
+  wip_exceeded: {}
+  sprint_ending: { days: 2 }
+  stale_active: { days: 5 }
+  epic_without_dates: {}
+digest:
+  weekday: friday
+  metrics: [first_response, autonomy, run_share]
+  members: [ana, bruno, carla]
+rituals:
+  - { name: Daily, when: "todo dia, por chamada", reads: [active, attention, triage] }
+  - { name: Weekly de liderança, when: "quarta", reads: [epics, roadmap, lab, deferred] }

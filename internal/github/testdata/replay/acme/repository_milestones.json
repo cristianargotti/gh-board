@@ -1,0 +1,84 @@
+{
+ "request": {
+  "operation": "RepositoryMilestones",
+  "match": {
+   "owner": "acme",
+   "name": "app",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "milestones": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpK5MjAyNy0wMS0yOFQxOTowMDowMC0wNTowMM4BEsM3"
+      },
+      "nodes": [
+       {
+        "id": "MI_QT3vddgc8CMT9XUO",
+        "number": 1,
+        "title": "Marco 2",
+        "state": "OPEN",
+        "dueOn": "2026-10-07T00:00:00Z"
+       },
+       {
+        "id": "MI_S-okDM3GZx6C5Wzk",
+        "number": 6,
+        "title": "Marco 5",
+        "state": "OPEN",
+        "dueOn": "2026-10-09T00:00:00Z"
+       },
+       {
+        "id": "MI_RrBxRCk0lYZ-cj80",
+        "number": 8,
+        "title": "Marco 1",
+        "state": "OPEN",
+        "dueOn": "2026-10-09T00:00:00Z"
+       },
+       {
+        "id": "MI_jg849W9a7tk-gCu_",
+        "number": 9,
+        "title": "Marco 9",
+        "state": "OPEN",
+        "dueOn": "2026-10-16T00:00:00Z"
+       },
+       {
+        "id": "MI_ZOEH6_p1AFTNAzdA",
+        "number": 11,
+        "title": "Marco 8",
+        "state": "OPEN",
+        "dueOn": "2026-10-23T00:00:00Z"
+       },
+       {
+        "id": "MI_drCiHn4CTCkFXa2V",
+        "number": 10,
+        "title": "Marco 7",
+        "state": "OPEN",
+        "dueOn": "2026-10-30T00:00:00Z"
+       },
+       {
+        "id": "MI_DMAsRCiwFQozjLCu",
+        "number": 5,
+        "title": "Marco 6",
+        "state": "OPEN",
+        "dueOn": "2026-11-13T00:00:00Z"
+       },
+       {
+        "id": "MI_G7DkVE6BRIvNNPfx",
+        "number": 4,
+        "title": "Marco 4",
+        "state": "OPEN",
+        "dueOn": "2027-01-29T00:00:00Z"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

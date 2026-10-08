@@ -1,0 +1,58 @@
+name: Oportunidade (quero usar IA para...)
+description: Ideia ou pedido de uma área para usar IA. A triagem decide o caminho, que nem sempre é o time construir. Tipo Task, etiquetas entrada e oportunidade.
+title: "[Oportunidade] "
+labels: ["entrada", "oportunidade"]
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A triagem responde três perguntas: **dá para medir** se deu certo, **há dados** e podemos usá-los (LGPD), e **quem opera** a solução depois de pronta.
+        A Decisão no board define a saída: Resolver (tarefa de um épico), Ensinar (a área faz sozinha, com apoio do time), Construir capacidade (terceira vez do mesmo pedido), Lab (experimento), Encaminhar, Recusar ou Adiar.
+  - type: input
+    id: canal
+    attributes:
+      label: Quem pediu, canal e link
+      placeholder: "Nome e área; Miro, link do sticky"
+    validations: { required: true }
+  - type: textarea
+    id: atividade
+    attributes:
+      label: Atividade e efeito esperado
+      description: "Escreva como atividade mais efeito: 'gerar as copies das campanhas em minutos para o analista escolher, em vez de escrever cada uma'."
+    validations: { required: true }
+  - type: textarea
+    id: metrica
+    attributes:
+      label: Métrica e baseline
+      description: Que número muda se der certo, quanto vale hoje e onde está a fonte. Se ainda não existe, a primeira entrega será medi-lo.
+      placeholder: "Tempo do analista por campanha: 40 min hoje (média de setembro, planilha X); meta 10 min."
+    validations: { required: true }
+  - type: input
+    id: volume
+    attributes:
+      label: Volume
+      placeholder: "30 campanhas por semana, 4 analistas"
+  - type: dropdown
+    id: dados
+    attributes:
+      label: Dados envolvidos
+      options: [Sem dados pessoais, Dados pessoais de clientes, Dados pessoais de colaboradores, Não sei]
+    validations: { required: true }
+  - type: textarea
+    id: tentou
+    attributes:
+      label: O que já tentou
+      description: Ferramenta, template ou pessoa consultada. Ajuda a decidir entre ensinar, resolver ou construir.
+  - type: input
+    id: opera
+    attributes:
+      label: Quem opera depois de pronto
+      placeholder: "Nome completo e cargo na área"
+    validations: { required: true }
+  - type: input
+    id: confirma
+    attributes:
+      label: Quem confirma o resultado
+      placeholder: "Nome completo e cargo na área"
+    validations: { required: true }

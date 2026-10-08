@@ -1,0 +1,5 @@
+mutation CopyProject($projectId: ID!, $ownerId: ID!, $title: String!, $includeDraftIssues: Boolean) {
+  copyProjectV2(input: { projectId: $projectId, ownerId: $ownerId, title: $title, includeDraftIssues: $includeDraftIssues }) {
+    projectV2 { ...ProjectSchema }
+  }
+}

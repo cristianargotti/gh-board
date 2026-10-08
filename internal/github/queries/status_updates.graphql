@@ -1,0 +1,12 @@
+# Newest first, so the first page already answers whether the ISO week has
+# a status update.
+query StatusUpdates($id: ID!, $first: Int!, $after: String) {
+  node(id: $id) {
+    ... on ProjectV2 {
+      statusUpdates(first: $first, after: $after, orderBy: { field: CREATED_AT, direction: DESC }) {
+        pageInfo { hasNextPage endCursor }
+        nodes { id body status createdAt startDate targetDate creator { login } }
+      }
+    }
+  }
+}

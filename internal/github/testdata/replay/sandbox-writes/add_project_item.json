@@ -1,0 +1,22 @@
+{
+ "request": {
+  "operation": "AddProjectItem",
+  "match": {
+   "projectId": "PVT_wNsk5eGXHNnHmD7K",
+   "contentId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "addProjectV2ItemById": {
+     "item": {
+      "id": "PVTI_Q0Wn5uLXWpGEnAXpSCIPgh5"
+     }
+    }
+   }
+  }
+ }
+}

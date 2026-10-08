@@ -1,0 +1,5 @@
+mutation CreateIssue($repositoryId: ID!, $title: String!, $body: String, $issueTypeId: ID, $milestoneId: ID, $assigneeIds: [ID!], $labelIds: [ID!]) {
+  createIssue(input: { repositoryId: $repositoryId, title: $title, body: $body, issueTypeId: $issueTypeId, milestoneId: $milestoneId, assigneeIds: $assigneeIds, labelIds: $labelIds }) {
+    issue { ...IssueFields }
+  }
+}

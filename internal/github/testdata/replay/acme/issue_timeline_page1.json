@@ -1,0 +1,47 @@
+{
+ "request": {
+  "operation": "IssueTimeline",
+  "match": {
+   "id": "I_kud9Ny7kjDmOS1mJGdwQGO",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "timelineItems": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpPPAAABoPOlPkAAqjU5MTc1NjgzMjg="
+      },
+      "nodes": [
+       {
+        "__typename": "IssueComment",
+        "id": "IC_8ZUYXEnkgnzkJ9_bono-_O",
+        "body": "Comentário sintético: alinhado com o time, seguimos com a próxima etapa.",
+        "createdAt": "2026-09-30T18:34:49Z",
+        "url": "https://github.com/acme/app/issues/111#issuecomment-5917359953",
+        "author": {
+         "login": "membro1"
+        }
+       },
+       {
+        "__typename": "IssueComment",
+        "id": "IC_gND2JMzK8FsHhnjXyHx0uH",
+        "body": "Comentário sintético: alinhado com o time, seguimos com a próxima etapa.",
+        "createdAt": "2026-09-30T18:48:08Z",
+        "url": "https://github.com/acme/app/issues/111#issuecomment-5917568328",
+        "author": {
+         "login": "membro1"
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

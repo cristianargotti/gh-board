@@ -1,0 +1,83 @@
+{
+ "request": {
+  "operation": "UpdateIssue",
+  "match": {
+   "id": "I_vWR8nnSf6Ch6ckP3dRPc2t",
+   "milestoneId": "MI_iOIuVKTXnBfviszE"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "updateIssue": {
+     "issue": {
+      "id": "I_vWR8nnSf6Ch6ckP3dRPc2t",
+      "number": 1,
+      "title": "Tarefa sintética 65: Validar transição de status",
+      "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+      "state": "OPEN",
+      "url": "https://github.com/membro1/gh-board-sandbox/issues/1",
+      "createdAt": "2026-10-08T16:28:38Z",
+      "updatedAt": "2026-10-08T16:28:56Z",
+      "closedAt": null,
+      "repository": {
+       "name": "gh-board-sandbox",
+       "owner": {
+        "login": "membro1"
+       }
+      },
+      "labels": {
+       "nodes": [
+        {
+         "id": "LA_z4YTG_lw2ByXgGJpObmQg9",
+         "name": "kit-teste",
+         "color": "0e8a16"
+        }
+       ]
+      },
+      "assignees": {
+       "nodes": [
+        {
+         "id": "U_2JRxF9gBtX",
+         "login": "membro1"
+        }
+       ]
+      },
+      "milestone": {
+       "id": "MI_iOIuVKTXnBfviszE",
+       "number": 1,
+       "title": "Marco 10",
+       "state": "OPEN",
+       "dueOn": "2026-12-30T00:00:00Z"
+      },
+      "issueType": null,
+      "parent": {
+       "id": "I_pUL4m1pgFuLYPyYqu6crK-",
+       "number": 2,
+       "title": "Tarefa sintética 66: Documentar ritual de planejamento",
+       "repository": {
+        "name": "gh-board-sandbox",
+        "owner": {
+         "login": "membro1"
+        }
+       }
+      },
+      "subIssuesSummary": {
+       "total": 0,
+       "completed": 0,
+       "percentCompleted": 0
+      },
+      "blockedBy": {
+       "totalCount": 0
+      },
+      "issueFieldValues": {
+       "nodes": []
+      }
+     }
+    }
+   }
+  }
+ }
+}

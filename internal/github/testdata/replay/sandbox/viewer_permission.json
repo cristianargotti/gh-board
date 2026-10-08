@@ -1,0 +1,21 @@
+{
+ "request": {
+  "operation": "ViewerPermission",
+  "match": {
+   "owner": "membro1",
+   "name": "gh-board-sandbox"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "id": "R_pnZsM5O_6f",
+     "viewerPermission": "ADMIN"
+    }
+   }
+  }
+ }
+}

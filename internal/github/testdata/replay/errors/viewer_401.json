@@ -1,0 +1,15 @@
+{
+ "request": {
+  "operation": "Viewer",
+  "match": {}
+ },
+ "response": {
+  "status": 401,
+  "headers": {},
+  "body": {
+   "message": "Bad credentials",
+   "documentation_url": "https://docs.github.com/rest",
+   "status": "401"
+  }
+ }
+}

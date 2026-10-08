@@ -1,0 +1,24 @@
+# Comments and organization issue field changes of an issue, oldest first,
+# for the first_response metric. Project field decisions have no timeline
+# event on GitHub; the reader takes them from the item field values.
+query IssueTimeline($id: ID!, $first: Int!, $after: String) {
+  node(id: $id) {
+    ... on Issue {
+      timelineItems(first: $first, after: $after, itemTypes: [ISSUE_COMMENT, ISSUE_FIELD_ADDED_EVENT, ISSUE_FIELD_CHANGED_EVENT]) {
+        pageInfo { hasNextPage endCursor }
+        nodes {
+          __typename
+          ... on IssueComment { id body createdAt url author { login } }
+          ... on IssueFieldAddedEvent {
+            id createdAt actor { login } issueField { ...IssueFieldRef }
+            newValue: value newOptions: options { name }
+          }
+          ... on IssueFieldChangedEvent {
+            id createdAt actor { login } issueField { ...IssueFieldRef }
+            newValue newOptions { name }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+min_version: 2.1.0
+
+pre-commit:
+  parallel: false
+  commands:
+    secrets:
+      priority: 10
+      run: gitleaks protect --staged --redact
+    format:
+      priority: 20
+      glob: '*.go'
+      # Refuse unformatted files without staging unrelated working-tree edits.
+      run: |
+        unformatted=$(gofumpt -l {staged_files}) || exit 1
+        if [ -n "$unformatted" ]; then
+          printf 'Run gofumpt -w on these files and stage them again:\n%s\n' "$unformatted"
+          exit 1
+        fi
+    laws:
+      priority: 30
+      run: go run ./tools/laws -root .
+
+commit-msg:
+  commands:
+    conventional:
+      # ASCII is mechanically checkable; English meaning remains a review rule.
+      run: |
+        LC_ALL=C awk '
+          { sub(/\r$/, "") }
+          /^[[:space:]]*#/ { next }
+          {
+            n++
+            if ($0 ~ /[^\t -~]/) bad = 1
+            if (tolower($0) ~ /co-authored-by|generated with/) bad = 1
+            if (n == 1 && $0 !~ /^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9][a-z0-9._\/-]*\))?!?: [a-z].*[^[:space:]]$/) bad = 1
+            if (n == 2 && $0 !~ /^[[:space:]]*$/) bad = 1
+            if (n > 1 && $0 ~ /^[[:space:]]*[A-Za-z][A-Za-z0-9 -]*(:| #)/) bad = 1
+          }
+          END {
+            if (n == 0 || bad) {
+              print "Use an English conventional commit with no trailers. Use ! for breaking changes."
+              exit 1
+            }
+          }
+        ' "{1}"

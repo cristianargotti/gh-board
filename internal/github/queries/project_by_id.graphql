@@ -1,0 +1,9 @@
+# Discovery by node id, for a copied project whose number is only known
+# through the journal. The viewer login decides the role on a user board.
+query ProjectByID($id: ID!) {
+  node(id: $id) {
+    __typename
+    ... on ProjectV2 { ...ProjectSchema }
+  }
+  viewer { id login }
+}

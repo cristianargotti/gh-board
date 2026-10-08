@@ -1,0 +1,32 @@
+{
+ "request": {
+  "operation": "UpdateIssueFieldValue",
+  "match": {
+   "issueId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "updateIssueFieldValue": null
+   },
+   "errors": [
+    {
+     "type": "FORBIDDEN",
+     "path": [
+      "updateIssueFieldValue"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "membro1 does not have the correct permissions to execute `UpdateIssueFieldValue`"
+    }
+   ]
+  }
+ }
+}

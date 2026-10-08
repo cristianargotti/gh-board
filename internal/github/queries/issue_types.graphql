@@ -1,0 +1,8 @@
+query IssueTypes($owner: String!, $first: Int!, $after: String) {
+  organization(login: $owner) {
+    issueTypes(first: $first, after: $after) {
+      pageInfo { hasNextPage endCursor }
+      nodes { id name isEnabled }
+    }
+  }
+}

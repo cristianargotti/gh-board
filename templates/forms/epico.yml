@@ -1,0 +1,51 @@
+name: Épico
+description: Compromisso de entrega do time. Uma issue por entrega, tipo Feature, com PRD e ADR quando houver.
+title: "[E?] "
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pelo terminal, o mesmo épico nasce com `gh board new epic --title "..." --lane "..."`, já no board e com os campos preenchidos.
+  - type: input
+    id: frente
+    attributes:
+      label: Frente
+      description: Use o mesmo nome da opção do campo Frente no board e preencha o campo também.
+      placeholder: "Nome da frente"
+    validations:
+      required: true
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Resultado esperado e para quem. Sem histórico de conversas, só a entrega.
+    validations:
+      required: true
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo
+      description: O que entra e o que fica fora.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Data objetivo
+      description: Preencha também Start date e Target date na issue.
+      placeholder: AAAA-MM-DD
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências
+      description: PRD, ADR, repositórios, Jira.

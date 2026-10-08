@@ -1,0 +1,2477 @@
+{
+ "request": {
+  "operation": "ListItems",
+  "match": {
+   "project": "PVT_6gozs2PV0g9mjnL3",
+   "after": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDE5MjMwNzY5MjMwNzY5Ms4PDFMP",
+   "archived": [
+    "NOT_ARCHIVED"
+   ]
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "items": {
+      "totalCount": 169,
+      "pageInfo": {
+       "hasNextPage": true,
+       "endCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDA5OTAwOTkwMDk5MDA5Oc4PujNA"
+      },
+      "nodes": [
+       {
+        "id": "PVTI_2vNbP0qbJLTQGDD9vn6YyRp",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-16"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-17"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:18:24Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 17: Validar transição de status"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:18:30Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:18:34Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 1.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-22T19:28:37Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 4",
+           "iterationId": "cf050e6a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:47Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:01Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_VMuXY5AubmEMCcIW6L3NQ8",
+         "number": 69,
+         "title": "Tarefa sintética 17: Validar transição de status",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/69",
+         "createdAt": "2026-09-22T19:18:22Z",
+         "updatedAt": "2026-09-29T16:24:25Z",
+         "closedAt": "2026-09-22T19:18:33Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+            "name": "entregue",
+            "color": "1E7B4F"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 17: Validar transição de status",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-16"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-09-17"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_UfRv7HxPHMohmPWQQfHQwU7",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-18"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:18:42Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 18: Documentar ritual de planejamento"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:18:47Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:18:50Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 3.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-22T19:28:39Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 4",
+           "iterationId": "cf050e6a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:47Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:01Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_8nmO5sp0o2LhTN4lJCgKiu",
+         "number": 70,
+         "title": "Tarefa sintética 18: Documentar ritual de planejamento",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/70",
+         "createdAt": "2026-09-22T19:18:40Z",
+         "updatedAt": "2026-09-29T16:24:22Z",
+         "closedAt": "2026-09-22T19:18:49Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+            "name": "entregue",
+            "color": "1E7B4F"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 18: Documentar ritual de planejamento",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-18"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-09-21"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_Jwybkv6AHDx-JGvTOyOpSpj",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:19:00Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 19: Configurar iteração da sprint"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:19:06Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:19:10Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 1.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-22T19:28:42Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 4",
+           "iterationId": "cf050e6a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:48Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:02Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_OEvHixprLtXjJwcrP6khoE",
+         "number": 71,
+         "title": "Tarefa sintética 19: Configurar iteração da sprint",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/71",
+         "createdAt": "2026-09-22T19:18:57Z",
+         "updatedAt": "2026-09-29T16:24:19Z",
+         "closedAt": "2026-09-22T19:19:07Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+            "name": "entregue",
+            "color": "1E7B4F"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 19: Configurar iteração da sprint",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-21"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-09-21"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_rouz6yaoGbUgKryL-gVPpSO",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:19:19Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 20: Medir tempo de primeira resposta"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:19:24Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:19:27Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 0.5
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-22T19:28:43Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 4",
+           "iterationId": "cf050e6a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:49Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:02Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_49FzOIPJqAbJ_qY88R9GAR",
+         "number": 72,
+         "title": "Tarefa sintética 20: Medir tempo de primeira resposta",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/72",
+         "createdAt": "2026-09-22T19:19:17Z",
+         "updatedAt": "2026-09-29T16:24:17Z",
+         "closedAt": "2026-09-22T19:19:27Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+            "name": "entregue",
+            "color": "1E7B4F"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 20: Medir tempo de primeira resposta",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-21"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-09-21"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_FAE6j4WAia9WMpKXTdXZ1sO",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-22"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:19:35Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 21: Preparar checklist de onboarding"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:19:41Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:19:46Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 2.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-22T19:28:45Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 4",
+           "iterationId": "cf050e6a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:49Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:03Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_ICg_CbhTPv8at34EGwNU1N",
+         "number": 73,
+         "title": "Tarefa sintética 21: Preparar checklist de onboarding",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/73",
+         "createdAt": "2026-09-22T19:19:33Z",
+         "updatedAt": "2026-09-29T16:24:14Z",
+         "closedAt": "2026-09-22T19:19:43Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+            "name": "entregue",
+            "color": "1E7B4F"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 21: Preparar checklist de onboarding",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-21"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-09-22"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_Rk3PkjnUGYN_620pKu-8-mb",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-17"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:19:55Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 22: Revisar limites de WIP"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:20:01Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:20:04Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 2.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-22T19:28:46Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 4",
+           "iterationId": "cf050e6a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:49Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:03Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E4 · Preços Onda 1",
+           "optionId": "e2ddf6aa"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_XIdYF4TYayqe_362WcsJxK",
+         "number": 74,
+         "title": "Tarefa sintética 22: Revisar limites de WIP",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/74",
+         "createdAt": "2026-09-22T19:19:53Z",
+         "updatedAt": "2026-09-22T19:31:30Z",
+         "closedAt": "2026-09-22T19:20:02Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+            "name": "entregue",
+            "color": "1E7B4F"
+           },
+           {
+            "id": "LA_z8eQbA8eElbSSLbq6FKxRe",
+            "name": "precos-onda1",
+            "color": "B45309"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_DMAsRCiwFQozjLCu",
+          "number": 5,
+          "title": "Marco 6",
+          "state": "OPEN",
+          "dueOn": "2026-11-13T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_Jl3m6m89VAlhttqedV-soC",
+          "number": 20,
+          "title": "Tarefa sintética 22: Revisar limites de WIP",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-17"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-09-21"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_5DZlhBZ0_hUyitRE54Km8Wt",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-11-16"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-11-21"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:20:13Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 23: Ligar repositório ao projeto"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-29T16:33:39Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "BACKLOG",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:20:20Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 3.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-29T16:22:13Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 9",
+           "iterationId": "a60e1f07"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:50Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:04Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_r6DrRf1XajedMJjVC0M9y6",
+         "number": 75,
+         "title": "Tarefa sintética 23: Ligar repositório ao projeto",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/75",
+         "createdAt": "2026-09-22T19:20:10Z",
+         "updatedAt": "2026-09-29T16:24:11Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 23: Ligar repositório ao projeto",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-11-16"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-11-21"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_vlpJqFbUmA6X-mypH65Hps6",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-11-19"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-11-27"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:20:28Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 24: Conferir datas do épico"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:20:34Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "READY TO DEV",
+           "optionId": "ac9f5283"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:20:37Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 4.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-29T16:22:16Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 9",
+           "iterationId": "a60e1f07"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:50Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:04Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_spVir0TmdNp5jYwIAOBVNe",
+         "number": 76,
+         "title": "Tarefa sintética 24: Conferir datas do épico",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/76",
+         "createdAt": "2026-09-22T19:20:26Z",
+         "updatedAt": "2026-09-29T16:24:09Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 24: Conferir datas do épico",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 1
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-11-19"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-11-27"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_-MbnCgoWnaIqsvPUmG7TwgB",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-11-24"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-12-02"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:20:46Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 25: Revisar fluxo de triagem"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:20:47Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "BACKLOG",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:20:54Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 2.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-09-29T16:22:18Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 9",
+           "iterationId": "a60e1f07"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:50Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:04Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_O64JCwI5ANCmVbVHbpM_MO",
+         "number": 77,
+         "title": "Tarefa sintética 25: Revisar fluxo de triagem",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/77",
+         "createdAt": "2026-09-22T19:20:43Z",
+         "updatedAt": "2026-09-29T16:24:06Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 25: Revisar fluxo de triagem",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 1
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-11-24"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-12-02"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_DltRgX_x_reAdShL4Z_3lcK",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-11-24"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-12-05"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:21:03Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 26: Ajustar alertas do board"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:21:09Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "READY TO DEV",
+           "optionId": "ac9f5283"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:21:12Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 4.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:50Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:05Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_5-FR9E9vzQeaubJbhI2rlM",
+         "number": 78,
+         "title": "Tarefa sintética 26: Ajustar alertas do board",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/78",
+         "createdAt": "2026-09-22T19:21:01Z",
+         "updatedAt": "2026-09-29T16:24:03Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 26: Ajustar alertas do board",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-11-24"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-12-05"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_yeMNZyKHT4ZiDiMowQsse9y",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-12-01"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-12-09"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:21:20Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 27: Publicar digest semanal"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:21:21Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "BACKLOG",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:21:28Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 2.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:51Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:05Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_rrz8XLQxpyg4edYguUX90Q",
+         "number": 79,
+         "title": "Tarefa sintética 27: Publicar digest semanal",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/79",
+         "createdAt": "2026-09-22T19:21:18Z",
+         "updatedAt": "2026-09-29T16:24:00Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 27: Publicar digest semanal",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 1
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-12-01"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-12-09"
+           }
+          ]
+         }
+        }
+       },
+       {
+        "id": "PVTI_abBNpwBeqmTERJh84w6gW_I",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-12-09"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-12-16"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T19:21:37Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 28: Mapear capacidades no board.yml"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T19:21:38Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "BACKLOG",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-22T19:21:47Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 3.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:51Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:05Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E6 · Preços na nuvem",
+           "optionId": "c0d4d7a4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_cOkXrAECtYUFHDY6IY09Eg",
+         "number": 80,
+         "title": "Tarefa sintética 28: Mapear capacidades no board.yml",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/80",
+         "createdAt": "2026-09-22T19:21:35Z",
+         "updatedAt": "2026-09-29T16:23:58Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+            "name": "precos-plataforma",
+            "color": "1D4ED8"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           },
+           {
+            "id": "U_kgj7wvCPeQ",
+            "login": "membro6"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_G7DkVE6BRIvNNPfx",
+          "number": 4,
+          "title": "Marco 4",
+          "state": "OPEN",
+          "dueOn": "2027-01-29T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_V08SZ1KCeWaOKqBl_qGC_P",
+          "number": 22,
+          "title": "Tarefa sintética 28: Mapear capacidades no board.yml",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 3
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-12-09"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-12-16"
+           }
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

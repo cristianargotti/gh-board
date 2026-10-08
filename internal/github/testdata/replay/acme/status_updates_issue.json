@@ -1,0 +1,18 @@
+{
+ "request": {
+  "operation": "StatusUpdates",
+  "match": {
+   "id": "I_kud9Ny7kjDmOS1mJGdwQGO",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {}
+   }
+  }
+ }
+}

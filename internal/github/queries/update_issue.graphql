@@ -1,0 +1,7 @@
+# Title, body and milestone only (section 6.2): an omitted variable leaves
+# the attribute untouched.
+mutation UpdateIssue($id: ID!, $title: String, $body: String, $milestoneId: ID) {
+  updateIssue(input: { id: $id, title: $title, body: $body, milestoneId: $milestoneId }) {
+    issue { ...IssueFields }
+  }
+}

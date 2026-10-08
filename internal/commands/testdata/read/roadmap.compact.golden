@@ -1,0 +1,13 @@
+# Roadmap
+From: 2026-10-01
+To: 2027-01-31
+KIND	NAME	START	TARGET	PROGRESS	2026-10	2026-11	2026-12	2027-01	TITLE
+sprint	Sprint 4	2026-09-21	2026-10-04	completed	~~~~				
+sprint	Sprint 5	2026-10-05	2026-10-18	current	~~~~				
+sprint	Sprint 6	2026-10-19	2026-11-01	upcoming	~~~~	~~~~			
+epic	acme/app#1	2026-09-22	2026-11-15	2/4 (50%)	====	====			[[begin:title]] Onboarding do kit [[end:title]]
+epic	acme/app#2			0/0					[[begin:title]] Alertas no Claude Code [[end:title]]
+milestone	acme/app		2026-12-15	1/3 (33%)			<>		[[begin:title]] v1.0 [[end:title]]
+milestone	acme/app		2027-01-31	0/0				<>	[[begin:title]] v1.1 [[end:title]]
+> 1 epic(s) without dates
+Generated at: 2026-10-08T12:00:00Z

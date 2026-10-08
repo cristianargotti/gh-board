@@ -1,0 +1,8 @@
+# Configuração do seletor de issues. "gh board init --forms" copia estes
+# arquivos para .github/ISSUE_TEMPLATE/ do repositório do time e troca a
+# URL do board pela do projeto declarado em board.yml.
+blank_issues_enabled: true
+contact_links:
+  - name: Board do time
+    url: https://github.com/orgs/acme/projects/7
+    about: Fonte de verdade do time. Épicos, tarefas, cronograma e status semanal.

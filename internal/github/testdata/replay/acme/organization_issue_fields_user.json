@@ -1,0 +1,33 @@
+{
+ "request": {
+  "operation": "OrganizationIssueFields",
+  "match": {
+   "owner": "membro1",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": null
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "organization"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to an Organization with the login of 'membro1'."
+    }
+   ]
+  }
+ }
+}

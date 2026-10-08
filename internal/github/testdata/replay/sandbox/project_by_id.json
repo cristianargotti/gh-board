@@ -1,0 +1,801 @@
+{
+ "request": {
+  "operation": "ProjectByID",
+  "match": {
+   "id": "PVT_wNsk5eGXHNnHmD7K"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "ProjectV2",
+     "id": "PVT_wNsk5eGXHNnHmD7K",
+     "number": 2,
+     "title": "gh-board sandbox (cópia de Time Produto)",
+     "readme": null,
+     "url": "https://github.com/users/membro1/projects/2",
+     "viewerCanUpdate": true,
+     "owner": {
+      "__typename": "User",
+      "login": "membro1"
+     },
+     "items": {
+      "totalCount": 2
+     },
+     "fields": {
+      "nodes": [
+       {
+        "id": "PVTF_AX1ijiLVFZpc7b5wFf7EkJC",
+        "name": "Title",
+        "dataType": "TITLE"
+       },
+       {
+        "id": "PVTF_bSs_chFuQ0GGIz9k0TADilS",
+        "name": "Assignees",
+        "dataType": "ASSIGNEES"
+       },
+       {
+        "id": "PVTSSF_Y3It7eBVsqHLNATKgRLkikG",
+        "name": "Status",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "f75ad846",
+          "name": "BACKLOG"
+         },
+         {
+          "id": "98236657",
+          "name": "DISCOVERY"
+         },
+         {
+          "id": "483e998a",
+          "name": "PRD"
+         },
+         {
+          "id": "ac9f5283",
+          "name": "READY TO DEV"
+         },
+         {
+          "id": "97bab87a",
+          "name": "IN PROGRESS"
+         },
+         {
+          "id": "5949efea",
+          "name": "TEST / VALIDATION"
+         },
+         {
+          "id": "7e675973",
+          "name": "DONE"
+         }
+        ]
+       },
+       {
+        "id": "PVTF_qyAiChRSyOMUYYqQefgsAmJ",
+        "name": "Labels",
+        "dataType": "LABELS"
+       },
+       {
+        "id": "PVTF_6BxD15pZ63tAD3poU788yd3",
+        "name": "Linked pull requests",
+        "dataType": "LINKED_PULL_REQUESTS"
+       },
+       {
+        "id": "PVTF_DkXw1GuvQY05U5tQZ6XssaD",
+        "name": "Milestone",
+        "dataType": "MILESTONE"
+       },
+       {
+        "id": "PVTF_J-3uE8Y7XI-SdTW68eUpeLR",
+        "name": "Repository",
+        "dataType": "REPOSITORY"
+       },
+       {
+        "id": "PVTF_qae4fzOEFHYIon6CDq_n_1J",
+        "name": "Reviewers",
+        "dataType": "REVIEWERS"
+       },
+       {
+        "id": "PVTF_Wp9vyvDRkhtPeXvL0V9hcR5",
+        "name": "Parent issue",
+        "dataType": "PARENT_ISSUE"
+       },
+       {
+        "id": "PVTF_jPK9wq8XJMKGF6xDkB7PLsl",
+        "name": "Sub-issues progress",
+        "dataType": "SUB_ISSUES_PROGRESS"
+       },
+       {
+        "id": "PVTF_LYfJZO83hMcGrYS3rTpGVnA",
+        "name": "Created",
+        "dataType": "CREATED"
+       },
+       {
+        "id": "PVTF_tJZABauBpzIH2mHjr0VFD9D",
+        "name": "Updated",
+        "dataType": "UPDATED"
+       },
+       {
+        "id": "PVTF_CbDhvDQ1d-wctgAYSOgWk1q",
+        "name": "Closed",
+        "dataType": "CLOSED"
+       },
+       {
+        "id": "PVTF_vTyGCYodJ7dLcS-V-WA_Rpc",
+        "name": "Estimativa (dias)",
+        "dataType": "NUMBER"
+       },
+       {
+        "id": "PVTF_chruvtrl9xjOY8WvOgJ-GLx",
+        "name": "Start date",
+        "dataType": "DATE"
+       },
+       {
+        "id": "PVTF_iPKQfD_7MZ64DlBYxW6bd0B",
+        "name": "Target date",
+        "dataType": "DATE"
+       },
+       {
+        "id": "PVTF_SXmh0RsbosxGYZwMmEJ6C8R",
+        "name": "Delivery Jira",
+        "dataType": "TEXT"
+       },
+       {
+        "id": "PVTF_WC-kdEiXxvvLHPHXItA4t5E",
+        "name": "Epic Jira",
+        "dataType": "TEXT"
+       },
+       {
+        "id": "PVTSSF_3AQ9oeCQtN7d6U61EZRVQo6",
+        "name": "Origem",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "d5efbf83",
+          "name": "Engenharia"
+         },
+         {
+          "id": "800658c8",
+          "name": "Produto"
+         },
+         {
+          "id": "20c5b028",
+          "name": "Organização"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_l0wP-ELSiAHYH81KIJD5NKi",
+        "name": "Situação",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "33049843",
+          "name": "Impedido - Evento"
+         },
+         {
+          "id": "a0c43990",
+          "name": "Impedido  - Aguardando Outro Time"
+         },
+         {
+          "id": "3b2bf77c",
+          "name": "Impedido - Outros Motivos"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_bsMYaVZi_kY9UirBbEFys_v",
+        "name": "Squad",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "0b6c1f76",
+          "name": "Backoffice"
+         },
+         {
+          "id": "88f6fd9f",
+          "name": "Customer Analytics"
+         },
+         {
+          "id": "f9767c70",
+          "name": "Commercial"
+         },
+         {
+          "id": "0ce0c34d",
+          "name": "Data Plaform Engineering"
+         }
+        ]
+       },
+       {
+        "id": "PVTIF_Fw8OwXKQkYAXzXLF0aUgXi6",
+        "name": "Sprint",
+        "dataType": "ITERATION",
+        "configuration": {
+         "iterations": [
+          {
+           "id": "05188f6c",
+           "title": "Sprint 5",
+           "startDate": "2026-09-25",
+           "duration": 14
+          },
+          {
+           "id": "b774d5d4",
+           "title": "Sprint 6",
+           "startDate": "2026-10-09",
+           "duration": 14
+          },
+          {
+           "id": "018500f6",
+           "title": "Sprint 7",
+           "startDate": "2026-10-23",
+           "duration": 14
+          },
+          {
+           "id": "26c5bb0b",
+           "title": "Sprint 8",
+           "startDate": "2026-11-06",
+           "duration": 14
+          },
+          {
+           "id": "a60e1f07",
+           "title": "Sprint 9",
+           "startDate": "2026-11-20",
+           "duration": 14
+          }
+         ],
+         "completedIterations": [
+          {
+           "id": "cf050e6a",
+           "title": "Sprint 4",
+           "startDate": "2026-09-11",
+           "duration": 14
+          },
+          {
+           "id": "6ae21b5d",
+           "title": "Sprint 3",
+           "startDate": "2026-08-28",
+           "duration": 14
+          },
+          {
+           "id": "1d28d888",
+           "title": "Sprint 2",
+           "startDate": "2026-08-14",
+           "duration": 14
+          },
+          {
+           "id": "991ef6e9",
+           "title": "Sprint 1",
+           "startDate": "2026-07-31",
+           "duration": 14
+          }
+         ]
+        }
+       },
+       {
+        "id": "PVTSSF_u2_o2njW_V_UlnDsuylAVHP",
+        "name": "Tema",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "6647d6eb",
+          "name": "Plataforma de IA"
+         },
+         {
+          "id": "c66a9fa3",
+          "name": "Inteligência de preços"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_aUmWTB16robFxLw3RG0F1Bc",
+        "name": "Frente",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "e15cc628",
+          "name": "Atendimento"
+         },
+         {
+          "id": "d0bfc106",
+          "name": "Assistente de compras"
+         },
+         {
+          "id": "02be291c",
+          "name": "Preços"
+         },
+         {
+          "id": "4974f40c",
+          "name": "Ferramentas"
+         },
+         {
+          "id": "6caa4202",
+          "name": "Plataforma"
+         },
+         {
+          "id": "494513c9",
+          "name": "POC Plataforma de dados"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_im68gc2ZPTTiUXDpzSYBGim",
+        "name": "Épico",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "9b0d7637",
+          "name": "E1 · Atendimento"
+         },
+         {
+          "id": "0d7da5ad",
+          "name": "E2 · Assistente de compras"
+         },
+         {
+          "id": "87b05e9d",
+          "name": "E3 · Analisador de conversas"
+         },
+         {
+          "id": "e2ddf6aa",
+          "name": "E4 · Preços Onda 1"
+         },
+         {
+          "id": "e5351a91",
+          "name": "E5 · Preços Onda 2"
+         },
+         {
+          "id": "c0d4d7a4",
+          "name": "E6 · Preços na nuvem"
+         },
+         {
+          "id": "ae7c4772",
+          "name": "E7 · Ferramentas e fluxos"
+         },
+         {
+          "id": "99f1bc9e",
+          "name": "E8 · Governança de automações"
+         },
+         {
+          "id": "8d19b53a",
+          "name": "E9 · Prontidão de pico"
+         },
+         {
+          "id": "bf4d7b13",
+          "name": "E10 · Agentes na nuvem"
+         },
+         {
+          "id": "e3eaf54a",
+          "name": "E11 · Laboratório"
+         },
+         {
+          "id": "91689a0a",
+          "name": "E12 · POC Plataforma de dados"
+         },
+         {
+          "id": "6f2fe2a0",
+          "name": "E13 · POC Produto"
+         },
+         {
+          "id": "3a752ff0",
+          "name": "E14 · POC Dados"
+         },
+         {
+          "id": "2aa4532c",
+          "name": "E15 · POC Engenharia"
+         },
+         {
+          "id": "edc408eb",
+          "name": "E16 · POC SRE"
+         },
+         {
+          "id": "f2c08f0f",
+          "name": "E17 · POC Segurança"
+         },
+         {
+          "id": "c9118a17",
+          "name": "E18 · POC Negócio"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_zIxl70V4ADr7OUzM1Cust7G",
+        "name": "Porta",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "92c4fdb8",
+          "name": "Ideia"
+         },
+         {
+          "id": "31507c8e",
+          "name": "Simulação"
+         },
+         {
+          "id": "ff52bb3f",
+          "name": "Piloto shadow"
+         },
+         {
+          "id": "6e5edd6b",
+          "name": "Piloto com tráfego"
+         },
+         {
+          "id": "70f4b882",
+          "name": "Produção"
+         },
+         {
+          "id": "79fd4efc",
+          "name": "Encerrado"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_zTppft7K2ul5HS3u1hsb7Fz",
+        "name": "Resultado",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "36ed577d",
+          "name": "Pendente"
+         },
+         {
+          "id": "95ce5b91",
+          "name": "Ship"
+         },
+         {
+          "id": "c7e878fd",
+          "name": "Abortado por regressão"
+         },
+         {
+          "id": "3d9d030c",
+          "name": "Neutro com poder"
+         },
+         {
+          "id": "25923cf0",
+          "name": "Health check falhou"
+         },
+         {
+          "id": "95099a81",
+          "name": "Sem poder"
+         },
+         {
+          "id": "f5e96e48",
+          "name": "Abortado com motivo"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_cvzBJ2z7ha2rmVVmDGVUKgO",
+        "name": "Decisão",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "5601afde",
+          "name": "Resolver"
+         },
+         {
+          "id": "b4d35d7f",
+          "name": "Ensinar"
+         },
+         {
+          "id": "70c9b470",
+          "name": "Construir capacidade"
+         },
+         {
+          "id": "11bf6b99",
+          "name": "Lab"
+         },
+         {
+          "id": "20a9c534",
+          "name": "Encaminhar"
+         },
+         {
+          "id": "3b1c2572",
+          "name": "Recusar"
+         },
+         {
+          "id": "d60e624d",
+          "name": "Adiar"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_Os9Z3dwqFBXtA8Xxn7rSMVT",
+        "name": "Causa",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "295d302b",
+          "name": "Dado"
+         },
+         {
+          "id": "2d6abf8b",
+          "name": "Regra ou prompt"
+         },
+         {
+          "id": "db309e6d",
+          "name": "Modelo"
+         },
+         {
+          "id": "6c4a4aa9",
+          "name": "Integração"
+         },
+         {
+          "id": "925aaf5b",
+          "name": "Não é erro"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_SmC9kUx_AHqwAGIxNoK271T",
+        "name": "Área",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "7c9a3c5c",
+          "name": "Comercial"
+         },
+         {
+          "id": "ef150db1",
+          "name": "Pricing"
+         },
+         {
+          "id": "f9d962e7",
+          "name": "CRM"
+         },
+         {
+          "id": "6dea2250",
+          "name": "Pós-vendas"
+         },
+         {
+          "id": "d9409fe5",
+          "name": "Produto"
+         },
+         {
+          "id": "4c7762ed",
+          "name": "Marketing"
+         },
+         {
+          "id": "4b686b00",
+          "name": "Financeiro"
+         },
+         {
+          "id": "eaca9b21",
+          "name": "Operações"
+         },
+         {
+          "id": "76fa33ee",
+          "name": "Tecnologia"
+         },
+         {
+          "id": "2b61b92b",
+          "name": "Plataforma"
+         },
+         {
+          "id": "32869096",
+          "name": "Outra"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_fH7hu9KfLx8pfVrrj3Fqzq-",
+        "name": "Time",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "09ce5685",
+          "name": "Plataforma"
+         },
+         {
+          "id": "101f11aa",
+          "name": "Dados"
+         },
+         {
+          "id": "8944900f",
+          "name": "SRE"
+         },
+         {
+          "id": "32b9d5d3",
+          "name": "Segurança"
+         },
+         {
+          "id": "6b1e36db",
+          "name": "Produto"
+         },
+         {
+          "id": "07bcdb44",
+          "name": "Parceiro de dados"
+         },
+         {
+          "id": "7ca22dc5",
+          "name": "Negócio"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_sAls4FDE4CDamBh4XtXbQbJ",
+        "name": "Trilha",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "d041b3d5",
+          "name": "Infra"
+         },
+         {
+          "id": "c0db095e",
+          "name": "Acessos"
+         },
+         {
+          "id": "6caad4f4",
+          "name": "Dados"
+         },
+         {
+          "id": "c1e4ff51",
+          "name": "Agentes"
+         },
+         {
+          "id": "7b964f8a",
+          "name": "Custo"
+         },
+         {
+          "id": "34963d17",
+          "name": "SI"
+         },
+         {
+          "id": "d652b4d0",
+          "name": "Negócio"
+         },
+         {
+          "id": "a40e54c9",
+          "name": "Produto"
+         }
+        ]
+       },
+       {
+        "id": "PVTSSF_rNXCdDk3FQg3h8UcRT5zjQn",
+        "name": "Campo de teste",
+        "dataType": "SINGLE_SELECT",
+        "options": [
+         {
+          "id": "85ad1d8b",
+          "name": "Opção A"
+         },
+         {
+          "id": "fc0537b8",
+          "name": "Opção B"
+         }
+        ]
+       }
+      ]
+     },
+     "views": {
+      "nodes": [
+       {
+        "id": "PVTV_tITTTG4HdoDAAJu4JDdwJ8Z",
+        "number": 1,
+        "name": "Roadmap",
+        "layout": "ROADMAP_LAYOUT",
+        "filter": "type:Feature"
+       },
+       {
+        "id": "PVTV_ONnNYdwuGKvUgmhyUX6XFdc",
+        "number": 2,
+        "name": "Épicos",
+        "layout": "TABLE_LAYOUT",
+        "filter": "is:open"
+       },
+       {
+        "id": "PVTV_aw0DdWuaDIfdET0UV-8matG",
+        "number": 3,
+        "name": "Tarefas",
+        "layout": "BOARD_LAYOUT",
+        "filter": "-type:Feature -label:lab -label:entrada -status:DISCOVERY,PRD"
+       },
+       {
+        "id": "PVTV_PC50eUoL7BzjvmQKI_ZYvBi",
+        "number": 4,
+        "name": "Laboratório",
+        "layout": "BOARD_LAYOUT",
+        "filter": "label:lab -type:Feature"
+       },
+       {
+        "id": "PVTV_aKBQuzAVZZsZC1_OJADJv-M",
+        "number": 5,
+        "name": "Entrada",
+        "layout": "TABLE_LAYOUT",
+        "filter": "label:entrada is:open"
+       },
+       {
+        "id": "PVTV_awlDWnWrGPTwIvEMywHys1l",
+        "number": 6,
+        "name": "Atenção · Impedimentos e atrasos",
+        "layout": "TABLE_LAYOUT",
+        "filter": "is:open (-no:situação OR target-date:<@today OR label:urgente OR (label:entrada no:decisão created:<@today-2d))"
+       },
+       {
+        "id": "PVTV_4UAUhQMtlNBDqhj9CjwEMpu",
+        "number": 7,
+        "name": "Entregas · 7 dias",
+        "layout": "TABLE_LAYOUT",
+        "filter": "is:closed closed:>@today-1w"
+       },
+       {
+        "id": "PVTV_54vsjGkwXc8D2be4JV6Tykp",
+        "number": 8,
+        "name": "POC Plataforma de dados",
+        "layout": "BOARD_LAYOUT",
+        "filter": "frente:\"POC Plataforma de dados\" -type:Feature"
+       },
+       {
+        "id": "PVTV_2zCHN8YEidHGS6jWGD93ANu",
+        "number": 9,
+        "name": "POC · Roadmap",
+        "layout": "ROADMAP_LAYOUT",
+        "filter": "frente:\"POC Plataforma de dados\""
+       }
+      ]
+     },
+     "workflows": {
+      "nodes": [
+       {
+        "id": "PWF_Yjay21NCbY-Bb6CfqsIDKjB",
+        "name": "Auto-add sub-issues to project",
+        "enabled": true
+       },
+       {
+        "id": "PWF_6NQMA8Vsmsn8gwaq-v2ra9X",
+        "name": "Auto-archive items",
+        "enabled": true
+       },
+       {
+        "id": "PWF_u5CTtF1VJGoon_vbV6i-_F6",
+        "name": "Auto-close issue",
+        "enabled": true
+       },
+       {
+        "id": "PWF_S7tG560m2hjSwtTO07zl4Iy",
+        "name": "Item added to project",
+        "enabled": true
+       },
+       {
+        "id": "PWF_nt9_1V5WNR__3___qiWI5Xi",
+        "name": "Item closed",
+        "enabled": true
+       },
+       {
+        "id": "PWF_POiBF5E0EndT22BXChplFHM",
+        "name": "Item reopened",
+        "enabled": true
+       },
+       {
+        "id": "PWF_tiqlGFoxdByFiLvIIReZfQA",
+        "name": "Pull request linked to issue",
+        "enabled": true
+       },
+       {
+        "id": "PWF_ZTwPpccifEDOVxLtosV1Pmd",
+        "name": "Pull request merged",
+        "enabled": true
+       }
+      ]
+     },
+     "repositories": {
+      "nodes": [
+       {
+        "id": "R_pnZsM5O_6f",
+        "name": "gh-board-sandbox",
+        "owner": {
+         "login": "membro1"
+        }
+       }
+      ]
+     }
+    },
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   }
+  }
+ }
+}

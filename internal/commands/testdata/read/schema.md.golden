@@ -1,0 +1,49 @@
+# Schema acme/7
+
+## Project
+
+- **Title**: [[begin:title]] Time Produto [[end:title]]
+- **Node id**: PVT_kwDOAbc123
+- **Items**: 9
+- **Viewer role**: WRITER
+- **Discovered at**: 2026-10-08T11:00:00Z
+- **Refreshed**: no
+- **Repositories**: acme/app
+- **README**: [[begin:readme]] Quadro do time. Regras em board.yml. [[end:readme]]
+
+## Fields
+
+| NAME | TYPE | OPTIONS |
+| --- | --- | --- |
+| Title | TITLE |  |
+| Status | SINGLE_SELECT | BACKLOG, READY TO DEV, IN PROGRESS, TEST / VALIDATION, DONE |
+| Frente | SINGLE_SELECT | Plataforma, Dados |
+| Épico | SINGLE_SELECT | Onboarding, Alertas |
+| Sprint | ITERATION |  |
+| Estimativa (dias) | NUMBER |  |
+| Situação | SINGLE_SELECT | Bloqueada |
+| Decisão | SINGLE_SELECT | Ensinar, Encaminhar, Fazer |
+
+## Iterations
+
+| FIELD | TITLE | START | END | STATE |
+| --- | --- | --- | --- | --- |
+| Sprint | Sprint 4 | 2026-09-21 | 2026-10-04 | completed |
+| Sprint | Sprint 5 | 2026-10-05 | 2026-10-18 | current |
+| Sprint | Sprint 6 | 2026-10-19 | 2026-11-01 | upcoming |
+
+## Views
+
+| NAME | LAYOUT | FILTER |
+| --- | --- | --- |
+| Board | BOARD_LAYOUT |  |
+| Roadmap | ROADMAP_LAYOUT | is:open |
+
+## Workflows
+
+| NAME | ENABLED |
+| --- | --- |
+| Item closed | yes |
+| Auto-add to project | no |
+
+- **Generated at**: 2026-10-08T12:00:00Z

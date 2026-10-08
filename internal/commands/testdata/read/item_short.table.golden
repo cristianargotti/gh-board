@@ -1,0 +1,35 @@
+Item acme/app#4
+
+Issue
+  Title:          Dashboard de custos
+  State:          OPEN
+  Type:           Task
+  URL:            https://github.com/acme/app/issues/4
+  Labels:
+  Assignees:      bruno
+  Milestone:      v1.0 (OPEN, due 2026-12-15)
+  Parent:         acme/app#2 Alertas no Claude Code
+  Sub-issues:     0/0
+  Blocked by:     1 open issue(s)
+  Blocked value:  Bloqueada
+  Created:        2026-09-29T00:00:00Z
+  Updated:        2026-10-07T00:00:00Z
+  Closed:
+
+Board fields
+  FIELD     VALUE              UPDATED
+  Status    TEST / VALIDATION  2026-10-07T00:00:00Z
+  Frente    Dados              2026-10-07T00:00:00Z
+  Épico     Alertas            2026-10-07T00:00:00Z
+  Sprint    Sprint 5           2026-10-07T00:00:00Z
+  Situação  Bloqueada          2026-10-07T00:00:00Z
+
+Dates
+  Source:  issue_fields
+  Start:   2026-10-02
+  Target:  2026-10-20
+
+Body
+  
+
+  Generated at:  2026-10-08T12:00:00Z

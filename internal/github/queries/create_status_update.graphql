@@ -1,0 +1,5 @@
+mutation CreateStatusUpdate($projectId: ID!, $body: String, $status: ProjectV2StatusUpdateStatus, $startDate: Date, $targetDate: Date) {
+  createProjectV2StatusUpdate(input: { projectId: $projectId, body: $body, status: $status, startDate: $startDate, targetDate: $targetDate }) {
+    statusUpdate { id }
+  }
+}

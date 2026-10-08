@@ -1,0 +1,10 @@
+Items
+
+  REF         STATE  STATUS       ASSIGNEES  TITLE                   LABELS  LANE        EPIC        SPRINT  TARGET
+  acme/app#1  OPEN   IN PROGRESS  ana        Onboarding do kit               Plataforma  Onboarding          2026-11-15
+  acme/app#2  OPEN   BACKLOG                 Alertas no Claude Code                      Alertas
+
+  2 items shown
+  9 items on the board before filtering, use --all for every page
+
+  Generated at:  2026-10-08T12:00:00Z

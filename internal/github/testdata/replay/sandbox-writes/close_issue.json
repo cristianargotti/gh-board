@@ -1,0 +1,22 @@
+{
+ "request": {
+  "operation": "CloseIssue",
+  "match": {
+   "issueId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "closeIssue": {
+     "issue": {
+      "id": "I_vWR8nnSf6Ch6ckP3dRPc2t",
+      "state": "CLOSED"
+     }
+    }
+   }
+  }
+ }
+}

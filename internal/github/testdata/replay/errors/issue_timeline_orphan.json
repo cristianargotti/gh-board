@@ -1,0 +1,26 @@
+{
+ "request": {
+  "operation": "IssueTimeline",
+  "match": {
+   "id": "I_orphanTimeline00",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "timelineItems": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "MQ"
+      },
+      "nodes": []
+     }
+    }
+   }
+  }
+ }
+}

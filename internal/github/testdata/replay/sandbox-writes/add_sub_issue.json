@@ -1,0 +1,25 @@
+{
+ "request": {
+  "operation": "AddSubIssue",
+  "match": {
+   "issueId": "I_pUL4m1pgFuLYPyYqu6crK-",
+   "subIssueId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "addSubIssue": {
+     "issue": {
+      "id": "I_pUL4m1pgFuLYPyYqu6crK-"
+     },
+     "subIssue": {
+      "id": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "request": {
+  "operation": "CreateIssue",
+  "match": {
+   "repositoryId": "R_pnZsM5O_6f",
+   "title": "Tarefa de teste do kit"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "createIssue": {
+     "issue": {
+      "id": "I_vWR8nnSf6Ch6ckP3dRPc2t",
+      "number": 1,
+      "title": "Tarefa sintética 65: Validar transição de status",
+      "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+      "state": "OPEN",
+      "url": "https://github.com/membro1/gh-board-sandbox/issues/1",
+      "createdAt": "2026-10-08T16:28:38Z",
+      "updatedAt": "2026-10-08T16:28:38Z",
+      "closedAt": null,
+      "repository": {
+       "name": "gh-board-sandbox",
+       "owner": {
+        "login": "membro1"
+       }
+      },
+      "labels": {
+       "nodes": [
+        {
+         "id": "LA_z4YTG_lw2ByXgGJpObmQg9",
+         "name": "kit-teste",
+         "color": "0e8a16"
+        }
+       ]
+      },
+      "assignees": {
+       "nodes": [
+        {
+         "id": "U_2JRxF9gBtX",
+         "login": "membro1"
+        }
+       ]
+      },
+      "milestone": null,
+      "issueType": null,
+      "parent": null,
+      "subIssuesSummary": {
+       "total": 0,
+       "completed": 0,
+       "percentCompleted": 0
+      },
+      "blockedBy": {
+       "totalCount": 0
+      },
+      "issueFieldValues": {
+       "nodes": []
+      }
+     }
+    }
+   }
+  }
+ }
+}

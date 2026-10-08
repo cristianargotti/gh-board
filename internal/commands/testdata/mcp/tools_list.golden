@@ -1,0 +1,745 @@
+{
+  "tools": [
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Snapshot of the board for a prompt: rules, sprint, my items, attention, triage, epics, deliveries Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "budget": {
+            "default": 1500,
+            "description": "approximate token budget of the snapshot",
+            "type": "integer"
+          },
+          "for": {
+            "description": "login whose open items fill the my items section (default: the viewer)",
+            "type": "string"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "context",
+      "title": "board context"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Board overview: items per status, sprint and alert counts Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "status",
+      "title": "board status"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Overdue, blocked, triage past SLA, WIP exceeded and the other alert rules Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "attention",
+      "title": "board attention"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Epics and milestones on a month timeline with the sprint iterations as markers Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "months": {
+            "default": 3,
+            "description": "months on the timeline, starting with the current one",
+            "type": "integer"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "roadmap",
+      "title": "board roadmap"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "One issue with its board fields, parent, sub-issue progress, blockers and dates Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue reference: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref"
+        ],
+        "type": "object"
+      },
+      "name": "item",
+      "title": "board item"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "List items with the filters of section 7; --all reads every page Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "all": {
+            "description": "read every page",
+            "type": "boolean"
+          },
+          "assignee": {
+            "description": "assignee login",
+            "type": "string"
+          },
+          "blocked": {
+            "description": "only blocked items",
+            "type": "boolean"
+          },
+          "epic": {
+            "description": "epic value (capabilities.epic.field)",
+            "type": "string"
+          },
+          "label": {
+            "description": "label name",
+            "type": "string"
+          },
+          "lane": {
+            "description": "lane option name (capabilities.lane)",
+            "type": "string"
+          },
+          "limit": {
+            "default": 50,
+            "description": "items per page without --all",
+            "type": "integer"
+          },
+          "overdue": {
+            "description": "only items past their target date (capabilities.dates)",
+            "type": "boolean"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "sprint": {
+            "description": "iteration title, current or next (capabilities.sprint)",
+            "type": "string"
+          },
+          "status": {
+            "description": "status option name",
+            "type": "string"
+          },
+          "triage": {
+            "description": "only undecided triage entries (capabilities.triage)",
+            "type": "boolean"
+          },
+          "type": {
+            "description": "issue type name",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "list",
+      "title": "board list"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Find items whose title, body, reference or labels contain the query Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "query": {
+            "description": "Text searched in titles, bodies and labels of the board items",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "type": "object"
+      },
+      "name": "search",
+      "title": "board search"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Open epics with sub-issue progress, dates and owner Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "epics",
+      "title": "board epics"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Inspect the current or next sprint, or set an item's sprint Read tool: no side effects.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "which": {
+            "default": "current",
+            "description": "subcommand to run: current or next",
+            "enum": [
+              "current",
+              "next"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "sprint",
+      "title": "board sprint"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Move work, saving a plan for a done status Direct write: journaled and reversible. dry_run shows the change without sending it, reason is stored in the audit line and expect refuses the write when a current value differs (exit code 4). A done status or a bulk above the team threshold returns a plan instead of writing.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue references separated by commas: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          },
+          "status": {
+            "description": "Target status option as the board names it; a done status turns the call into a plan",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "status"
+        ],
+        "type": "object"
+      },
+      "name": "move",
+      "title": "board move"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Add an assignee Direct write: journaled and reversible. dry_run shows the change without sending it, reason is stored in the audit line and expect refuses the write when a current value differs (exit code 4). A done status or a bulk above the team threshold returns a plan instead of writing.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "login": {
+            "description": "GitHub login of the person to add, with or without the leading @",
+            "type": "string"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue references separated by commas: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "login"
+        ],
+        "type": "object"
+      },
+      "name": "assign",
+      "title": "board assign"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Remove an assignee Direct write: journaled and reversible. dry_run shows the change without sending it, reason is stored in the audit line and expect refuses the write when a current value differs (exit code 4). A done status or a bulk above the team threshold returns a plan instead of writing.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "login": {
+            "description": "GitHub login of the person to remove, with or without the leading @",
+            "type": "string"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue references separated by commas: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "login"
+        ],
+        "type": "object"
+      },
+      "name": "unassign",
+      "title": "board unassign"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Set project fields; status uses move policy Direct write: journaled and reversible. dry_run shows the change without sending it, reason is stored in the audit line and expect refuses the write when a current value differs (exit code 4). A done status or a bulk above the team threshold returns a plan instead of writing.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "fields": {
+            "description": "Field assignments as field=value, one per entry, with the field and option names the board uses; the status field follows the move policy",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue references separated by commas: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "fields"
+        ],
+        "type": "object"
+      },
+      "name": "set",
+      "title": "board set"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Add a comment from text, a file, or standard input Direct write: journaled and reversible. dry_run shows the change without sending it, reason is stored in the audit line and expect refuses the write when a current value differs (exit code 4). A done status or a bulk above the team threshold returns a plan instead of writing.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue references separated by commas: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          },
+          "text": {
+            "description": "Comment body in PT-BR, Markdown allowed; @path reads a file",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "text"
+        ],
+        "type": "object"
+      },
+      "name": "comment",
+      "title": "board comment"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Create an issue and add it to the project Direct write: journaled and reversible. dry_run shows the change without sending it, reason is stored in the audit line and expect refuses the write when a current value differs (exit code 4). A done status or a bulk above the team threshold returns a plan instead of writing.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "assignee": {
+            "description": "assignee login, repeatable or comma separated",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "body": {
+            "description": "body text, file path, @file, or - for standard input",
+            "type": "string"
+          },
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "epic": {
+            "description": "configured epic field value",
+            "type": "string"
+          },
+          "estimate": {
+            "description": "estimate in days",
+            "type": "string"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "kind": {
+            "description": "What to create: task (the configured task type), epic (the configured epic type) or entry (a task carrying the triage label)",
+            "enum": [
+              "task",
+              "epic",
+              "entry"
+            ],
+            "type": "string"
+          },
+          "label": {
+            "description": "label name, repeatable or comma separated",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "lane": {
+            "description": "configured lane value",
+            "type": "string"
+          },
+          "milestone": {
+            "description": "repository milestone title",
+            "type": "string"
+          },
+          "parent": {
+            "description": "parent issue reference",
+            "type": "string"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "sprint": {
+            "description": "current, next, or iteration title",
+            "type": "string"
+          },
+          "start": {
+            "description": "start date, YYYY-MM-DD",
+            "type": "string"
+          },
+          "target": {
+            "description": "target date, YYYY-MM-DD",
+            "type": "string"
+          },
+          "title": {
+            "description": "issue title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "type": "object"
+      },
+      "name": "new",
+      "title": "board new"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Plan closing an issue Plan tool: writes a plan and returns its id with the exact gh board apply command. Nothing changes until a person runs that command in a terminal; apply is never a tool.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Issue reference: owner/repo#n, a GitHub URL or a node id; #n alone works when board.yml names a repository and one item carries that number",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref"
+        ],
+        "type": "object"
+      },
+      "name": "close",
+      "title": "board close"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Plan the routines declared in board.yml Plan tool: writes a plan and returns its id with the exact gh board apply command. Nothing changes until a person runs that command in a terminal; apply is never a tool.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "tidy",
+      "title": "board tidy"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "description": "Plan publishing the weekly digest Plan tool: writes a plan and returns its id with the exact gh board apply command. Nothing changes until a person runs that command in a terminal; apply is never a tool.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "description": "show the write without sending it",
+            "type": "boolean"
+          },
+          "expect": {
+            "description": "precondition field=value for a write",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "project": {
+            "description": "project as owner/number, overrides board.yml",
+            "type": "string"
+          },
+          "reason": {
+            "description": "reason stored in the audit line",
+            "type": "string"
+          },
+          "status": {
+            "default": "on_track",
+            "description": "project status: on_track, at_risk or off_track",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": "digest_post",
+      "title": "board digest post"
+    }
+  ]
+}

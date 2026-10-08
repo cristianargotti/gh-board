@@ -1,0 +1,25 @@
+# $full reads everything; false reads the summary selection: the field
+# values without the issue field member and the issue without its body,
+# milestone and parent, which is what the listings, the alerts and the
+# snapshot need and makes a page lighter.
+query ListItems($project: ID!, $first: Int!, $after: String, $archived: [ProjectV2ItemArchivedState!], $full: Boolean!) {
+  node(id: $project) {
+    ... on ProjectV2 {
+      items(first: $first, after: $after, archivedStates: $archived) {
+        totalCount
+        pageInfo { hasNextPage endCursor }
+        nodes {
+          ...ItemCore
+          ...ItemIssueFields @include(if: $full)
+          content {
+            __typename
+            ... on Issue {
+              ...IssueSummary
+              ...IssueDetails @include(if: $full)
+            }
+          }
+        }
+      }
+    }
+  }
+}

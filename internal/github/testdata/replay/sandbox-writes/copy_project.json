@@ -1,0 +1,247 @@
+{
+ "request": {
+  "operation": "CopyProject",
+  "match": {
+   "projectId": "PVT_wNsk5eGXHNnHmD7K",
+   "ownerId": "U_2JRxF9gBtX"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "copyProjectV2": {
+     "projectV2": {
+      "id": "PVT_VORNCTezFznZfm0B",
+      "number": 3,
+      "title": "Cópia de teste do kit",
+      "readme": null,
+      "url": "https://github.com/users/membro1/projects/3",
+      "viewerCanUpdate": true,
+      "owner": {
+       "__typename": "User",
+       "login": "membro1"
+      },
+      "items": {
+       "totalCount": 0
+      },
+      "fields": {
+       "nodes": [
+        {
+         "id": "PVTF_a4-_UVFmaJuDIiaJ_S0M7CB",
+         "name": "Title",
+         "dataType": "TITLE"
+        },
+        {
+         "id": "PVTF_9obAvqLbjDfQMNlFXC2T9PB",
+         "name": "Assignees",
+         "dataType": "ASSIGNEES"
+        },
+        {
+         "id": "PVTSSF_etPjHGFxM2d3iY6ygQ7B7Bx",
+         "name": "Status",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "f75ad846",
+           "name": "BACKLOG"
+          },
+          {
+           "id": "98236657",
+           "name": "DISCOVERY"
+          },
+          {
+           "id": "483e998a",
+           "name": "PRD"
+          },
+          {
+           "id": "ac9f5283",
+           "name": "READY TO DEV"
+          },
+          {
+           "id": "97bab87a",
+           "name": "IN PROGRESS"
+          },
+          {
+           "id": "5949efea",
+           "name": "TEST / VALIDATION"
+          },
+          {
+           "id": "7e675973",
+           "name": "DONE"
+          }
+         ]
+        },
+        {
+         "id": "PVTF_sJ1j4vWdg1XZGj2kHXPKsG3",
+         "name": "Labels",
+         "dataType": "LABELS"
+        },
+        {
+         "id": "PVTF_KX2unD201eR2nQWIPUm9i8j",
+         "name": "Linked pull requests",
+         "dataType": "LINKED_PULL_REQUESTS"
+        },
+        {
+         "id": "PVTF_qcbLAlksLFa3j0cc1jZKbTH",
+         "name": "Milestone",
+         "dataType": "MILESTONE"
+        },
+        {
+         "id": "PVTF_h1KOu1x6vkuCOB-h6KR_Tra",
+         "name": "Repository",
+         "dataType": "REPOSITORY"
+        },
+        {
+         "id": "PVTF_oDV2EIolnf77QQkS3Hu9j8Q",
+         "name": "Reviewers",
+         "dataType": "REVIEWERS"
+        },
+        {
+         "id": "PVTF_LA5Mb7h4s5d5Hzfh49n5_xn",
+         "name": "Parent issue",
+         "dataType": "PARENT_ISSUE"
+        },
+        {
+         "id": "PVTF_oPR-o-rz_gMmo5tYk81BP55",
+         "name": "Sub-issues progress",
+         "dataType": "SUB_ISSUES_PROGRESS"
+        },
+        {
+         "id": "PVTF_qNZfoxodA5RauQWW2brvpxk",
+         "name": "Created",
+         "dataType": "CREATED"
+        },
+        {
+         "id": "PVTF_6yDcRIvNLDn2UUVMs1Zvwxj",
+         "name": "Updated",
+         "dataType": "UPDATED"
+        },
+        {
+         "id": "PVTF_HTtG5A9SKxBsz2ROyJk_TFb",
+         "name": "Closed",
+         "dataType": "CLOSED"
+        }
+       ]
+      },
+      "views": {
+       "nodes": [
+        {
+         "id": "PVTV_vnOjtSe1PWSFHyz3sTp3iHK",
+         "number": 1,
+         "name": "Roadmap",
+         "layout": "ROADMAP_LAYOUT",
+         "filter": "type:Feature"
+        },
+        {
+         "id": "PVTV_D1up-tyNd1OAdG_jACZA-9s",
+         "number": 2,
+         "name": "Épicos",
+         "layout": "TABLE_LAYOUT",
+         "filter": "is:open"
+        },
+        {
+         "id": "PVTV_hIRCN0l3djLorF8M6RFJMN_",
+         "number": 3,
+         "name": "Tarefas",
+         "layout": "BOARD_LAYOUT",
+         "filter": "-type:Feature -label:lab -label:entrada -status:DISCOVERY,PRD"
+        },
+        {
+         "id": "PVTV_sHaXQW3MvzE_xtRFVwapUn3",
+         "number": 4,
+         "name": "Laboratório",
+         "layout": "BOARD_LAYOUT",
+         "filter": "label:lab -type:Feature"
+        },
+        {
+         "id": "PVTV_pvX9fuavVAgLHb3uPaVabrG",
+         "number": 5,
+         "name": "Entrada",
+         "layout": "TABLE_LAYOUT",
+         "filter": "label:entrada is:open"
+        },
+        {
+         "id": "PVTV_vGUoxSBPAqVOO9KpxWy9am7",
+         "number": 6,
+         "name": "Atenção · Impedimentos e atrasos",
+         "layout": "TABLE_LAYOUT",
+         "filter": "is:open (-no:situação OR target-date:<@today OR label:urgente OR (label:entrada no:decisão created:<@today-2d))"
+        },
+        {
+         "id": "PVTV_RVdp7l4DkOi3n5YcS9fwrOL",
+         "number": 7,
+         "name": "Entregas · 7 dias",
+         "layout": "TABLE_LAYOUT",
+         "filter": "is:closed closed:>@today-1w"
+        },
+        {
+         "id": "PVTV__YgLliXDVLldK60qFbzCwJQ",
+         "number": 8,
+         "name": "POC Plataforma de dados",
+         "layout": "BOARD_LAYOUT",
+         "filter": "frente:\"POC Plataforma de dados\" -type:Feature"
+        },
+        {
+         "id": "PVTV_SUVyr8HROccJW3-QpPFJlTe",
+         "number": 9,
+         "name": "POC · Roadmap",
+         "layout": "ROADMAP_LAYOUT",
+         "filter": "frente:\"POC Plataforma de dados\""
+        }
+       ]
+      },
+      "workflows": {
+       "nodes": [
+        {
+         "id": "PWF_10atDMlg56ZA9XpLNqPq9hl",
+         "name": "Auto-add sub-issues to project",
+         "enabled": true
+        },
+        {
+         "id": "PWF_HiUsqQe0FUnHQlyyL-AbigM",
+         "name": "Auto-archive items",
+         "enabled": true
+        },
+        {
+         "id": "PWF_vmune-_LwfhkzFfXSS6tqW6",
+         "name": "Auto-close issue",
+         "enabled": true
+        },
+        {
+         "id": "PWF_oAIN_ekL1yO6XhZsS7F0NQV",
+         "name": "Item added to project",
+         "enabled": true
+        },
+        {
+         "id": "PWF_VD6s5oO2KHRV27JjhWhO8V2",
+         "name": "Item closed",
+         "enabled": true
+        },
+        {
+         "id": "PWF_qyyq-iQAHS_fF-yJDlBBJ5W",
+         "name": "Item reopened",
+         "enabled": true
+        },
+        {
+         "id": "PWF_kZPwWYS4x3W47_o8XySpj2A",
+         "name": "Pull request linked to issue",
+         "enabled": true
+        },
+        {
+         "id": "PWF_4unmQR-nYP31btjbAGaO6hH",
+         "name": "Pull request merged",
+         "enabled": true
+        }
+       ]
+      },
+      "repositories": {
+       "nodes": []
+      }
+     }
+    }
+   }
+  }
+ }
+}

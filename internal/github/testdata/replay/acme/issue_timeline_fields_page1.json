@@ -1,0 +1,55 @@
+{
+ "request": {
+  "operation": "IssueTimeline",
+  "match": {
+   "id": "I_L6YAgk2eOGLqwgrX2JwpPl",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "timelineItems": {
+      "pageInfo": {
+       "hasNextPage": true,
+       "endCursor": "Y3Vyc29yOnYyOpPPAAABoMmr2fABqzMxNjEwMjA4NTYw"
+      },
+      "nodes": [
+       {
+        "__typename": "IssueFieldAddedEvent",
+        "id": "IFAE_lADORaYhCM8AAAABSkwJXM8AAAAHXB14Tw",
+        "createdAt": "2026-09-22T15:11:16Z",
+        "actor": {
+         "login": "membro1"
+        },
+        "issueField": {
+         "name": "Start date",
+         "id": "IFD_e7jmu-_8WZ"
+        },
+        "newValue": "2026-09-22",
+        "newOptions": null
+       },
+       {
+        "__typename": "IssueFieldAddedEvent",
+        "id": "IFAE_lADORaYhCM8AAAABSkwJXM8AAAAHXB2BMA",
+        "createdAt": "2026-09-22T15:11:18Z",
+        "actor": {
+         "login": "membro1"
+        },
+        "issueField": {
+         "name": "Target date",
+         "id": "IFD_QPgBnZsICL"
+        },
+        "newValue": "2026-10-02",
+        "newOptions": null
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

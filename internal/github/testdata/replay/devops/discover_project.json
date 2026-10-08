@@ -1,0 +1,287 @@
+{
+ "request": {
+  "operation": "DiscoverProject",
+  "match": {
+   "owner": "acme",
+   "number": 26
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": {
+     "projectV2": {
+      "id": "PVT__mGFEy6M_Z_9BlrI",
+      "number": 26,
+      "title": "Time Infra",
+      "readme": null,
+      "url": "https://github.com/orgs/acme/projects/26",
+      "viewerCanUpdate": true,
+      "owner": {
+       "__typename": "Organization",
+       "login": "acme",
+       "viewerCanAdminister": false
+      },
+      "items": {
+       "totalCount": 12
+      },
+      "fields": {
+       "nodes": [
+        {
+         "id": "PVTF_c9HiViG9t5wu1NQRMLDuDWL",
+         "name": "Title",
+         "dataType": "TITLE"
+        },
+        {
+         "id": "PVTF_pqHdorDwYO9IIERV7t8zXBM",
+         "name": "Assignees",
+         "dataType": "ASSIGNEES"
+        },
+        {
+         "id": "PVTSSF_nWtCtD6IL78l64OQEf5YRur",
+         "name": "Status",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "f75ad846",
+           "name": "Backlog"
+          },
+          {
+           "id": "61e4505c",
+           "name": "Ready"
+          },
+          {
+           "id": "47fc9ee4",
+           "name": "In progress"
+          },
+          {
+           "id": "df73e18b",
+           "name": "In review"
+          },
+          {
+           "id": "98236657",
+           "name": "Done"
+          }
+         ]
+        },
+        {
+         "id": "PVTF_HGRTJq4hll9VIHEsAdKs0zI",
+         "name": "Labels",
+         "dataType": "LABELS"
+        },
+        {
+         "id": "PVTF_fjLKoPeI1vggWlMYHamW8Qa",
+         "name": "Linked pull requests",
+         "dataType": "LINKED_PULL_REQUESTS"
+        },
+        {
+         "id": "PVTF_YA90-lEeMo3RZbXHwVlgezK",
+         "name": "Milestone",
+         "dataType": "MILESTONE"
+        },
+        {
+         "id": "PVTF_sTgRpo5CvxqhyKUaDdHnUwg",
+         "name": "Repository",
+         "dataType": "REPOSITORY"
+        },
+        {
+         "id": "PVTF_qUOZZYULpVDfyxtAAcSfpF3",
+         "name": "Reviewers",
+         "dataType": "REVIEWERS"
+        },
+        {
+         "id": "PVTF_5_bsymu-0NLJ-zVbOItkL0F",
+         "name": "Parent issue",
+         "dataType": "PARENT_ISSUE"
+        },
+        {
+         "id": "PVTF_kfXRVmAzXVRDyyCLhtQxjpb",
+         "name": "Sub-issues progress",
+         "dataType": "SUB_ISSUES_PROGRESS"
+        },
+        {
+         "id": "PVTF_7CByYwB8eE90sGgoYiZTXTj",
+         "name": "Created",
+         "dataType": "CREATED"
+        },
+        {
+         "id": "PVTF_v9JNVwW2uOFM3L2ilt3Evb0",
+         "name": "Updated",
+         "dataType": "UPDATED"
+        },
+        {
+         "id": "PVTF_Z1TDeKutfKqrvxMI-uX0C1r",
+         "name": "Closed",
+         "dataType": "CLOSED"
+        },
+        {
+         "id": "PVTSSF_GMsnoxFa-O0h6P036dXEvil",
+         "name": "Priority",
+         "dataType": "SINGLE_SELECT",
+         "options": []
+        },
+        {
+         "id": "PVTSSF_tYzOImyAsv5bWmAGZNK99JU",
+         "name": "Size",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "6c6483d2",
+           "name": "XS"
+          },
+          {
+           "id": "f784b110",
+           "name": "S"
+          },
+          {
+           "id": "7515a9f1",
+           "name": "M"
+          },
+          {
+           "id": "817d0097",
+           "name": "L"
+          },
+          {
+           "id": "db339eb2",
+           "name": "XL"
+          }
+         ]
+        },
+        {
+         "id": "PVTF_NCDbtjXFZ1Sg9nPvgIsIHYT",
+         "name": "Estimate",
+         "dataType": "NUMBER"
+        },
+        {
+         "id": "PVTF_HpkxbbN7sAeLJ1mT6V6oGRh",
+         "name": "Start date",
+         "dataType": "DATE"
+        },
+        {
+         "id": "PVTF_TP6e_SS4C82l2TQtaaMI7dR",
+         "name": "Target date",
+         "dataType": "DATE"
+        },
+        {
+         "id": "PVTSSF_ndCpm4WBRnZVTSIQd0P_gXz",
+         "name": "Effort",
+         "dataType": "SINGLE_SELECT",
+         "options": []
+        },
+        {
+         "id": "PVTSSF_Z2DvkvHK14tC9xk9RDmPfwU",
+         "name": "Iniciativa",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "0678b8f5",
+           "name": "Migração de nuvem"
+          }
+         ]
+        }
+       ]
+      },
+      "views": {
+       "nodes": [
+        {
+         "id": "PVTV_ciLR0CM44blMqsW90m1ur75",
+         "number": 1,
+         "name": "Backlog",
+         "layout": "BOARD_LAYOUT",
+         "filter": ""
+        },
+        {
+         "id": "PVTV_JcL9jACLimY1Z0qJxN4QRBg",
+         "number": 2,
+         "name": "Priority board",
+         "layout": "BOARD_LAYOUT",
+         "filter": null
+        },
+        {
+         "id": "PVTV_f_VX4Q6yAOGlu03zzvJZpOr",
+         "number": 3,
+         "name": "Team items",
+         "layout": "TABLE_LAYOUT",
+         "filter": null
+        },
+        {
+         "id": "PVTV_AT1cmDrYia2NeALbTHO9aIa",
+         "number": 4,
+         "name": "Roadmap",
+         "layout": "ROADMAP_LAYOUT",
+         "filter": null
+        },
+        {
+         "id": "PVTV_BSj5FmFBC2SV1EU7LVLrXER",
+         "number": 5,
+         "name": "My items",
+         "layout": "TABLE_LAYOUT",
+         "filter": "assignee:@me"
+        }
+       ]
+      },
+      "workflows": {
+       "nodes": [
+        {
+         "id": "PWF_5xKG2WgJar4VCMbCTJSECrE",
+         "name": "Auto-add sub-issues to project",
+         "enabled": true
+        },
+        {
+         "id": "PWF_ZOcwNmgG6jEgR90nV15UUg3",
+         "name": "Auto-close issue",
+         "enabled": true
+        },
+        {
+         "id": "PWF_ICXfCSsXfY1XaapMSoqFFCJ",
+         "name": "Item added to project",
+         "enabled": true
+        },
+        {
+         "id": "PWF_wqLSzIw2UZwrNjt5ykVoKVY",
+         "name": "Item closed",
+         "enabled": true
+        },
+        {
+         "id": "PWF_jTk7yyQuMhj_gBBXMMSVEQk",
+         "name": "Pull request linked to issue",
+         "enabled": true
+        },
+        {
+         "id": "PWF_CTleSI-pcQHmWAryI6wHD63",
+         "name": "Pull request merged",
+         "enabled": true
+        }
+       ]
+      },
+      "repositories": {
+       "nodes": []
+      }
+     }
+    },
+    "user": null,
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "user"
+     ],
+     "locations": [
+      {
+       "line": 3,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a User with the login of 'acme'."
+    }
+   ]
+  }
+ }
+}

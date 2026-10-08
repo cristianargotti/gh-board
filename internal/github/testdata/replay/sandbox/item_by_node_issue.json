@@ -1,0 +1,169 @@
+{
+ "request": {
+  "operation": "ItemByNode",
+  "match": {
+   "id": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "Issue",
+     "projectItems": {
+      "nodes": [
+       {
+        "id": "PVTI_Q0Wn5uLXWpGEnAXpSCIPgh5",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_wNsk5eGXHNnHmD7K"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-08T16:28:41Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "text": "Tarefa sintética 71: Ligar repositório ao projeto"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-08T16:29:00Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "READY TO DEV",
+           "optionId": "ac9f5283"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-10-08T16:28:43Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 1.5
+          },
+          {
+           "__typename": "ProjectV2ItemFieldDateValue",
+           "field": {
+            "name": "Start date"
+           },
+           "updatedAt": "2026-10-08T16:28:44Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "date": "2026-10-10"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-10-08T16:28:45Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 5",
+           "iterationId": "05188f6c"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_vWR8nnSf6Ch6ckP3dRPc2t",
+         "number": 1,
+         "title": "Tarefa sintética 71: Ligar repositório ao projeto",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/membro1/gh-board-sandbox/issues/1",
+         "createdAt": "2026-10-08T16:28:38Z",
+         "updatedAt": "2026-10-08T16:28:58Z",
+         "closedAt": null,
+         "repository": {
+          "name": "gh-board-sandbox",
+          "owner": {
+           "login": "membro1"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_z4YTG_lw2ByXgGJpObmQg9",
+            "name": "kit-teste",
+            "color": "0e8a16"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_iOIuVKTXnBfviszE",
+          "number": 1,
+          "title": "Marco 10",
+          "state": "OPEN",
+          "dueOn": "2026-12-30T00:00:00Z"
+         },
+         "issueType": null,
+         "parent": {
+          "id": "I_pUL4m1pgFuLYPyYqu6crK-",
+          "number": 2,
+          "title": "Tarefa sintética 71: Ligar repositório ao projeto",
+          "repository": {
+           "name": "gh-board-sandbox",
+           "owner": {
+            "login": "membro1"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": []
+         }
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

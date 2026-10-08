@@ -1,0 +1,153 @@
+{
+ "request": {
+  "operation": "RepositoryLabels",
+  "match": {
+   "owner": "acme",
+   "name": "app",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "labels": {
+      "pageInfo": {
+       "hasNextPage": true,
+       "endCursor": "MjU"
+      },
+      "nodes": [
+       {
+        "id": "LA_vZf3d6m6Q1MyqZfHie2Om6",
+        "name": "Amazon Q development agent",
+        "color": "008dff"
+       },
+       {
+        "id": "LA_4fWn9NJynV5fb2gviZT8Kv",
+        "name": "bug",
+        "color": "d73a4a"
+       },
+       {
+        "id": "LA_nsHcRmjh4pB0gMIKpIqN1h",
+        "name": "atendimento",
+        "color": "0E6E67"
+       },
+       {
+        "id": "LA_ytNSgqu84ODGqWJeIxit65",
+        "name": "conector-front",
+        "color": "7C3AED"
+       },
+       {
+        "id": "LA_08C4YUMv1KDGy2d4bjDRDb",
+        "name": "plataforma-dados",
+        "color": "0E4D64"
+       },
+       {
+        "id": "LA_IRuoKiLZhvGs2W_rduKeh5",
+        "name": "documentation",
+        "color": "0075ca"
+       },
+       {
+        "id": "LA_aqVrBIgqlxwkQpwGP_rYUu",
+        "name": "duplicate",
+        "color": "cfd3d7"
+       },
+       {
+        "id": "LA_PNQnPB0cSQKZPfmpVF-bpB",
+        "name": "enhancement",
+        "color": "a2eeef"
+       },
+       {
+        "id": "LA_CMR-_hOEwuzUcoYFHkaYHw",
+        "name": "entrada",
+        "color": "0B6B63"
+       },
+       {
+        "id": "LA_oIQMff-gvTcR8CGLvV-vGe",
+        "name": "entrega-tecnica",
+        "color": "D97706"
+       },
+       {
+        "id": "LA_sdp-lFFtzyGxkYH5vFJEm2",
+        "name": "entregue",
+        "color": "1E7B4F"
+       },
+       {
+        "id": "LA_kfM5SQWK8196HoB9ux8TiU",
+        "name": "erro",
+        "color": "D73A4A"
+       },
+       {
+        "id": "LA_pxsYWSr-p4JDfjUqFHH5Jl",
+        "name": "assistente",
+        "color": "B42318"
+       },
+       {
+        "id": "LA_nBkh1dffi3KNB2e0QRhGM_",
+        "name": "good first issue",
+        "color": "7057ff"
+       },
+       {
+        "id": "LA_WVL7hApV1KYLKWfriTFlUL",
+        "name": "help wanted",
+        "color": "008672"
+       },
+       {
+        "id": "LA_3F5SJ7TQ1kBTUtLS7z83PJ",
+        "name": "ferramentas",
+        "color": "A5680F"
+       },
+       {
+        "id": "LA_1XZiDOOKg98HmBSDU9GneQ",
+        "name": "invalid",
+        "color": "e4e669"
+       },
+       {
+        "id": "LA_82zCIv9mq785LcDm12HV-v",
+        "name": "lab",
+        "color": "0B6B63"
+       },
+       {
+        "id": "LA_LL6Voh8LvCMQNv3GrPFMZv",
+        "name": "oportunidade",
+        "color": "5FD1C1"
+       },
+       {
+        "id": "LA_IGXSm9xJh8ClaVEojwUcjb",
+        "name": "parceiro-dados",
+        "color": "6A737D"
+       },
+       {
+        "id": "LA_z8eQbA8eElbSSLbq6FKxRe",
+        "name": "precos-onda1",
+        "color": "B45309"
+       },
+       {
+        "id": "LA_qONtWKn2S7YHHbCyaQd43E",
+        "name": "precos-onda2",
+        "color": "6D28D9"
+       },
+       {
+        "id": "LA_f7HgeQwgHGg7Y8f0bcrNqe",
+        "name": "precos-plataforma",
+        "color": "1D4ED8"
+       },
+       {
+        "id": "LA_c8vPgormIC-fKsswFAE3Qf",
+        "name": "pipeline-co",
+        "color": "1E7B4F"
+       },
+       {
+        "id": "LA_LSQqo6WU_DnZJ7UJYZuy6z",
+        "name": "plataforma-ia",
+        "color": "5B6673"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

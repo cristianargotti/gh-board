@@ -1,0 +1,17 @@
+{
+  "description": "gh board guard for Codex CLI: denies destructive GitHub commands before a shell tool runs them (exit code 2 blocks). Trust it once through /hooks. Needs gh-board 0.1.0 or newer on PATH.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gh board guard check --agent codex",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

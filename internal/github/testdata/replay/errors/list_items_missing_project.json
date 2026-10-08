@@ -1,0 +1,32 @@
+{
+ "request": {
+  "operation": "ListItems",
+  "match": {
+   "project": "PVT_missingProject00"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": null
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "node"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a node with the global id of 'PVT_missingProject00'"
+    }
+   ]
+  }
+ }
+}

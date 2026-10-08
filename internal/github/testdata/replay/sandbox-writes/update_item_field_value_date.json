@@ -1,0 +1,22 @@
+{
+ "request": {
+  "operation": "UpdateItemFieldValue",
+  "match": {
+   "itemId": "PVTI_Q0Wn5uLXWpGEnAXpSCIPgh5",
+   "fieldId": "PVTF_chruvtrl9xjOY8WvOgJ-GLx"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "updateProjectV2ItemFieldValue": {
+     "projectV2Item": {
+      "id": "PVTI_Q0Wn5uLXWpGEnAXpSCIPgh5"
+     }
+    }
+   }
+  }
+ }
+}

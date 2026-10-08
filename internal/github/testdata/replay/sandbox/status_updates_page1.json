@@ -1,0 +1,38 @@
+{
+ "request": {
+  "operation": "StatusUpdates",
+  "match": {
+   "id": "PVT_wNsk5eGXHNnHmD7K",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "statusUpdates": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "MQ"
+      },
+      "nodes": [
+       {
+        "id": "PVTSU_iUUIoUBWH2b4oiTSKxZh9Pj",
+        "body": "Comentário sintético: alinhado com o time, seguimos com a próxima etapa.",
+        "status": "ON_TRACK",
+        "createdAt": "2026-10-08T16:29:01Z",
+        "startDate": "2026-10-06",
+        "targetDate": "2026-10-17",
+        "creator": {
+         "login": "membro1"
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

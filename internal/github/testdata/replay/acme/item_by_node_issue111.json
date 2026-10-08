@@ -1,0 +1,190 @@
+{
+ "request": {
+  "operation": "ItemByNode",
+  "match": {
+   "id": "I_kud9Ny7kjDmOS1mJGdwQGO"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "Issue",
+     "projectItems": {
+      "nodes": [
+       {
+        "id": "PVTI_F3Zx-CSXteRw6KfZBJntVVF",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-30T17:06:12Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 70: Revisar limites de WIP"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-30T18:48:07Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "DONE",
+           "optionId": "7e675973"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Origem"
+           },
+           "updatedAt": "2026-09-30T17:06:18Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Produto",
+           "optionId": "800658c8"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Área"
+           },
+           "updatedAt": "2026-09-30T17:06:19Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Comercial",
+           "optionId": "7c9a3c5c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-30T17:06:20Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 1.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:29:01Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Preços",
+           "optionId": "02be291c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T14:30:18Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E5 · Preços Onda 2",
+           "optionId": "e5351a91"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_kud9Ny7kjDmOS1mJGdwQGO",
+         "number": 111,
+         "title": "Tarefa sintética 70: Revisar limites de WIP",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "CLOSED",
+         "url": "https://github.com/acme/app/issues/111",
+         "createdAt": "2026-09-30T17:06:09Z",
+         "updatedAt": "2026-09-30T18:48:10Z",
+         "closedAt": "2026-09-30T18:48:10Z",
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_C53zUJPE0KekzSb069YD_X",
+            "name": "precos",
+            "color": "2F5FA8"
+           },
+           {
+            "id": "LA_qONtWKn2S7YHHbCyaQd43E",
+            "name": "precos-onda2",
+            "color": "6D28D9"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_2JRxF9gBtX",
+            "login": "membro1"
+           }
+          ]
+         },
+         "milestone": null,
+         "issueType": null,
+         "parent": {
+          "id": "I_anP9MzAOzZOzKDFlEvnuMf",
+          "number": 21,
+          "title": "Tarefa sintética 70: Revisar limites de WIP",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": []
+         }
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

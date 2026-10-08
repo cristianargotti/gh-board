@@ -1,0 +1,19 @@
+{
+ "request": {
+  "operation": "RemoveLabels",
+  "match": {
+   "labelableId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "removeLabelsFromLabelable": {
+     "clientMutationId": null
+    }
+   }
+  }
+ }
+}

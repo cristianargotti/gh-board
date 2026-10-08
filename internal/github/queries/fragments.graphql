@@ -1,0 +1,132 @@
+# Shared fragments. A document receives only the fragments it spreads,
+# transitively, because GitHub rejects a document with an unused fragment.
+fragment ProjectSchema on ProjectV2 {
+  id
+  number
+  title
+  readme
+  url
+  viewerCanUpdate
+  owner {
+    __typename
+    ... on Organization { login viewerCanAdminister }
+    ... on User { login }
+  }
+  items { totalCount }
+  fields(first: 100) {
+    nodes {
+      ... on ProjectV2FieldCommon { id name dataType }
+      ... on ProjectV2SingleSelectField { options { id name } }
+      ... on ProjectV2IterationField {
+        configuration {
+          iterations { id title startDate duration }
+          completedIterations { id title startDate duration }
+        }
+      }
+    }
+  }
+  views(first: 100) { nodes { id number name layout filter } }
+  workflows(first: 100) { nodes { id name enabled } }
+  repositories(first: 100) { nodes { id name owner { login } } }
+}
+
+fragment IssueFieldRef on IssueFields {
+  ... on IssueFieldCommon { name }
+  ... on IssueFieldDate { id }
+  ... on IssueFieldSingleSelect { id }
+  ... on IssueFieldText { id }
+  ... on IssueFieldNumber { id }
+  ... on IssueFieldMultiSelect { id }
+}
+
+fragment IssueFieldValueParts on IssueFieldValue {
+  __typename
+  ... on IssueFieldDateValue { field { ...IssueFieldRef } dateValue: value }
+  ... on IssueFieldSingleSelectValue { field { ...IssueFieldRef } optionName: name optionId }
+  ... on IssueFieldTextValue { field { ...IssueFieldRef } textValue: value }
+  ... on IssueFieldNumberValue { field { ...IssueFieldRef } numberValue: value }
+  ... on IssueFieldMultiSelectValue { field { ...IssueFieldRef } multiValue: value }
+}
+
+fragment IssueSummary on Issue {
+  id
+  number
+  title
+  state
+  url
+  createdAt
+  updatedAt
+  closedAt
+  repository { name owner { login } }
+  labels(first: 30) { nodes { id name color } }
+  assignees(first: 20) { nodes { id login } }
+  issueType { id name }
+  subIssuesSummary { total completed percentCompleted }
+  blockedBy { totalCount }
+  issueFieldValues(first: 30) { nodes { ...IssueFieldValueParts } }
+}
+
+# IssueDetails are the parts of an issue the summary selection leaves out:
+# item, search, roadmap, digest and the writes read them.
+fragment IssueDetails on Issue {
+  body
+  milestone { id number title state dueOn }
+  parent { id number title repository { name owner { login } } }
+}
+
+fragment IssueFields on Issue {
+  ...IssueSummary
+  ...IssueDetails
+}
+
+fragment ItemCore on ProjectV2Item {
+  id
+  isArchived
+  type
+  project { id }
+  fieldValues(first: 50) {
+    nodes {
+      __typename
+      ... on ProjectV2ItemFieldValueCommon {
+        field { ... on ProjectV2FieldCommon { name } }
+        updatedAt
+        creator { login }
+      }
+      ... on ProjectV2ItemFieldSingleSelectValue { name optionId }
+      ... on ProjectV2ItemFieldIterationValue { title iterationId }
+      ... on ProjectV2ItemFieldDateValue { date }
+      ... on ProjectV2ItemFieldTextValue { text }
+      ... on ProjectV2ItemFieldNumberValue { number }
+    }
+  }
+}
+
+# ItemIssueFields are the organization issue field values surfaced as
+# project field values, the costliest member of the union to resolve; the
+# summary selection reads them from the issue instead.
+fragment ItemIssueFields on ProjectV2Item {
+  fieldValues(first: 50) {
+    nodes {
+      ... on ProjectV2ItemIssueFieldValue {
+        field { ... on ProjectV2FieldCommon { name } }
+        issueFieldValue {
+          __typename
+          ... on IssueFieldDateValue { dateValue: value }
+          ... on IssueFieldSingleSelectValue { optionName: name optionId }
+          ... on IssueFieldTextValue { textValue: value }
+          ... on IssueFieldNumberValue { numberValue: value }
+          ... on IssueFieldMultiSelectValue { multiValue: value }
+        }
+      }
+    }
+  }
+}
+
+fragment ItemFields on ProjectV2Item {
+  ...ItemCore
+  ...ItemIssueFields
+  content {
+    __typename
+    ... on Issue { ...IssueFields }
+  }
+}

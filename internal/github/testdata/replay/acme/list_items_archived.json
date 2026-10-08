@@ -1,0 +1,240 @@
+{
+ "request": {
+  "operation": "ListItems",
+  "match": {
+   "project": "PVT_6gozs2PV0g9mjnL3",
+   "after": null,
+   "archived": [
+    "ARCHIVED"
+   ]
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "items": {
+      "totalCount": 4,
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpKrMDAwMDAwMDAuMjXODt6ZUA=="
+      },
+      "nodes": [
+       {
+        "id": "PVTI_WYqriuwUDon4eaedk67sDZi",
+        "isArchived": true,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-17T16:55:37Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "name": "DISCOVERY",
+           "optionId": "98236657"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-17T16:55:11Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "text": "Tarefa sintética 2: Ajustar alertas do board"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-09-17T16:55:11Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "number": 0.0
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Delivery Jira"
+           },
+           "updatedAt": "2026-09-17T16:55:11Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "text": "JIRA-2966"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Epic Jira"
+           },
+           "updatedAt": "2026-09-17T16:55:11Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "text": "JIRA-3751"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_IzuD8L8Pxb5GtcTGjrBnTwJ",
+        "isArchived": true,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-17T17:13:36Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "text": "Tarefa sintética 3: Publicar digest semanal"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-17T17:14:20Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "name": "DISCOVERY",
+           "optionId": "98236657"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_qSgk7-iyqvZysULl_0iANG0",
+        "isArchived": true,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-17T18:54:33Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "text": "Tarefa sintética 4: Mapear capacidades no board.yml"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-17T18:54:55Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "name": "BACKLOG",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Tema"
+           },
+           "updatedAt": "2026-09-17T18:54:56Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "name": "Plataforma de IA",
+           "optionId": "6647d6eb"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       },
+       {
+        "id": "PVTI_N3bDDCVjh3-d1B10wpy4C9u",
+        "isArchived": true,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-17T18:54:36Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "text": "Tarefa sintética 5: Validar transição de status"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-17T18:54:57Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "name": "BACKLOG",
+           "optionId": "f75ad846"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Tema"
+           },
+           "updatedAt": "2026-09-17T18:54:57Z",
+           "creator": {
+            "login": "membro5"
+           },
+           "name": "Inteligência de preços",
+           "optionId": "c66a9fa3"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

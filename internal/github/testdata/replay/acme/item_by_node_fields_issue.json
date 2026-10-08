@@ -1,0 +1,233 @@
+{
+ "request": {
+  "operation": "ItemByNode",
+  "match": {
+   "id": "I_L6YAgk2eOGLqwgrX2JwpPl"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "Issue",
+     "projectItems": {
+      "nodes": [
+       {
+        "id": "PVTI_ub3NYt5ZCt5FTyoNu_TwjXD",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-09-22"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-10-07"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-09-22T15:08:20Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "text": "Tarefa sintética 7: Configurar iteração da sprint"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-09-22T15:08:21Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "IN PROGRESS",
+           "optionId": "97bab87a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Origem"
+           },
+           "updatedAt": "2026-09-22T15:08:22Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Organização",
+           "optionId": "20c5b028"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Epic Jira"
+           },
+           "updatedAt": "2026-09-22T15:11:17Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "text": "JIRA-1568"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Delivery Jira"
+           },
+           "updatedAt": "2026-09-22T15:11:18Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "text": "JIRA-6674"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:28:30Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Atendimento",
+           "optionId": "e15cc628"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_L6YAgk2eOGLqwgrX2JwpPl",
+         "number": 17,
+         "title": "Tarefa sintética 7: Configurar iteração da sprint",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/17",
+         "createdAt": "2026-09-22T15:08:17Z",
+         "updatedAt": "2026-10-07T16:21:40Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_nsHcRmjh4pB0gMIKpIqN1h",
+            "name": "atendimento",
+            "color": "0E6E67"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "U_0KsgQ4h7E7",
+            "login": "membro7"
+           },
+           {
+            "id": "U_kgj7wvCPeQ",
+            "login": "membro6"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_QT3vddgc8CMT9XUO",
+          "number": 1,
+          "title": "Marco 2",
+          "state": "OPEN",
+          "dueOn": "2026-10-07T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_0hoY84Mlen5V6itW",
+          "name": "Feature"
+         },
+         "parent": null,
+         "subIssuesSummary": {
+          "total": 22,
+          "completed": 16,
+          "percentCompleted": 72
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldSingleSelectValue",
+            "field": {
+             "name": "Priority",
+             "id": "IFSS_K-XGVJw7oo"
+            },
+            "optionName": "High",
+            "optionId": "IFSSO_nKSuOCcrkZ"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-09-22"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-10-07"
+           },
+           {
+            "__typename": "IssueFieldSingleSelectValue",
+            "field": {
+             "name": "Effort",
+             "id": "IFSS_JigL4QI9av"
+            },
+            "optionName": "High",
+            "optionId": "IFSSO__tGlRqOJnV"
+           }
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

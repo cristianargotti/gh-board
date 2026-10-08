@@ -1,0 +1,34 @@
+{
+ "request": {
+  "operation": "CreateProjectField",
+  "match": {
+   "projectId": "PVT_wNsk5eGXHNnHmD7K",
+   "name": "Campo de teste"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "createProjectV2Field": {
+     "projectV2Field": {
+      "id": "PVTSSF_rNXCdDk3FQg3h8UcRT5zjQn",
+      "name": "Campo de teste",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "id": "85ad1d8b",
+        "name": "Opção A"
+       },
+       {
+        "id": "fc0537b8",
+        "name": "Opção B"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

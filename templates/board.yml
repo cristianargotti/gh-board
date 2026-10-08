@@ -1,0 +1,122 @@
+# board.yml de exemplo de um time, a referência do gh-board.
+#
+# Este arquivo diz ao kit o que cada campo do board significa para o time.
+# Ele não concede permissão nenhuma: a lista de mutações, os guards dos
+# agentes e as regras de segurança estão compilados no binário e nenhuma
+# chave daqui os enfraquece.
+#
+# A leitura é estrita: chave desconhecida, nome de capacidade desconhecido,
+# id de alerta desconhecido ou métrica desconhecida é erro. Cada campo,
+# opção, etiqueta e login citado aqui precisa existir no board;
+# "gh board doctor" lista o que não bate e os comandos que dependem disso.
+version: 1
+
+# O projeto (owner e número) que este arquivo descreve.
+# "--project owner/número" na linha de comando sobrepõe este valor.
+project:
+  owner: acme
+  number: 7
+
+# Repositório onde "gh board new" cria issues e padrão da forma curta "#n".
+# Sem ele, os itens são referenciados como owner/repo#n ou pela URL.
+repository: acme/app
+
+# Idioma do conteúdo mostrado ao time: alertas, digest, descrições de plano.
+language: pt-BR
+
+# Fuso horário usado em dias úteis, fim de sprint e semana do digest.
+timezone: America/Sao_Paulo
+
+# O init cria estas etiquetas no repositório de destino para que os
+# formulários funcionem sem uma etapa manual de criação de etiquetas.
+# Marcos não vêm prontos: cada time declara seus compromissos e datas.
+template:
+  labels:
+    - { name: entrada, color: "D4C5F9", description: "Pedido na fila de triagem do time" }
+    - { name: urgente, color: "B60205", description: "Precisa de uma decisão no mesmo dia" }
+    - { name: lab, color: "5319E7", description: "Experimento controlado do laboratório" }
+    - { name: erro, color: "D73A4A", description: "Resultado incorreto em um sistema do time" }
+    - { name: oportunidade, color: "0E8A16", description: "Oportunidade de uso de IA em uma área" }
+    - { name: regra, color: "0052CC", description: "Mudança de regra ou conhecimento de um sistema" }
+    - { name: sinal, color: "FBCA04", description: "Risco observado na operação pelo próprio time" }
+  milestones: []
+
+# Capacidades: o papel que cada campo do board cumpre. Uma capacidade
+# ausente fica "indisponível" e os comandos que dependem dela avisam,
+# em vez de adivinhar pelo nome ou pela ordem das opções.
+capabilities:
+  # Status: as opções distribuídas em quatro classes. Mover para uma
+  # opção de "done" fecha a issue pelo workflow do board, por isso essa
+  # movimentação vira plano e só executa com "gh board apply".
+  status:
+    field: Status
+    backlog: [BACKLOG]
+    ready: [READY TO DEV]
+    active: [IN PROGRESS, "TEST / VALIDATION"]
+    done: [DONE]
+  # Épico: o tipo de issue e o campo de seleção única que nomeia o épico.
+  epic: { issue_type: Feature, field: "Épico" }
+  # Tarefa: o tipo de issue e o teto de estimativa em dias.
+  task: { issue_type: Task, max_estimate_days: 3 }
+  # Frente de trabalho. "tidy" herda do épico pai quando falta.
+  lane: { field: Frente }
+  # Campo de iteração que representa a sprint.
+  sprint: { field: Sprint }
+  # Estimativa em dias, campo numérico.
+  estimate: { field: "Estimativa (dias)" }
+  # Datas de início e objetivo. "issue_fields" são campos de issue da
+  # organização: uma mudança aparece em todo projeto que mostra a issue.
+  # "project" usa campos de data do próprio projeto.
+  dates: { start: "Start date", target: "Target date", source: issue_fields }
+  # Campo que marca um item impedido.
+  blocked: { field: "Situação" }
+  # Fila de entrada: etiqueta, campo de decisão, SLA em dias úteis e a
+  # etiqueta de urgência, que exige resposta no mesmo dia.
+  triage: { label: entrada, decision_field: "Decisão", sla_business_days: 2, urgent_label: urgente }
+  # Laboratório: etiqueta, campo de porta e campo de resultado.
+  lab: { label: lab, gate_field: Porta, result_field: Resultado }
+
+# Política do fluxo: transições permitidas entre status, limites de WIP
+# por status e o número de itens a partir do qual uma escrita em lote
+# deixa de ser direta e vira plano.
+policy:
+  transitions:
+    "READY TO DEV": [IN PROGRESS]
+    "IN PROGRESS": [TEST / VALIDATION, READY TO DEV]
+    "TEST / VALIDATION": [DONE, IN PROGRESS]
+  wip: { "IN PROGRESS": 6, "TEST / VALIDATION": 5 }
+  bulk_threshold: 10
+
+# Passos de rotina que "gh board tidy" calcula e grava como plano:
+# herdar frente e épico do pai, sprint a partir da data objetivo, data de
+# início quando o item entra em status ativo, status do épico seguindo
+# as tarefas.
+tidy:
+  inherit_from_parent: [lane, epic]
+  sprint_from_target: true
+  stamp_start_on_active: true
+  epic_follows_tasks: true
+
+# Alertas ligados. Um mapeamento vazio liga a regra com os valores
+# padrão; "days" ajusta a janela quando a regra aceita.
+alerts:
+  overdue: {}
+  blocked: {}
+  triage_sla: {}
+  wip_exceeded: {}
+  sprint_ending: { days: 2 }
+  stale_active: { days: 5 }
+  epic_without_dates: {}
+
+# Digest semanal: o dia em que é publicado, as métricas calculadas com
+# evidência (sem evidência a métrica sai como "indisponível") e os logins
+# dos membros do time.
+digest:
+  weekday: friday
+  metrics: [first_response, autonomy, run_share]
+  members: [ana, bruno, carla]
+
+# Rituais do time e as seções do board que cada um lê.
+rituals:
+  - { name: Daily, when: "todo dia, por chamada", reads: [active, attention, triage] }
+  - { name: Weekly de liderança, when: "quarta", reads: [epics, roadmap, lab, deferred] }

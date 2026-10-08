@@ -1,0 +1,19 @@
+{
+  "description": "gh board guard: denies destructive GitHub commands before Bash runs them, one layer under the permissions.deny rules and above the mod. Needs gh-board 0.1.0 or newer on PATH.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gh board guard check --agent claude",
+            "statusMessage": "gh board guard",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "modules": ["./register.tsx"]
+}

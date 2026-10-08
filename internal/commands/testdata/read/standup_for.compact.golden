@@ -1,0 +1,10 @@
+# Standup 2026-10-08
+Yesterday: 2026-10-07
+Today: 2026-10-08
+## bruno
+KIND	REF	STATUS	TITLE
+moved yesterday	acme/app#4	TEST / VALIDATION	[[begin:title]] Dashboard de custos [[end:title]]
+moved yesterday	acme/app#6	DONE	[[begin:title]] Documentar guardas [[end:title]]
+active today	acme/app#4	TEST / VALIDATION	[[begin:title]] Dashboard de custos [[end:title]]
+blocked	acme/app#4	TEST / VALIDATION	[[begin:title]] Dashboard de custos [[end:title]]
+Generated at: 2026-10-08T12:00:00Z

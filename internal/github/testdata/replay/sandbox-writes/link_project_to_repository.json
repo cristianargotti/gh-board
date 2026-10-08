@@ -1,0 +1,22 @@
+{
+ "request": {
+  "operation": "LinkProjectToRepository",
+  "match": {
+   "projectId": "PVT_VORNCTezFznZfm0B",
+   "repositoryId": "R_pnZsM5O_6f"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "linkProjectV2ToRepository": {
+     "repository": {
+      "id": "R_pnZsM5O_6f"
+     }
+    }
+   }
+  }
+ }
+}

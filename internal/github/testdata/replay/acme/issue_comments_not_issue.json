@@ -1,0 +1,18 @@
+{
+ "request": {
+  "operation": "IssueComments",
+  "match": {
+   "id": "PVT_6gozs2PV0g9mjnL3",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {}
+   }
+  }
+ }
+}

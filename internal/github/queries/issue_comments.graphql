@@ -1,0 +1,10 @@
+query IssueComments($id: ID!, $first: Int!, $after: String) {
+  node(id: $id) {
+    ... on Issue {
+      comments(first: $first, after: $after) {
+        pageInfo { hasNextPage endCursor }
+        nodes { id body createdAt url author { login } }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+version: 2
+project_name: gh-board
+
+builds:
+  - id: gh-board
+    main: ./cmd/gh-board
+    binary: 'gh-board_{{ .Version }}_{{ .Os }}-{{ .Arch }}'
+    env:
+      - CGO_ENABLED=0
+    goos: [darwin, linux, windows]
+    goarch: [amd64, arm64]
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{ .Version }}
+    mod_timestamp: '{{ .CommitTimestamp }}'
+
+archives:
+  - id: extension
+    ids: [gh-board]
+    formats: [binary]
+    # GoReleaser appends the Windows extension itself.
+    name_template: 'gh-board_{{ .Version }}_{{ .Os }}-{{ .Arch }}'
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
+
+sboms:
+  - id: binaries
+    artifacts: binary
+    ids: [gh-board]
+    documents:
+      - 'gh-board_{{ .Version }}_{{ .Os }}-{{ .Arch }}.sbom.spdx.json'
+    cmd: syft
+    args: ['${artifact}', --output, 'spdx-json=${document}']
+
+signs:
+  # The signed manifest covers every binary and its SBOM.
+  - id: checksums
+    cmd: cosign
+    artifacts: checksum
+    signature: '${artifact}.sigstore.json'
+    args: [sign-blob, '--bundle=${signature}', --yes, '${artifact}']
+
+changelog:
+  use: git
+  sort: asc
+  groups:
+    - title: Breaking changes
+      regexp: '^.*[a-z]+(\([^)]*\))?!: .+$'
+      order: 0
+    - title: Features
+      regexp: '^.*feat(\([^)]*\))?: .+$'
+      order: 1
+    - title: Bug fixes
+      regexp: '^.*fix(\([^)]*\))?: .+$'
+      order: 2
+    - title: Performance
+      regexp: '^.*perf(\([^)]*\))?: .+$'
+      order: 3
+    - title: Documentation
+      regexp: '^.*docs(\([^)]*\))?: .+$'
+      order: 4
+    - title: Maintenance
+      order: 5
+
+release:
+  prerelease: auto

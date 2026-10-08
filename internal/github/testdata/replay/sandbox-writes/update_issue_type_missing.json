@@ -1,0 +1,32 @@
+{
+ "request": {
+  "operation": "UpdateIssueType",
+  "match": {
+   "issueId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "updateIssueIssueType": null
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "updateIssueIssueType"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to IssueType node with the global id of 'IT_kwDOACm68c4AAAAA'."
+    }
+   ]
+  }
+ }
+}

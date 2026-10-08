@@ -1,0 +1,49 @@
+# Context acme/7
+## Team rules
+Project: acme/7 [[begin:title]] Time Produto [[end:title]]
+Viewer: ana
+Language: pt-BR
+- flow: IN PROGRESS -> TEST / VALIDATION | READY TO DEV
+- flow: READY TO DEV -> IN PROGRESS
+- flow: TEST / VALIDATION -> DONE | IN PROGRESS
+- wip: IN PROGRESS: máximo 1
+- wip: TEST / VALIDATION: máximo 5
+- sla: Triagem: decisão em 2 dias úteis; urgente: no mesmo dia
+- sla: Tarefa: estimativa máxima de 3 dias
+- sla: Escrita em lote acima de 10 itens exige plano
+- ritual: Daily: todo dia (active, attention, triage)
+## Sprint
+Title: Sprint 5
+Start: 2026-10-05
+End: 2026-10-18
+Days left: 10
+Open: 3
+Done: 1
+## Open items of ana
+REF	STATUS	ASSIGNEES	TITLE	LANE	EPIC	SPRINT	TARGET
+acme/app#3	IN PROGRESS	ana	[[begin:title]] Corrigir login SSO [[end:title]]	Plataforma	Onboarding	Sprint 5	2026-10-01
+acme/app#1	IN PROGRESS	ana	[[begin:title]] Onboarding do kit [[end:title]]	Plataforma	Onboarding		2026-11-15
+## Attention
+RULE	SEVERITY	ITEM	TITLE	MESSAGE
+overdue	critical	acme/app#3	[[begin:title]] Corrigir login SSO [[end:title]]	Atrasada há 7 dias (alvo 01/10/2026)
+triage_sla	critical	acme/app#8	[[begin:title]] Entrada urgente [[end:title]]	Entrada urgente sem decisão desde 07/10/2026 (SLA: mesmo dia)
+wip_exceeded	critical	board		WIP excedido: IN PROGRESS 2/1
+blocked	warning	acme/app#4	[[begin:title]] Dashboard de custos [[end:title]]	Bloqueada: Situação = Bloqueada
+triage_sla	warning	acme/app#5	[[begin:title]] Pedido: relatório semanal [[end:title]]	Entrada sem decisão há 6 dias úteis (SLA: 2)
+stale_active	warning	acme/app#3	[[begin:title]] Corrigir login SSO [[end:title]]	Sem movimento há 13 dias em IN PROGRESS
+epic_without_dates	info	acme/app#2	[[begin:title]] Alertas no Claude Code [[end:title]]	Épico sem data de início e sem data alvo
+## Triage queue
+REF	STATUS	ASSIGNEES	TITLE	LANE	EPIC	SPRINT	TARGET
+acme/app#5	BACKLOG		[[begin:title]] Pedido: relatório semanal [[end:title]]				
+acme/app#8	BACKLOG		[[begin:title]] Entrada urgente [[end:title]]				
+## Epics
+REF	STATUS	OWNER	PROGRESS	START	TARGET	TITLE
+acme/app#1	IN PROGRESS	ana	2/4 (50%)	2026-09-22	2026-11-15	[[begin:title]] Onboarding do kit [[end:title]]
+acme/app#2	BACKLOG		0/0			[[begin:title]] Alertas no Claude Code [[end:title]]
+## Deliveries this week
+REF	STATUS	ASSIGNEES	TITLE	LANE	EPIC	SPRINT	TARGET
+acme/app#6	DONE	bruno	[[begin:title]] Documentar guardas [[end:title]]	Plataforma	Onboarding	Sprint 5	2026-10-07
+## Snapshot
+Generated at: 2026-10-08T12:00:00Z
+Completeness: complete
+Omitted: none

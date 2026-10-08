@@ -1,0 +1,21 @@
+{
+ "request": {
+  "operation": "SetIssueFieldValue",
+  "match": {
+   "issueId": "I_2Gxqm1o_-TlPmXqb57tKlQ"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "setIssueFieldValue": {
+     "issue": {
+      "id": "I_2Gxqm1o_-TlPmXqb57tKlQ"
+     }
+    }
+   }
+  }
+ }
+}

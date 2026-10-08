@@ -1,0 +1,8 @@
+# Reads one issue by node id, fresh, for the write that re-reads an issue it
+# just created before adding it to the board.
+query IssueByID($id: ID!) {
+  node(id: $id) {
+    __typename
+    ... on Issue { ...IssueFields }
+  }
+}

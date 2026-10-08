@@ -1,0 +1,8 @@
+# The owner may be an organization or a user; the missing one answers with a
+# path scoped NOT_FOUND that the reader tolerates. The viewer login decides
+# the role on a user-owned board.
+query DiscoverProject($owner: String!, $number: Int!) {
+  organization(login: $owner) { projectV2(number: $number) { ...ProjectSchema } }
+  user(login: $owner) { projectV2(number: $number) { ...ProjectSchema } }
+  viewer { id login }
+}

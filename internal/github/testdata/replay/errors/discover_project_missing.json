@@ -1,0 +1,54 @@
+{
+ "request": {
+  "operation": "DiscoverProject",
+  "match": {
+   "owner": "acme",
+   "number": 999999
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": {
+     "projectV2": null
+    },
+    "user": null,
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "user"
+     ],
+     "locations": [
+      {
+       "line": 3,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a User with the login of 'acme'."
+    },
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "organization",
+      "projectV2"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 33
+      }
+     ],
+     "message": "Could not resolve to a ProjectV2 with the number 999999."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "gh-board",
+  "owner": {
+    "name": "Cristian Reyes"
+  },
+  "metadata": {
+    "description": "GitHub Projects boards for AI coding agents: the gh board CLI extension and its Claude Code plugin."
+  },
+  "plugins": [
+    {
+      "name": "gh-board",
+      "source": "./agents/claude",
+      "description": "GitHub Projects boards for Claude Code through gh board: the skill, a guard that denies destructive board commands, and the /board pane with the alerts gh board watch writes."
+    }
+  ]
+}

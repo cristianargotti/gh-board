@@ -1,0 +1,8 @@
+# Open items of ana
+
+| REF | STATUS | ASSIGNEES | TITLE | LANE | EPIC | SPRINT | TARGET |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| acme/app#1 | IN PROGRESS | ana | [[begin:title]] Onboarding do kit [[end:title]] | Plataforma | Onboarding |  | 2026-11-15 |
+| acme/app#3 | IN PROGRESS | ana | [[begin:title]] Corrigir login SSO [[end:title]] | Plataforma | Onboarding | Sprint 5 | 2026-10-01 |
+
+- **Generated at**: 2026-10-08T12:00:00Z

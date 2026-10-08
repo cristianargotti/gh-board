@@ -1,0 +1,21 @@
+{
+ "request": {
+  "operation": "CreateStatusUpdate",
+  "match": {
+   "projectId": "PVT_wNsk5eGXHNnHmD7K"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "createProjectV2StatusUpdate": {
+     "statusUpdate": {
+      "id": "PVTSU_iUUIoUBWH2b4oiTSKxZh9Pj"
+     }
+    }
+   }
+  }
+ }
+}

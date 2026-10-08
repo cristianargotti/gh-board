@@ -1,0 +1,56 @@
+{
+ "request": {
+  "operation": "CreateIssue",
+  "match": {
+   "repositoryId": "R_pnZsM5O_6f",
+   "title": "Épico de teste do kit"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "createIssue": {
+     "issue": {
+      "id": "I_pUL4m1pgFuLYPyYqu6crK-",
+      "number": 2,
+      "title": "Tarefa sintética 66: Documentar ritual de planejamento",
+      "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+      "state": "OPEN",
+      "url": "https://github.com/membro1/gh-board-sandbox/issues/2",
+      "createdAt": "2026-10-08T16:28:40Z",
+      "updatedAt": "2026-10-08T16:28:40Z",
+      "closedAt": null,
+      "repository": {
+       "name": "gh-board-sandbox",
+       "owner": {
+        "login": "membro1"
+       }
+      },
+      "labels": {
+       "nodes": []
+      },
+      "assignees": {
+       "nodes": []
+      },
+      "milestone": null,
+      "issueType": null,
+      "parent": null,
+      "subIssuesSummary": {
+       "total": 0,
+       "completed": 0,
+       "percentCompleted": 0
+      },
+      "blockedBy": {
+       "totalCount": 0
+      },
+      "issueFieldValues": {
+       "nodes": []
+      }
+     }
+    }
+   }
+  }
+ }
+}

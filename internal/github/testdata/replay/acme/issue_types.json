@@ -1,0 +1,42 @@
+{
+ "request": {
+  "operation": "IssueTypes",
+  "match": {
+   "owner": "acme",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": {
+     "issueTypes": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Mw"
+      },
+      "nodes": [
+       {
+        "id": "IT_bj48wUHi2Ib8JK1V",
+        "name": "Task",
+        "isEnabled": true
+       },
+       {
+        "id": "IT_OnnRbE520QteEMaB",
+        "name": "Bug",
+        "isEnabled": true
+       },
+       {
+        "id": "IT_0hoY84Mlen5V6itW",
+        "name": "Feature",
+        "isEnabled": true
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

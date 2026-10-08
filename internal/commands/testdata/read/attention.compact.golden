@@ -1,0 +1,13 @@
+# Attention acme/7
+Summary: Sprint 5 · 10 dias · 1 atrasada · 1 bloqueada · 2 entradas fora do SLA · 1 WIP excedido · 1 parada · 1 épico sem datas
+Total: 7
+## Alerts
+RULE	SEVERITY	ITEM	TITLE	MESSAGE
+overdue	critical	acme/app#3	[[begin:title]] Corrigir login SSO [[end:title]]	Atrasada há 7 dias (alvo 01/10/2026)
+blocked	warning	acme/app#4	[[begin:title]] Dashboard de custos [[end:title]]	Bloqueada: Situação = Bloqueada
+triage_sla	warning	acme/app#5	[[begin:title]] Pedido: relatório semanal [[end:title]]	Entrada sem decisão há 6 dias úteis (SLA: 2)
+triage_sla	critical	acme/app#8	[[begin:title]] Entrada urgente [[end:title]]	Entrada urgente sem decisão desde 07/10/2026 (SLA: mesmo dia)
+wip_exceeded	critical	board		WIP excedido: IN PROGRESS 2/1
+stale_active	warning	acme/app#3	[[begin:title]] Corrigir login SSO [[end:title]]	Sem movimento há 13 dias em IN PROGRESS
+epic_without_dates	info	acme/app#2	[[begin:title]] Alertas no Claude Code [[end:title]]	Épico sem data de início e sem data alvo
+Generated at: 2026-10-08T12:00:00Z

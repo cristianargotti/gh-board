@@ -1,0 +1,333 @@
+{
+ "request": {
+  "operation": "DiscoverProject",
+  "match": {
+   "owner": "acme",
+   "number": 24
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "organization": {
+     "projectV2": {
+      "id": "PVT_VDlOjkUW8bidBVTR",
+      "number": 24,
+      "title": "[TEMPLATE] Acme",
+      "readme": null,
+      "url": "https://github.com/orgs/acme/projects/24",
+      "viewerCanUpdate": true,
+      "owner": {
+       "__typename": "Organization",
+       "login": "acme",
+       "viewerCanAdminister": false
+      },
+      "items": {
+       "totalCount": 0
+      },
+      "fields": {
+       "nodes": [
+        {
+         "id": "PVTF_A8wbCWmV0ASJ_obmHw78CvV",
+         "name": "Title",
+         "dataType": "TITLE"
+        },
+        {
+         "id": "PVTF_UVKYo5UmTYdKisWkP6MZijT",
+         "name": "Assignees",
+         "dataType": "ASSIGNEES"
+        },
+        {
+         "id": "PVTSSF_44T2iMB3QevIMLTkY-AQF1X",
+         "name": "Status",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "f75ad846",
+           "name": "Backlog"
+          },
+          {
+           "id": "61e4505c",
+           "name": "Em PRD"
+          },
+          {
+           "id": "47fc9ee4",
+           "name": "Design UI"
+          },
+          {
+           "id": "f5cf8110",
+           "name": "Tech Parking Lot"
+          },
+          {
+           "id": "df73e18b",
+           "name": "ADR"
+          },
+          {
+           "id": "98236657",
+           "name": "Tech Doc"
+          },
+          {
+           "id": "e2b96033",
+           "name": "Pronto para Iniciar"
+          },
+          {
+           "id": "e4dc19c6",
+           "name": "Em Refinamento"
+          },
+          {
+           "id": "33234f9d",
+           "name": "Em Implementação"
+          },
+          {
+           "id": "5949efea",
+           "name": "Em Testes & Validação"
+          },
+          {
+           "id": "126cfd25",
+           "name": "Em Processo de Deploy"
+          },
+          {
+           "id": "8a12b570",
+           "name": "Desenvolvimento Finalizado"
+          },
+          {
+           "id": "9535a9a7",
+           "name": "Rollout & Test AB"
+          },
+          {
+           "id": "483e998a",
+           "name": "Refinamento"
+          },
+          {
+           "id": "ac9f5283",
+           "name": "Em Downstream"
+          },
+          {
+           "id": "d4e8864e",
+           "name": "Testing/Rollout/AB"
+          },
+          {
+           "id": "97bab87a",
+           "name": "Results"
+          }
+         ]
+        },
+        {
+         "id": "PVTF_FlkFp-QICOBxpDxhJhvnhqk",
+         "name": "Labels",
+         "dataType": "LABELS"
+        },
+        {
+         "id": "PVTF_PkEvhnd5AMEeJS0mjuA1tQw",
+         "name": "Linked pull requests",
+         "dataType": "LINKED_PULL_REQUESTS"
+        },
+        {
+         "id": "PVTF_g6f5txglx38jueHsFAqRlF_",
+         "name": "Milestone",
+         "dataType": "MILESTONE"
+        },
+        {
+         "id": "PVTF_gM6YJ8mukz3viZ15bBYn5HE",
+         "name": "Repository",
+         "dataType": "REPOSITORY"
+        },
+        {
+         "id": "PVTF_ClD5bmikDJQt292Pq2vL4Cp",
+         "name": "Reviewers",
+         "dataType": "REVIEWERS"
+        },
+        {
+         "id": "PVTF_Gf3srNZ550OZE3aC-d2t5Z2",
+         "name": "Parent issue",
+         "dataType": "PARENT_ISSUE"
+        },
+        {
+         "id": "PVTF_HiK2cPbqvu2Y_kxNE9hRoPh",
+         "name": "Sub-issues progress",
+         "dataType": "SUB_ISSUES_PROGRESS"
+        },
+        {
+         "id": "PVTF_wU_mOY997MFuRcWBRxmCzUO",
+         "name": "Created",
+         "dataType": "CREATED"
+        },
+        {
+         "id": "PVTF_nNxoku6XY6nUWCm5lKLZSBp",
+         "name": "Updated",
+         "dataType": "UPDATED"
+        },
+        {
+         "id": "PVTF_reqslgaMiorJDSqz02pZ9Qe",
+         "name": "Closed",
+         "dataType": "CLOSED"
+        },
+        {
+         "id": "PVTF_w2qIlNeIFco2J2otVTtmQQB",
+         "name": "Estimate",
+         "dataType": "NUMBER"
+        },
+        {
+         "id": "PVTF_EF3njKEBBZfCkFyGRWIB817",
+         "name": "Start date",
+         "dataType": "DATE"
+        },
+        {
+         "id": "PVTF_OGj0fCXizTrDoXvv6nsdJ3y",
+         "name": "Target date",
+         "dataType": "DATE"
+        },
+        {
+         "id": "PVTF_JPJsMatvqRHi-TvbGDekDYA",
+         "name": "Delivery Jira",
+         "dataType": "TEXT"
+        },
+        {
+         "id": "PVTF_0LQ1kr3B26lVUiwWGDxu9ca",
+         "name": "Epic Jira",
+         "dataType": "TEXT"
+        },
+        {
+         "id": "PVTSSF_Hv6nfKC7LKfOTBzjSDjC0n6",
+         "name": "Origem",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "d5efbf83",
+           "name": "Engenharia"
+          },
+          {
+           "id": "800658c8",
+           "name": "Produto"
+          },
+          {
+           "id": "20c5b028",
+           "name": "Organização"
+          }
+         ]
+        },
+        {
+         "id": "PVTSSF_sKRIVvDMyens2KCkrhcNhcO",
+         "name": "Situação",
+         "dataType": "SINGLE_SELECT",
+         "options": [
+          {
+           "id": "33049843",
+           "name": "Impedido - Evento"
+          },
+          {
+           "id": "a0c43990",
+           "name": "Impedido  - Aguardando Outro Time"
+          },
+          {
+           "id": "3b2bf77c",
+           "name": "Impedido - Outros Motivos"
+          }
+         ]
+        }
+       ]
+      },
+      "views": {
+       "nodes": [
+        {
+         "id": "PVTV_mLYe3J5WADmF0OP3bJSs-Z_",
+         "number": 1,
+         "name": "Upstream",
+         "layout": "BOARD_LAYOUT",
+         "filter": "-status:\"Desenvolvimento Finalizado\",\"Em Refinamento\",\"Rollout & Test AB\",\"Em Processo de Deploy\",\"Em Implementação\",\"Em Testes & Validação\",\"Pronto para Iniciar\" type:Feature"
+        },
+        {
+         "id": "PVTV_fAi4M7byzAUsh47bbWUVS6Y",
+         "number": 2,
+         "name": "Downstream",
+         "layout": "BOARD_LAYOUT",
+         "filter": "-status:Backlog,\"Em PRD\",\"Design UI\",ADR,\"Tech Doc\",\"Rollout & Test AB\",Results,Testing/Rollout/AB,\"Em Downstream\",\"Em Refinamento\",Refinamento,\"Tech Parking Lot\" type:Bug,Task"
+        },
+        {
+         "id": "PVTV_g9pSaDmupEYird8iCVrJiYV",
+         "number": 3,
+         "name": "Cronograma",
+         "layout": "ROADMAP_LAYOUT",
+         "filter": "type:Feature"
+        },
+        {
+         "id": "PVTV_EQLKgaFiMW9PlQZZxH6UrP-",
+         "number": 4,
+         "name": "Team items",
+         "layout": "TABLE_LAYOUT",
+         "filter": null
+        },
+        {
+         "id": "PVTV_bYI9kBf8wGAU4sWKwxqavIF",
+         "number": 5,
+         "name": "My items",
+         "layout": "TABLE_LAYOUT",
+         "filter": "assignee:@me"
+        }
+       ]
+      },
+      "workflows": {
+       "nodes": [
+        {
+         "id": "PWF_Q77CVhK0xicUk3SuHpY8H-v",
+         "name": "Auto-add sub-issues to project",
+         "enabled": false
+        },
+        {
+         "id": "PWF_XFB--W-ecc7ktdHIyxlV-Ra",
+         "name": "Auto-close issue",
+         "enabled": true
+        },
+        {
+         "id": "PWF_NhmUzZ-qpZAieYmiTTnVyxe",
+         "name": "Item added to project",
+         "enabled": false
+        },
+        {
+         "id": "PWF_AQFVLfFRliAg7UUs8VjOkR-",
+         "name": "Item closed",
+         "enabled": false
+        },
+        {
+         "id": "PWF_puPVRq4UuqB2ta_-5rVPyO7",
+         "name": "Pull request linked to issue",
+         "enabled": false
+        },
+        {
+         "id": "PWF_Hz-Lj9kKVnxws0HsdDAYKAg",
+         "name": "Pull request merged",
+         "enabled": false
+        }
+       ]
+      },
+      "repositories": {
+       "nodes": []
+      }
+     }
+    },
+    "user": null,
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "user"
+     ],
+     "locations": [
+      {
+       "line": 3,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a User with the login of 'acme'."
+    }
+   ]
+  }
+ }
+}

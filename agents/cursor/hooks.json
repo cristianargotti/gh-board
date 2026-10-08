@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "gh board guard check --agent cursor",
+        "failClosed": true
+      }
+    ]
+  }
+}

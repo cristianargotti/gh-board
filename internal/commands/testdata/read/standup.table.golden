@@ -1,0 +1,18 @@
+Standup 2026-10-08
+
+  Yesterday:  2026-10-07
+  Today:      2026-10-08
+
+ana
+  KIND          REF         STATUS       TITLE
+  active today  acme/app#1  IN PROGRESS  Onboarding do kit
+  active today  acme/app#3  IN PROGRESS  Corrigir login SSO
+
+bruno
+  KIND             REF         STATUS             TITLE
+  moved yesterday  acme/app#4  TEST / VALIDATION  Dashboard de custos
+  moved yesterday  acme/app#6  DONE               Documentar guardas
+  active today     acme/app#4  TEST / VALIDATION  Dashboard de custos
+  blocked          acme/app#4  TEST / VALIDATION  Dashboard de custos
+
+  Generated at:  2026-10-08T12:00:00Z

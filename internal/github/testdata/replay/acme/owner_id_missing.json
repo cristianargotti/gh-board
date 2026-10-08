@@ -1,0 +1,17 @@
+{
+ "request": {
+  "operation": "OwnerID",
+  "match": {
+   "login": "membro132"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repositoryOwner": null
+   }
+  }
+ }
+}

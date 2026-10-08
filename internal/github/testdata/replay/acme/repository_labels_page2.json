@@ -1,0 +1,128 @@
+{
+ "request": {
+  "operation": "RepositoryLabels",
+  "match": {
+   "owner": "acme",
+   "name": "app",
+   "after": "MjU"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "labels": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "NDU"
+      },
+      "nodes": [
+       {
+        "id": "LA_Pi0dlhvArzAQmlgAtcV9tq",
+        "name": "poc-acessos",
+        "color": "5319E7"
+       },
+       {
+        "id": "LA_vYuUwuJt-3pCd17w8JP_rE",
+        "name": "poc-agentes",
+        "color": "D93F0B"
+       },
+       {
+        "id": "LA_h_Fupj7_K9kBDE7sTNjqjM",
+        "name": "poc-custo",
+        "color": "FBCA04"
+       },
+       {
+        "id": "LA_beKtFE-EP6j9UL-k0D6qtt",
+        "name": "poc-dados",
+        "color": "0E8A16"
+       },
+       {
+        "id": "LA_tRZW1uYgSaIr6-iAoQhoNV",
+        "name": "poc-infra",
+        "color": "1D76DB"
+       },
+       {
+        "id": "LA_UcunmI-5qc_N6Rut14cH4r",
+        "name": "poc-negocio",
+        "color": "C5DEF5"
+       },
+       {
+        "id": "LA_dJjQ6YaCUdiqNAI6cJ_9BT",
+        "name": "poc-produto",
+        "color": "BFD4F2"
+       },
+       {
+        "id": "LA_8060sA-VBZWoN6pqPY-tDA",
+        "name": "poc-si",
+        "color": "B60205"
+       },
+       {
+        "id": "LA_C53zUJPE0KekzSb069YD_X",
+        "name": "precos",
+        "color": "2F5FA8"
+       },
+       {
+        "id": "LA_2kApSXDEi_HWzxLoqlZ9IQ",
+        "name": "question",
+        "color": "d876e3"
+       },
+       {
+        "id": "LA_avbQjtoa_FY4kiV95eZmW9",
+        "name": "regra",
+        "color": "E4A11B"
+       },
+       {
+        "id": "LA_fqs2CuwTAqEJ7yBU1FOIwc",
+        "name": "sinal",
+        "color": "6F42C1"
+       },
+       {
+        "id": "LA__cFhz7TgJqfYzmvrR24DUB",
+        "name": "time-dados",
+        "color": "0E8A16"
+       },
+       {
+        "id": "LA_QN7bigMGnPK5igcKGn_rdz",
+        "name": "time-plataforma",
+        "color": "1D76DB"
+       },
+       {
+        "id": "LA_0msi3eqoyV4o0nPFj8ZVAb",
+        "name": "time-negocio",
+        "color": "0052CC"
+       },
+       {
+        "id": "LA_PalEWFN91-M_1SIpy2UviB",
+        "name": "time-produto",
+        "color": "5319E7"
+       },
+       {
+        "id": "LA_TnT7By8G0-vwf70IvDrwR6",
+        "name": "time-seguranca",
+        "color": "B60205"
+       },
+       {
+        "id": "LA_tS6ggPDpzmn-lEe2NXc_OU",
+        "name": "time-sre",
+        "color": "D93F0B"
+       },
+       {
+        "id": "LA_N_Vy5P52VAdrum7GvQlxlU",
+        "name": "urgente",
+        "color": "B60205"
+       },
+       {
+        "id": "LA_0ENFtWNi4ESD3X28aB550r",
+        "name": "wontfix",
+        "color": "ffffff"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

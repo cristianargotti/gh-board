@@ -1,0 +1,152 @@
+{
+ "request": {
+  "operation": "AssignableUsers",
+  "match": {
+   "owner": "acme",
+   "name": "app",
+   "after": "Y3Vyc29yOnYyOpKsbnlkaWFjYWJyZXJhzgc6NxQ="
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "assignableUsers": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpKpeWdvcmN1Y2hpzgtkt7c="
+      },
+      "nodes": [
+       {
+        "id": "U_x5r_7xvTkO",
+        "login": "membro104"
+       },
+       {
+        "id": "U_aY0-l1yp86",
+        "login": "membro105"
+       },
+       {
+        "id": "U_za2o1pQlpH",
+        "login": "membro106"
+       },
+       {
+        "id": "U_q00seghq0H",
+        "login": "membro107"
+       },
+       {
+        "id": "U_KcNqvw_bs6",
+        "login": "membro14"
+       },
+       {
+        "id": "U_TAWpLSIujS",
+        "login": "membro108"
+       },
+       {
+        "id": "U_JiDRb7mnbZ",
+        "login": "membro109"
+       },
+       {
+        "id": "U_UfrRWxDxtc",
+        "login": "membro110"
+       },
+       {
+        "id": "U_1ng1efWxfH",
+        "login": "membro111"
+       },
+       {
+        "id": "U_Qsuxk5t-KW",
+        "login": "membro112"
+       },
+       {
+        "id": "U_sAZx15rHtb",
+        "login": "membro113"
+       },
+       {
+        "id": "U_sBowxPrfan",
+        "login": "membro114"
+       },
+       {
+        "id": "U_ryDw0ZCkXS",
+        "login": "membro115"
+       },
+       {
+        "id": "U_f6injLtJMJ",
+        "login": "membro116"
+       },
+       {
+        "id": "U_gBA3ePy6q0",
+        "login": "membro117"
+       },
+       {
+        "id": "U_mM-7eg-7b0",
+        "login": "membro118"
+       },
+       {
+        "id": "U_0qIcEelAjP",
+        "login": "membro119"
+       },
+       {
+        "id": "U_0wDLAaYgbz",
+        "login": "membro120"
+       },
+       {
+        "id": "U_IB-HYtkqnu",
+        "login": "membro121"
+       },
+       {
+        "id": "U_UVSww3WCBk",
+        "login": "membro122"
+       },
+       {
+        "id": "U_U2cWGNn1hI",
+        "login": "membro123"
+       },
+       {
+        "id": "U_S_FvHA1RX-",
+        "login": "membro12"
+       },
+       {
+        "id": "U_533IvS1JMW",
+        "login": "membro124"
+       },
+       {
+        "id": "U_feyMwR2MKi",
+        "login": "membro125"
+       },
+       {
+        "id": "U_CWLtb05tU0",
+        "login": "membro126"
+       },
+       {
+        "id": "U_TeZxqtOK8N",
+        "login": "membro127"
+       },
+       {
+        "id": "U_PWTQX10xUW",
+        "login": "membro128"
+       },
+       {
+        "id": "U_UGqZ5DZmQR",
+        "login": "membro129"
+       },
+       {
+        "id": "U_W-2LI4T7s9",
+        "login": "membro130"
+       },
+       {
+        "id": "U_pkgsS3Z-88",
+        "login": "membro15"
+       },
+       {
+        "id": "U_WFf3LKZhcL",
+        "login": "membro131"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

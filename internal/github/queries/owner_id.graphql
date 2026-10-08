@@ -1,0 +1,4 @@
+# An organization or a user: the owner of a project copy.
+query OwnerID($login: String!) {
+  repositoryOwner(login: $login) { id login }
+}

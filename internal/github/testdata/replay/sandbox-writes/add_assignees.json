@@ -1,0 +1,19 @@
+{
+ "request": {
+  "operation": "AddAssignees",
+  "match": {
+   "assignableId": "I_vWR8nnSf6Ch6ckP3dRPc2t"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "addAssigneesToAssignable": {
+     "clientMutationId": null
+    }
+   }
+  }
+ }
+}

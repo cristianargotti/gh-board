@@ -1,0 +1,21 @@
+{
+ "request": {
+  "operation": "IssueField",
+  "match": {
+   "id": "IFD_e7jmu-_8WZ"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "IssueFieldDate",
+     "name": "Start date",
+     "dataType": "DATE"
+    }
+   }
+  }
+ }
+}

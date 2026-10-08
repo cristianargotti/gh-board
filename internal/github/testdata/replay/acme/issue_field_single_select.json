@@ -1,0 +1,39 @@
+{
+ "request": {
+  "operation": "IssueField",
+  "match": {
+   "id": "IFSS_K-XGVJw7oo"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "IssueFieldSingleSelect",
+     "name": "Priority",
+     "dataType": "SINGLE_SELECT",
+     "options": [
+      {
+       "id": "IFSSO_xd5OJ1cz6L",
+       "name": "Urgent"
+      },
+      {
+       "id": "IFSSO_nKSuOCcrkZ",
+       "name": "High"
+      },
+      {
+       "id": "IFSSO_6uroewPlUD",
+       "name": "Medium"
+      },
+      {
+       "id": "IFSSO_VFxTScXRaQ",
+       "name": "Low"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

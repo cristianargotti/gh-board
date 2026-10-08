@@ -1,0 +1,69 @@
+{
+ "request": {
+  "operation": "ListItems",
+  "match": {
+   "project": "PVT_Q5eNoBY20XdsmLCE",
+   "after": null,
+   "archived": [
+    "NOT_ARCHIVED"
+   ]
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "items": {
+      "totalCount": 1,
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "Y3Vyc29yOnYyOpKqMDAwMDAwMDEuMM4MbGCK"
+      },
+      "nodes": [
+       {
+        "id": "PVTI_WpfnnGZXv58dNn6DeCHzIiF",
+        "isArchived": false,
+        "type": "DRAFT_ISSUE",
+        "project": {
+         "id": "PVT_Q5eNoBY20XdsmLCE"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-07-03T18:12:12Z",
+           "creator": {
+            "login": "membro16"
+           },
+           "name": "Backlog",
+           "optionId": "2251bdee"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-07-03T18:12:12Z",
+           "creator": {
+            "login": "membro16"
+           },
+           "text": "Tarefa sintética 67: Configurar iteração da sprint"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "DraftIssue"
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

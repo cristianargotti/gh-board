@@ -1,0 +1,8 @@
+query IssueByNumber($owner: String!, $name: String!, $number: Int!) {
+  repository(owner: $owner, name: $name) {
+    issue(number: $number) {
+      id
+      projectItems(first: 50, includeArchived: true) { nodes { ...ItemFields } }
+    }
+  }
+}

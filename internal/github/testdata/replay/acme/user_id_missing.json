@@ -1,0 +1,32 @@
+{
+ "request": {
+  "operation": "UserID",
+  "match": {
+   "login": "membro132"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "user": null
+   },
+   "errors": [
+    {
+     "type": "NOT_FOUND",
+     "path": [
+      "user"
+     ],
+     "locations": [
+      {
+       "line": 2,
+       "column": 3
+      }
+     ],
+     "message": "Could not resolve to a User with the login of 'membro132'."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,428 @@
+{
+ "request": {
+  "operation": "AssignableUsers",
+  "match": {
+   "owner": "acme",
+   "name": "app",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "assignableUsers": {
+      "pageInfo": {
+       "hasNextPage": true,
+       "endCursor": "Y3Vyc29yOnYyOpKsbnlkaWFjYWJyZXJhzgc6NxQ="
+      },
+      "nodes": [
+       {
+        "id": "U_RILnfCX0NH",
+        "login": "membro17"
+       },
+       {
+        "id": "U_ODUKX-ql2p",
+        "login": "membro18"
+       },
+       {
+        "id": "U_nihmtc8PgX",
+        "login": "membro11"
+       },
+       {
+        "id": "U_cUV-qw3H62",
+        "login": "membro19"
+       },
+       {
+        "id": "U_arftNWFw4I",
+        "login": "membro20"
+       },
+       {
+        "id": "U_DauzI_ZV7g",
+        "login": "membro21"
+       },
+       {
+        "id": "U_cI-uff1Ksp",
+        "login": "membro22"
+       },
+       {
+        "id": "U_hqgmYhzhyq",
+        "login": "membro23"
+       },
+       {
+        "id": "U_hqxbA5yUMC",
+        "login": "membro24"
+       },
+       {
+        "id": "U_Vyvw4DW_QP",
+        "login": "membro25"
+       },
+       {
+        "id": "U_9F0Mc2cR-6",
+        "login": "membro26"
+       },
+       {
+        "id": "U_f17St0Fw1I",
+        "login": "membro27"
+       },
+       {
+        "id": "U_gBQeq-94nT",
+        "login": "membro28"
+       },
+       {
+        "id": "U_hPbbMchoqG",
+        "login": "membro29"
+       },
+       {
+        "id": "U__-UDao_ke0",
+        "login": "membro30"
+       },
+       {
+        "id": "U_sYJUCn2aIa",
+        "login": "membro8"
+       },
+       {
+        "id": "U_tScyTJ4UfB",
+        "login": "membro31"
+       },
+       {
+        "id": "U_2JRxF9gBtX",
+        "login": "membro1"
+       },
+       {
+        "id": "U_eI56ii3Hc-",
+        "login": "membro32"
+       },
+       {
+        "id": "U_QjtYoff5VB",
+        "login": "membro33"
+       },
+       {
+        "id": "U_MH2602o51a",
+        "login": "membro34"
+       },
+       {
+        "id": "U_waE-5skp68",
+        "login": "membro35"
+       },
+       {
+        "id": "U_BZUMfYkHm-",
+        "login": "membro36"
+       },
+       {
+        "id": "U_-2LKxsYtJP",
+        "login": "membro37"
+       },
+       {
+        "id": "U_kgj7wvCPeQ",
+        "login": "membro6"
+       },
+       {
+        "id": "U_-fLg-keS-i",
+        "login": "membro38"
+       },
+       {
+        "id": "U_580zOmRWs9",
+        "login": "membro39"
+       },
+       {
+        "id": "U_n5E-dDFk_A",
+        "login": "membro40"
+       },
+       {
+        "id": "U_PAdc3i3_C0",
+        "login": "membro41"
+       },
+       {
+        "id": "U_SC-p980_1m",
+        "login": "membro42"
+       },
+       {
+        "id": "U_sVdfippP8f",
+        "login": "membro43"
+       },
+       {
+        "id": "U_cILscaH8_M",
+        "login": "membro44"
+       },
+       {
+        "id": "U_MMuyaRCLWe",
+        "login": "membro45"
+       },
+       {
+        "id": "U_dpb4yzZGiD",
+        "login": "membro46"
+       },
+       {
+        "id": "U_0KsgQ4h7E7",
+        "login": "membro7"
+       },
+       {
+        "id": "U_r1fhXUp7dU",
+        "login": "membro47"
+       },
+       {
+        "id": "U_3LT9FhmNSg",
+        "login": "membro16"
+       },
+       {
+        "id": "U_xeEu7IEHX-",
+        "login": "membro48"
+       },
+       {
+        "id": "U_TV6-qTjjsC",
+        "login": "membro49"
+       },
+       {
+        "id": "U_IcJiW0GYq1",
+        "login": "membro50"
+       },
+       {
+        "id": "U_CbVcW8HDEN",
+        "login": "membro51"
+       },
+       {
+        "id": "U_KrhA3NttpH",
+        "login": "membro52"
+       },
+       {
+        "id": "U_q-XQcVyV_Z",
+        "login": "membro10"
+       },
+       {
+        "id": "U_nsDBNO2SHd",
+        "login": "membro53"
+       },
+       {
+        "id": "U_uPnvONwDMB",
+        "login": "membro54"
+       },
+       {
+        "id": "U_B8K0mLtzAz",
+        "login": "membro55"
+       },
+       {
+        "id": "U_E5-gKx-e7s",
+        "login": "membro3"
+       },
+       {
+        "id": "U_mSPGxCAlW3",
+        "login": "membro56"
+       },
+       {
+        "id": "U_LbMv2jsmcQ",
+        "login": "membro57"
+       },
+       {
+        "id": "U_uXyTnRJcY8",
+        "login": "membro58"
+       },
+       {
+        "id": "U_hGo03Ss-TD",
+        "login": "membro59"
+       },
+       {
+        "id": "U_rOdrZfPHjv",
+        "login": "membro60"
+       },
+       {
+        "id": "U_OUiNh1Zn9z",
+        "login": "membro61"
+       },
+       {
+        "id": "U_s5QRva8bqs",
+        "login": "membro62"
+       },
+       {
+        "id": "U_X3xRZnbWyh",
+        "login": "membro63"
+       },
+       {
+        "id": "U_DLlKtYOCHE",
+        "login": "membro64"
+       },
+       {
+        "id": "U_8vicdw9Tbz",
+        "login": "membro65"
+       },
+       {
+        "id": "U_tDweO0FbzM",
+        "login": "membro2"
+       },
+       {
+        "id": "U_bvTC07tdgd",
+        "login": "membro66"
+       },
+       {
+        "id": "U__WBj129oNp",
+        "login": "membro67"
+       },
+       {
+        "id": "U_euQkM9SKUn",
+        "login": "membro68"
+       },
+       {
+        "id": "U_vpSHR0S94O",
+        "login": "membro5"
+       },
+       {
+        "id": "U_Zn0p7RMMTe",
+        "login": "membro69"
+       },
+       {
+        "id": "U_wu3X5Ayx4j",
+        "login": "membro70"
+       },
+       {
+        "id": "U_gPVDhl2cXN",
+        "login": "membro71"
+       },
+       {
+        "id": "U_UjXz68qrBJ",
+        "login": "membro72"
+       },
+       {
+        "id": "U_UhkNIswWV1",
+        "login": "membro73"
+       },
+       {
+        "id": "U_kwpurfezPb",
+        "login": "membro74"
+       },
+       {
+        "id": "U_SA36IloyXi",
+        "login": "membro75"
+       },
+       {
+        "id": "U_UptDrXCfAc",
+        "login": "membro76"
+       },
+       {
+        "id": "U_pV7QGq4M3D",
+        "login": "membro77"
+       },
+       {
+        "id": "U_Ixi4EqVjeJ",
+        "login": "membro78"
+       },
+       {
+        "id": "U_GCXlsLtZBj",
+        "login": "membro79"
+       },
+       {
+        "id": "U_mBfrfsLrYA",
+        "login": "membro80"
+       },
+       {
+        "id": "U_sktMm22Vtd",
+        "login": "membro9"
+       },
+       {
+        "id": "U_UVWGtgZiY_",
+        "login": "membro81"
+       },
+       {
+        "id": "U_jiXjKK-kcO",
+        "login": "membro82"
+       },
+       {
+        "id": "U_6uT55Cr4Jg",
+        "login": "membro83"
+       },
+       {
+        "id": "U_sUR-aDGWdt",
+        "login": "membro84"
+       },
+       {
+        "id": "U_8xE10Mcmlk",
+        "login": "membro85"
+       },
+       {
+        "id": "U_5izUqlppMB",
+        "login": "membro13"
+       },
+       {
+        "id": "U_iMvd2WfrwB",
+        "login": "membro86"
+       },
+       {
+        "id": "U_9p4v0D_ByL",
+        "login": "membro87"
+       },
+       {
+        "id": "U_bIdz1r56pA",
+        "login": "membro88"
+       },
+       {
+        "id": "U_o8pgHDDRH-",
+        "login": "membro89"
+       },
+       {
+        "id": "U_1DdpLsZCzv",
+        "login": "membro4"
+       },
+       {
+        "id": "U_yuXVzqG1_w",
+        "login": "membro90"
+       },
+       {
+        "id": "U_qkYSQHsc6x",
+        "login": "membro91"
+       },
+       {
+        "id": "U_1lBSpIQfjx",
+        "login": "membro92"
+       },
+       {
+        "id": "U_WSghUxWgOP",
+        "login": "membro93"
+       },
+       {
+        "id": "U_cr-a48EiBo",
+        "login": "membro94"
+       },
+       {
+        "id": "U_iBRkGCoGhN",
+        "login": "membro95"
+       },
+       {
+        "id": "U_et5-SBVesz",
+        "login": "membro96"
+       },
+       {
+        "id": "U_sIj7AVtU-L",
+        "login": "membro97"
+       },
+       {
+        "id": "U_o1li2RlDKM",
+        "login": "membro98"
+       },
+       {
+        "id": "U_Oe68wqhHGj",
+        "login": "membro99"
+       },
+       {
+        "id": "U_FzlaMfAlDm",
+        "login": "membro100"
+       },
+       {
+        "id": "U_0_QstcgIiB",
+        "login": "membro101"
+       },
+       {
+        "id": "U_MsHZJQFNTM",
+        "login": "membro102"
+       },
+       {
+        "id": "U_0QPHFhntfP",
+        "login": "membro103"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

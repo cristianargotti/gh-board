@@ -1,0 +1,30 @@
+{
+ "request": {
+  "operation": "ListItems",
+  "match": {
+   "project": "PVT__mGFEy6M_Z_9BlrI",
+   "after": null,
+   "archived": [
+    "ARCHIVED"
+   ]
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "items": {
+      "totalCount": 0,
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": null
+      },
+      "nodes": []
+     }
+    }
+   }
+  }
+ }
+}

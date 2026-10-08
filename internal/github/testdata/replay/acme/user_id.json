@@ -1,0 +1,20 @@
+{
+ "request": {
+  "operation": "UserID",
+  "match": {
+   "login": "membro1"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "user": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   }
+  }
+ }
+}

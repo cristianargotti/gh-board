@@ -1,0 +1,23 @@
+{
+ "request": {
+  "operation": "ProjectByID",
+  "match": {
+   "id": "I_kud9Ny7kjDmOS1mJGdwQGO"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "Issue"
+    },
+    "viewer": {
+     "id": "U_2JRxF9gBtX",
+     "login": "membro1"
+    }
+   }
+  }
+ }
+}

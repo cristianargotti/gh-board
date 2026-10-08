@@ -1,0 +1,10 @@
+# Search acme/7
+
+- **Query**: login
+- **Matches**: 1
+
+| REF | STATE | STATUS | MATCHED | TITLE |
+| --- | --- | --- | --- | --- |
+| acme/app#3 | OPEN | IN PROGRESS | title, body | [[begin:title]] Corrigir login SSO [[end:title]] |
+
+- **Generated at**: 2026-10-08T12:00:00Z

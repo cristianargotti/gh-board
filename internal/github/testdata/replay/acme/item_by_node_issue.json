@@ -1,0 +1,264 @@
+{
+ "request": {
+  "operation": "ItemByNode",
+  "match": {
+   "id": "I_2Gxqm1o_-TlPmXqb57tKlQ"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "__typename": "Issue",
+     "projectItems": {
+      "nodes": [
+       {
+        "id": "PVTI_HFqu-DJTxb8Yy5MzJtRxKu-",
+        "isArchived": false,
+        "type": "ISSUE",
+        "project": {
+         "id": "PVT_6gozs2PV0g9mjnL3"
+        },
+        "fieldValues": {
+         "nodes": [
+          {
+           "__typename": "ProjectV2ItemFieldUserValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldRepositoryValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldLabelValue"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldMilestoneValue"
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Start date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-10-06"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemIssueFieldValue",
+           "field": {
+            "name": "Target date"
+           },
+           "issueFieldValue": {
+            "__typename": "IssueFieldDateValue",
+            "dateValue": "2026-10-07"
+           }
+          },
+          {
+           "__typename": "ProjectV2ItemFieldTextValue",
+           "field": {
+            "name": "Title"
+           },
+           "updatedAt": "2026-10-06T14:44:49Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "text": "Tarefa sintética 1: Revisar fluxo de triagem"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Status"
+           },
+           "updatedAt": "2026-10-06T18:59:28Z",
+           "creator": {
+            "login": "github-project-automation"
+           },
+           "name": "IN PROGRESS",
+           "optionId": "97bab87a"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Frente"
+           },
+           "updatedAt": "2026-10-06T14:44:57Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "POC Plataforma de dados",
+           "optionId": "494513c9"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Épico"
+           },
+           "updatedAt": "2026-10-06T15:14:11Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "E14 · POC Dados",
+           "optionId": "3a752ff0"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldIterationValue",
+           "field": {
+            "name": "Sprint"
+           },
+           "updatedAt": "2026-10-06T14:45:00Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "title": "Sprint 5",
+           "iterationId": "05188f6c"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldNumberValue",
+           "field": {
+            "name": "Estimativa (dias)"
+           },
+           "updatedAt": "2026-10-06T14:45:01Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "number": 0.5
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Time"
+           },
+           "updatedAt": "2026-10-06T14:57:44Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Dados",
+           "optionId": "101f11aa"
+          },
+          {
+           "__typename": "ProjectV2ItemFieldSingleSelectValue",
+           "field": {
+            "name": "Trilha"
+           },
+           "updatedAt": "2026-10-06T14:57:46Z",
+           "creator": {
+            "login": "membro1"
+           },
+           "name": "Dados",
+           "optionId": "6caad4f4"
+          }
+         ]
+        },
+        "content": {
+         "__typename": "Issue",
+         "id": "I_2Gxqm1o_-TlPmXqb57tKlQ",
+         "number": 126,
+         "title": "Tarefa sintética 1: Revisar fluxo de triagem",
+         "body": "Descrição sintética da tarefa. Critérios de aceite: comportamento validado no board.",
+         "state": "OPEN",
+         "url": "https://github.com/acme/app/issues/126",
+         "createdAt": "2026-10-06T14:44:46Z",
+         "updatedAt": "2026-10-06T18:59:14Z",
+         "closedAt": null,
+         "repository": {
+          "name": "app",
+          "owner": {
+           "login": "acme"
+          }
+         },
+         "labels": {
+          "nodes": [
+           {
+            "id": "LA_08C4YUMv1KDGy2d4bjDRDb",
+            "name": "plataforma-dados",
+            "color": "0E4D64"
+           },
+           {
+            "id": "LA_beKtFE-EP6j9UL-k0D6qtt",
+            "name": "poc-dados",
+            "color": "0E8A16"
+           },
+           {
+            "id": "LA__cFhz7TgJqfYzmvrR24DUB",
+            "name": "time-dados",
+            "color": "0E8A16"
+           }
+          ]
+         },
+         "assignees": {
+          "nodes": [
+           {
+            "id": "MDQ6VXNlcjUyNDcwNzg4",
+            "login": "membro2"
+           },
+           {
+            "id": "MDQ6VXNlcjU1OTkyNTUx",
+            "login": "membro3"
+           },
+           {
+            "id": "MDQ6VXNlcjU3NDU0MjAy",
+            "login": "membro4"
+           }
+          ]
+         },
+         "milestone": {
+          "id": "MI_RrBxRCk0lYZ-cj80",
+          "number": 8,
+          "title": "Marco 1",
+          "state": "OPEN",
+          "dueOn": "2026-10-09T00:00:00Z"
+         },
+         "issueType": {
+          "id": "IT_bj48wUHi2Ib8JK1V",
+          "name": "Task"
+         },
+         "parent": {
+          "id": "I_NiwBiP7LReyAII_2psCUZo",
+          "number": 155,
+          "title": "Tarefa sintética 1: Revisar fluxo de triagem",
+          "repository": {
+           "name": "app",
+           "owner": {
+            "login": "acme"
+           }
+          }
+         },
+         "subIssuesSummary": {
+          "total": 0,
+          "completed": 0,
+          "percentCompleted": 0
+         },
+         "blockedBy": {
+          "totalCount": 0
+         },
+         "issueFieldValues": {
+          "nodes": [
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Start date",
+             "id": "IFD_e7jmu-_8WZ"
+            },
+            "dateValue": "2026-10-06"
+           },
+           {
+            "__typename": "IssueFieldDateValue",
+            "field": {
+             "name": "Target date",
+             "id": "IFD_QPgBnZsICL"
+            },
+            "dateValue": "2026-10-07"
+           }
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

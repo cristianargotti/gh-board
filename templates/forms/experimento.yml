@@ -1,0 +1,117 @@
+name: Experimento (Laboratório)
+description: Teste controlado de algo novo, com hipótese, métricas e decisão definidas antes de rodar. Tipo Task, etiqueta lab.
+title: "[LAB-NNN] "
+labels: ["lab"]
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Um experimento tem hipótese com número, baseline, métricas nas quatro classes e uma decisão escrita antes dos dados, com prazo de até três semanas. Enquanto faltar um desses itens, o lab fica na porta **Ideia**.
+        Depois de criar: adicione a issue como sub-issue do épico patrocinador e preencha no board os campos **Épico**, **Porta** (a mesma desta issue), **Resultado** (Pendente) e **Target date** (data limite).
+  - type: input
+    id: frente
+    attributes:
+      label: Frente
+      description: Use o mesmo nome da opção do campo Frente no board, ou "A definir".
+      placeholder: "Nome da frente"
+    validations:
+      required: true
+  - type: input
+    id: epico
+    attributes:
+      label: Épico patrocinador
+      description: O épico que cede a capacidade. Sem patrocinador natural, use o épico de laboratório do time.
+      placeholder: "#17"
+    validations:
+      required: true
+  - type: dropdown
+    id: porta
+    attributes:
+      label: Porta de entrada
+      description: Simulação exige golden set; piloto exige simulação concluída.
+      options:
+        - Ideia
+        - Simulação
+        - Piloto shadow
+        - Piloto com tráfego
+    validations:
+      required: true
+  - type: textarea
+    id: hipotese
+    attributes:
+      label: Hipótese
+      description: "Acreditamos que [mudança] resultará em [efeito]. Saberemos que deu certo quando [métrica] chegar a [número]."
+      placeholder: "Acreditamos que usar um modelo menor na classificação dos pedidos reduzirá o custo por execução sem perder acurácia. Saberemos que deu certo quando a acurácia for de 95% ou mais (IC 95%) e o custo cair 20% ou mais."
+    validations:
+      required: true
+  - type: textarea
+    id: variante
+    attributes:
+      label: O que testamos e contra o quê (baseline)
+      description: A variante e o que roda hoje, com versões de modelo, prompt e configuração.
+    validations:
+      required: true
+  - type: textarea
+    id: por_que
+    attributes:
+      label: Por que agora
+      description: Problema ou oportunidade, valor esperado (custo, tempo, qualidade, receita) e quem pediu.
+    validations:
+      required: true
+  - type: textarea
+    id: metricas
+    attributes:
+      label: Métricas em quatro classes
+      description: Preencha antes de rodar. Sucesso tem de melhorar, guardrail não pode piorar, qualidade garante que a medição vale, custo e latência entram sempre. Baseline medido no mesmo conjunto.
+      value: |
+        | Classe | Métrica | Baseline | Limiar | Como medimos |
+        | --- | --- | --- | --- | --- |
+        | Sucesso | | | | |
+        | Guardrail | | | | |
+        | Qualidade | | | | |
+        | Custo e latência | | | | |
+    validations:
+      required: true
+  - type: textarea
+    id: amostra
+    attributes:
+      label: Amostra, dados e período
+      description: Tamanho e origem da amostra (produção anonimizada, sintética, golden set) e período. Para LLM, golden set a partir de casos reais e resultado com intervalo de confiança de 95%. Dados pessoais, diga como foram tratados (LGPD).
+    validations:
+      required: true
+  - type: input
+    id: prazo
+    attributes:
+      label: Prazo e custo estimado
+      placeholder: "3 semanas; ~US$ 40 em tokens; sem infra nova"
+    validations:
+      required: true
+  - type: textarea
+    id: decisao
+    attributes:
+      label: Decisão pré-registrada
+      description: Escrita antes dos dados, com os cenários nulo e misto e o critério de parada. Mudar a regra depois do resultado só por comentário do gerente de engenharia.
+      value: |
+        | Cenário observado | Decisão | Quem decide |
+        | --- | --- | --- |
+        | Sucesso acima do limiar e guardrails dentro da margem | Avança para a próxima porta | gerente de engenharia e PM, na weekly |
+        | Sucesso acima do limiar, um guardrail fora da margem | Itera uma vez com o guardrail como meta | gerente de engenharia e PM, na weekly |
+        | Sucesso dentro do intervalo do baseline (nulo) | Encerra e registra o aprendizado | gerente de engenharia e PM, na weekly |
+        | Resultado misto | Piloto só na parte que melhorou | gerente de engenharia e PM, na weekly |
+        | Custo por dia acima do previsto ou amostra corrompida | Para imediatamente | qualquer pessoa do time |
+    validations:
+      required: true
+  - type: input
+    id: data_limite
+    attributes:
+      label: Data limite
+      description: Até três semanas depois do início. Copie para Target date no board.
+      placeholder: AAAA-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado medido (preencher ao fechar)
+      description: Deixe em branco ao abrir. Ao encerrar, edite esta seção com os números na mesma tabela das métricas, o que surpreendeu e os links da evidência, e preencha o campo Resultado no board.

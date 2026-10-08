@@ -1,0 +1,56 @@
+name: Tarefa
+description: Sub-issue de um épico, até 3 dias, com responsável, datas e estimativa. Tipo Task.
+title: "[T?] "
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pelo terminal, a mesma tarefa nasce com `gh board new task --title "..." --parent "#17"`, já ligada ao épico, no board e com os campos preenchidos.
+  - type: input
+    id: epico
+    attributes:
+      label: Épico
+      description: Issue pai. Depois de criar, adicione esta issue como sub-issue do épico.
+      placeholder: "#17"
+    validations:
+      required: true
+  - type: input
+    id: frente
+    attributes:
+      label: Frente
+      description: Use o mesmo nome da opção do campo Frente no board. Sem valor, a tarefa herda a frente do épico.
+      placeholder: "Nome da frente"
+  - type: textarea
+    id: entrega
+    attributes:
+      label: Entrega
+      description: O que fica pronto, em uma ou duas linhas.
+    validations:
+      required: true
+  - type: input
+    id: estimativa
+    attributes:
+      label: Estimativa (dias)
+      placeholder: "0.5, 1, 2 ou 3"
+    validations:
+      required: true
+  - type: input
+    id: datas
+    attributes:
+      label: Início e data objetivo
+      description: Preencha também Start date e Target date na issue.
+      placeholder: 2026-09-23 a 2026-09-25
+  - type: textarea
+    id: pronto
+    attributes:
+      label: Pronto quando
+      description: Critério objetivo de conclusão, verificável por outra pessoa.
+    validations:
+      required: true
+  - type: input
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Issues que bloqueiam esta. Registre também com "blocked by" na issue.
+      placeholder: "#28, #29"

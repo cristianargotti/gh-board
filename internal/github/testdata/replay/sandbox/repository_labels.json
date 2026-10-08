@@ -1,0 +1,78 @@
+{
+ "request": {
+  "operation": "RepositoryLabels",
+  "match": {
+   "owner": "membro1",
+   "name": "gh-board-sandbox",
+   "after": null
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "repository": {
+     "labels": {
+      "pageInfo": {
+       "hasNextPage": false,
+       "endCursor": "MTA"
+      },
+      "nodes": [
+       {
+        "id": "LA_8KM_y96uLcY6camyTCbHg0",
+        "name": "accessibility",
+        "color": "f143ab"
+       },
+       {
+        "id": "LA_yMBq1oIyjk1G6xkP22TgNT",
+        "name": "bug",
+        "color": "d73a4a"
+       },
+       {
+        "id": "LA_5Jxd3_L_F4vL5kz51W4ALV",
+        "name": "documentation",
+        "color": "0075ca"
+       },
+       {
+        "id": "LA_tQ9pixyBWeCy1m6WIaJk7U",
+        "name": "duplicate",
+        "color": "cfd3d7"
+       },
+       {
+        "id": "LA_RO025T2OczoVC_W7fhY5F1",
+        "name": "enhancement",
+        "color": "a2eeef"
+       },
+       {
+        "id": "LA_DYZZBtB8r5HzKe1yLvaC3T",
+        "name": "good first issue",
+        "color": "7057ff"
+       },
+       {
+        "id": "LA_Q3KyrJB5yLmTJ4FFfqBV5d",
+        "name": "help wanted",
+        "color": "008672"
+       },
+       {
+        "id": "LA_dnoFmaQF-RBalGbeL3BEyN",
+        "name": "invalid",
+        "color": "e4e669"
+       },
+       {
+        "id": "LA_DgLuUOkJP0CNTmnRS4BemZ",
+        "name": "question",
+        "color": "d876e3"
+       },
+       {
+        "id": "LA_weWvy1zRrTgLaMz6qtdAu8",
+        "name": "wontfix",
+        "color": "ffffff"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

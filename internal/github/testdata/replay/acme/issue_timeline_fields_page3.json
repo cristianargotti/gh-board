@@ -1,0 +1,51 @@
+{
+ "request": {
+  "operation": "IssueTimeline",
+  "match": {
+   "id": "I_L6YAgk2eOGLqwgrX2JwpPl",
+   "after": "Y3Vyc29yOnYyOpPPAAABoMnBIygBqzMxNjExNzM4ODQy"
+  }
+ },
+ "response": {
+  "status": 200,
+  "headers": {},
+  "body": {
+   "data": {
+    "node": {
+     "timelineItems": {
+      "pageInfo": {
+       "hasNextPage": true,
+       "endCursor": "Y3Vyc29yOnYyOpPPAAABoRcLi3gBqzMyNzA0MjI4OTYz"
+      },
+      "nodes": [
+       {
+        "__typename": "IssueComment",
+        "id": "IC_78meZqTBT6Uufo3_DtLkP4",
+        "body": "Comentário sintético: alinhado com o time, seguimos com a próxima etapa.",
+        "createdAt": "2026-09-22T23:38:52Z",
+        "url": "https://github.com/acme/app/issues/17#issuecomment-5786210711",
+        "author": {
+         "login": "membro1"
+        }
+       },
+       {
+        "__typename": "IssueFieldChangedEvent",
+        "id": "IFCE_lADORaYhCM8AAAABSkwJXM8AAAAHnVLuYw",
+        "createdAt": "2026-10-07T15:46:35Z",
+        "actor": {
+         "login": "membro1"
+        },
+        "issueField": {
+         "name": "Target date",
+         "id": "IFD_QPgBnZsICL"
+        },
+        "newValue": "2026-10-16",
+        "newOptions": null
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,11 @@
+# gitleaks configuration of gh-board. The default rules apply. GitHub node
+# ids are public identifiers and never secrets; recorded fixtures are
+# sanitized before they enter the repository, so no path is exempt.
+title = "gh-board"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "GitHub GraphQL node ids"
+regexes = ['''\b(?:PVT|PVTI|PVTF|PVTSSF|PVTIF|PVTV|PVTW|I|U|O|R|MDU6|MDQ6)_[A-Za-z0-9_-]{8,}\b''']
