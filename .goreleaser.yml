@@ -27,9 +27,12 @@ checksum:
   algorithm: sha256
 
 sboms:
+  # With the binary archive format the uploadable binaries carry the archive
+  # id, not the build id; the build id matched nothing and the 0.1.0 release
+  # shipped without SBOMs.
   - id: binaries
     artifacts: binary
-    ids: [gh-board]
+    ids: [extension]
     documents:
       - 'gh-board_{{ .Version }}_{{ .Os }}-{{ .Arch }}.sbom.spdx.json'
     cmd: syft

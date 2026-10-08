@@ -116,3 +116,25 @@ func changeGroup(t *testing.T, groups *yaml.Node, message string) string {
 	}
 	return ""
 }
+
+// The uploadable binaries of the binary archive format carry the archive
+// id, so the SBOM catalog must name it: the build id matched nothing and
+// the 0.1.0 release shipped without SBOMs.
+func TestSBOMCatalogsEveryBinary(t *testing.T) {
+	config := readYAML(t, "../../.goreleaser.yml")
+	archiveID := lookup(t, config, "archives.0.id").Value
+	if got := lookup(t, config, "sboms.0.artifacts").Value; got != "binary" {
+		t.Fatalf("sboms.0.artifacts = %q, want binary", got)
+	}
+	ids := lookup(t, config, "sboms.0.ids")
+	if len(ids.Content) != 1 || ids.Content[0].Value != archiveID {
+		t.Fatalf("sboms.0.ids = %v, want [%s]", ids.Content, archiveID)
+	}
+	document := lookup(t, config, "sboms.0.documents.0").Value
+	for _, tc := range targets {
+		want := "gh-board_1.2.3_" + tc.os + "-" + tc.arch + ".sbom.spdx.json"
+		if got := renderName(t, document, tc.os, tc.arch); got != want {
+			t.Errorf("%s/%s: document %q, want %q", tc.os, tc.arch, got, want)
+		}
+	}
+}
