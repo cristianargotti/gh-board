@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- The diff the installers print no longer computes allocation sizes from the line counts of the files it compares: the table of the longest common subsequence checks both counts against its limit next to the allocations it protects and returns nil above it, and the op lists grow by appending. Behavior is unchanged; CodeQL's extended suite reported the sizes as potential overflows.
+- The board link of `config.yml` is replaced by an anchored pattern that matches a whole `url:` line with an organization or user project URL, instead of any GitHub project URL inside any line that mentions `url:`.
+- The release workflow runs on cosign-installer 4, sbom-action 0.24 and attest-build-provenance 4, with the pinned cosign and syft versions unchanged.
+
 ## 0.1.1
 
 - `doctor` no longer reports a legitimate install on Apple silicon as tampered: `gh extension install` re-signs the downloaded binary with `codesign`, so the installed copy differs from the release asset by its code signature. Doctor now inspects the Mach-O signature, downloads the release asset of the running version and platform once when the installed file differs, checks it against the manifest (`Provenance: release asset matches the manifest`), compares a re-signed copy with it apart from the signature, and names the two verifications a person can run on the asset: `gh attestation verify <asset> --repo cristianargotti/gh-board` and the checksum against `checksums.txt`.
