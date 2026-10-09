@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- `doctor` no longer reports a legitimate install on Apple silicon as tampered: `gh extension install` re-signs the downloaded binary with `codesign`, so the installed copy differs from the release asset by its code signature. Doctor now inspects the Mach-O signature, downloads the release asset of the running version and platform once when the installed file differs, checks it against the manifest (`Provenance: release asset matches the manifest`), compares a re-signed copy with it apart from the signature, and names the two verifications a person can run on the asset: `gh attestation verify <asset> --repo cristianargotti/gh-board` and the checksum against `checksums.txt`.
+- Releases carry one SPDX JSON SBOM per binary again. The SBOM catalog named the build id, which matches none of the uploadable binaries of the binary archive format; it now names the archive id, and `tools/cicheck` checks it.
+- `docs/releasing.md` explains how to verify a download (attestation with `--repo`, `cosign verify-blob` with the bundle, the checksum manifest) and the macOS re-signing; `docs/security.md` states what the binary check proves.
+
 ## 0.1.0
 
 The first public release of `gh board`, a GitHub CLI extension that lets a team run a GitHub Projects v2 board with AI coding agents.

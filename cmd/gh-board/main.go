@@ -28,15 +28,17 @@ func main() {
 // run executes the command tree and returns the process exit code.
 func run(args []string, stdout, stderr io.Writer) int {
 	dirs := config.DefaultPaths()
-	adapter := github.New(github.Options{CacheDir: dirs.Cache, ReleaseRepository: releaseRepository()})
+	repository := releaseRepository()
+	adapter := github.New(github.Options{CacheDir: dirs.Cache, ReleaseRepository: repository})
 	deps := &commands.Deps{
-		Reader:  adapter,
-		Writer:  adapter,
-		Clock:   github.SystemClock{},
-		Dirs:    dirs,
-		Out:     stdout,
-		Err:     stderr,
-		Version: version,
+		Reader:            adapter,
+		Writer:            adapter,
+		Clock:             github.SystemClock{},
+		Dirs:              dirs,
+		Out:               stdout,
+		Err:               stderr,
+		Version:           version,
+		ReleaseRepository: repository,
 	}
 	err := commands.Execute(context.Background(), args, deps)
 	if err == nil {

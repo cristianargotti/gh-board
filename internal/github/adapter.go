@@ -58,6 +58,10 @@ type connection struct {
 	tokenSource string
 	gql         *api.GraphQLClient
 	rest        *api.RESTClient
+	// http is the client of gh for the release asset download: the token
+	// travels to the GitHub host only, never to the object store the
+	// download redirects to.
+	http *http.Client
 }
 
 // New returns an adapter with the options filled with defaults.

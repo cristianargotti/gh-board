@@ -1,0 +1,13 @@
+{
+ "request": {
+  "method": "GET",
+  "path": "/objects/gh_2.102.0_linux_amd64.deb"
+ },
+ "response": {
+  "status": 200,
+  "headers": {
+   "Content-Type": "application/octet-stream"
+  },
+  "text": "deb package bytes\n"
+ }
+}

@@ -121,3 +121,13 @@ State includes `plans/<id>.json`, `journal/<id>.jsonl`, `audit.jsonl`, `alerts.j
 ## If you suspect tampering
 
 Run `gh board doctor`: it prints the configuration file and its hash, the state of every rule and hook against the expected hash, and the installed binary against the release checksum. Reinstall the agents with `gh board agent install` (idempotent, prints the diff) and review the local audit log with `gh board log --since <date>`.
+
+### What the binary check proves
+
+Doctor hashes the running binary and compares it with the digest GitHub records for the release asset of the same version and platform. When they match, `Verified: yes`. When they differ, doctor downloads that asset once into a temporary file, compares its SHA-256 with the manifest (`Provenance`) and inspects the Mach-O code signature of the installed file:
+
+- On Apple silicon, `gh extension install` re-signs the downloaded binary with `codesign --sign - --force`, so the installed copy always differs from the asset by its signature blob and the three header fields that size it. A copy whose signature is ad hoc and not linker-signed is compared with the downloaded asset apart from those bytes: equal means `Verified: yes` with the note `installed copy re-signed by macOS after download`; anything else is a problem.
+- Everywhere else, and for a signature the Go linker wrote, a difference is a problem: `checksum differs from the release checksum`.
+- `release asset differs from the manifest` means the published asset no longer matches its recorded digest, which is a problem whatever the installed copy says.
+
+The download is one GitHub request, only when the installed file differs, never for a development build. Doctor cannot verify the attestation or the Sigstore bundle by itself; the note names the commands that do, `gh attestation verify <asset> --repo cristianargotti/gh-board` and the checksum of the downloaded asset against `checksums.txt`, both documented in [releasing.md](releasing.md). Run them on the asset you download, not on the installed copy.

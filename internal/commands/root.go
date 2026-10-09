@@ -52,6 +52,9 @@ type Deps struct {
 	In io.Reader
 	// Version is the kit version set at build time.
 	Version string
+	// ReleaseRepository is the owner/name that publishes the kit releases;
+	// doctor names it in the verification it points a person to.
+	ReleaseRepository string
 	// Flags are bound to the root persistent flags.
 	Flags GlobalFlags
 }

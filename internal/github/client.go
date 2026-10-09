@@ -36,7 +36,11 @@ func (a *Adapter) connect() (*connection, error) {
 	if err != nil {
 		return nil, authError(host, err)
 	}
-	a.conn = &connection{host: host, tokenSource: source, gql: gql, rest: rest}
+	httpClient, err := api.NewHTTPClient(opts)
+	if err != nil {
+		return nil, authError(host, err)
+	}
+	a.conn = &connection{host: host, tokenSource: source, gql: gql, rest: rest, http: httpClient}
 	return a.conn, nil
 }
 

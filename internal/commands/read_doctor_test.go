@@ -151,6 +151,7 @@ var readChecksumCases = []struct {
 }{
 	{"verified", "", nil, "Verified:          yes"},
 	{"differs", "deadbeef", nil, "checksum differs from the release checksum"},
+	{"no downloader", "deadbeef", nil, "release asset not downloaded: the adapter does not download release assets"},
 	{"error", "", errors.New("offline"), "release checksum unavailable: offline"},
 }
 
