@@ -26,7 +26,7 @@ type FormSubstitutions struct {
 
 var (
 	quotedItem = regexp.MustCompile(`"([^"]*)"`)
-	projectURL = regexp.MustCompile(`https://github\.com/\S+/projects/\d+`)
+	projectURL = regexp.MustCompile(`^(\s*url:\s*)https://github\.com/(?:orgs|users)/[^/\s]+/projects/\d+\s*$`)
 )
 
 // FormSubstitutionsFor derives the substitutions from the reference
@@ -137,8 +137,8 @@ func renderFormLine(line string, s FormSubstitutions) (string, bool) {
 			}
 			return item
 		}), true
-	case s.BoardURL != "" && strings.Contains(line, "url: "):
-		return projectURL.ReplaceAllLiteralString(line, s.BoardURL), true
+	case s.BoardURL != "" && projectURL.MatchString(line):
+		return projectURL.FindStringSubmatch(line)[1] + s.BoardURL, true
 	default:
 		return replaceWords(line, s.Values), true
 	}

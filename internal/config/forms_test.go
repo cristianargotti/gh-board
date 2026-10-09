@@ -115,3 +115,19 @@ func TestRenderFormRefusesBrokenYAML(t *testing.T) {
 		t.Fatalf("an empty form is refused: %v", err)
 	}
 }
+
+func TestRenderFormReplacesOnlyTheBoardLink(t *testing.T) {
+	s := config.FormSubstitutions{BoardURL: "https://github.com/users/me/projects/3"}
+	form := "body:\n  - type: markdown\n    attributes:\n      value: \"url: https://github.com/orgs/beta/projects/46\"\n    url: https://github.com/orgs/beta/projects/46\n    view: https://github.com/orgs/beta/projects/46/views/1\n"
+	out, err := config.RenderForm("x", []byte(form), s)
+	if err != nil {
+		t.Fatal(err)
+	}
+	text := string(out)
+	if strings.Count(text, "https://github.com/users/me/projects/3") != 1 {
+		t.Fatalf("only the url line is a board link:\n%s", text)
+	}
+	if !strings.Contains(text, "value: \"url: https://github.com/orgs/beta/projects/46\"") || !strings.Contains(text, "projects/46/views/1") {
+		t.Fatalf("other lines keep their text:\n%s", text)
+	}
+}

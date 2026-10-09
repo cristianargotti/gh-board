@@ -93,11 +93,11 @@ func autoDiffHunks(ops []autoDiffOp) []autoDiffHunk {
 
 // autoDiffOps aligns two line lists on their longest common subsequence.
 func autoDiffOps(a, b []string) []autoDiffOp {
-	if len(a)*len(b) > autoDiffLimit {
+	table := autoLCSTable(a, b)
+	if table == nil {
 		return autoReplaceOps(a, b)
 	}
-	table := autoLCSTable(a, b)
-	ops := make([]autoDiffOp, 0, len(a)+len(b))
+	var ops []autoDiffOp
 	i, j := 0, 0
 	for i < len(a) && j < len(b) {
 		switch {
@@ -122,8 +122,13 @@ func autoDiffOps(a, b []string) []autoDiffOp {
 	return ops
 }
 
-// autoLCSTable fills the suffix table of the longest common subsequence.
+// autoLCSTable fills the suffix table of the longest common subsequence,
+// or returns nil when the line counts exceed autoDiffLimit; the bounds are
+// checked here, next to the allocations they protect.
 func autoLCSTable(a, b []string) [][]int {
+	if len(a) > autoDiffLimit || len(b) > autoDiffLimit || len(a)*len(b) > autoDiffLimit {
+		return nil
+	}
 	table := make([][]int, len(a)+1)
 	for i := range table {
 		table[i] = make([]int, len(b)+1)
@@ -142,7 +147,7 @@ func autoLCSTable(a, b []string) [][]int {
 
 // autoReplaceOps shows every old line removed and every new line added.
 func autoReplaceOps(a, b []string) []autoDiffOp {
-	ops := make([]autoDiffOp, 0, len(a)+len(b))
+	var ops []autoDiffOp
 	for _, line := range a {
 		ops = append(ops, autoDiffOp{'-', line})
 	}

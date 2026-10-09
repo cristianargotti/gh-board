@@ -70,3 +70,16 @@ func TestAutoDiffHelpers(t *testing.T) {
 		t.Fatalf("ops of nothing = %v", ops)
 	}
 }
+
+func TestAutoDiffFallsBackAboveTheLimit(t *testing.T) {
+	a, b := make([]string, 2001), make([]string, 2000)
+	if table := autoLCSTable(a, b); table != nil {
+		t.Fatalf("table above the limit = %d rows, want nil", len(table))
+	}
+	if ops := autoDiffOps(a, b); len(ops) != len(a)+len(b) {
+		t.Fatalf("fallback ops = %d, want %d", len(ops), len(a)+len(b))
+	}
+	if table := autoLCSTable([]string{"a"}, []string{"a"}); table == nil || table[0][0] != 1 {
+		t.Fatalf("table within the limit = %v", table)
+	}
+}
